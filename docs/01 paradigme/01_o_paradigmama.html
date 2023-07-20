@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>О програмским језицима и програмским парадигмама</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Shrot description</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>О програмским језицима и програмским парадигмама<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Током историјата развоја рачунарства и програмирања коришћени су разни
+програмски језици. У почетку су се рачунари чак програмирали
+хардверски (преспајањем жица тј. каблова), али брзо се прешло на
+софтвер и поступак програмирања какав данас знамо. Програмер пише
+програм на неком програмском језику и тај програм се помоћу посебних
+програма званих <strong>компилатори</strong> (енгл. compiler) преводи на машински
+језик тј. низ нула и јединица који када се смести у меморију рачунара
+даје инструкције чијим извршавањем хардвер решава оно што му је
+задатак.  Алтернативно, посебан програм зван <strong>интерпретатор</strong>
+(енгл. interpreter) анализира и хардверу налаже како да изврши једну
+по једну наредбу програма које је програмер направио.</p>
+<p>Програмски језици на којима програмер задаје опис програма рачунару су
+се током година мењали и до данас су креиране хиљаде различитих
+програмских језика. Сваки програмски језик има своје специфичности,
+али се ипак по програмским конструкцијама које ти језици
+подржавају. На пример,</p>
+<ul class="simple">
+<li><p>неки програмски језици подржавају измену вредности променљивих и
+петље, а неки не,</p></li>
+<li><p>неки програмски језици подржавају дефинисање класа и објеката, а
+неки не,</p></li>
+<li><p>неки програмски језици захтевају да корисник дефинише типове
+променљивих пре њихове употребе, а неки не, него тип променљиве
+одређују на основу вредности која им је додељена,</p></li>
+<li><p>неки програмски језици допуштају да функције буду параметри других
+функција, а неки не,</p></li>
+<li><p>неки програмски језици гарантују да ће функција за исте аргументе
+увек вратити исту вредност, а неки не,</p></li>
+<li><p>неки програмски језици захтевају од програмера да изда наредбу за
+ослобађање меморије која више није потребна, а неки то раде
+аутоматски, коришћењем тзв. сакупљача отпадака,</p></li>
+<li><p>неки програмски језици су на основу неких ограничења које решење
+проблема треба да задовољи могу самостално, помоћу неких уграђених
+алгоритама, да пронађу решење, а неки то не подржавају, него
+програмер мора увек да зада алгоритам којим се долази до решења.</p></li>
+</ul>
+<p>Дакле, посте заиста различите карактеристике по којима можемо
+класификовати програмских језика. Међутим, показује се да постоје неке
+веома важне групе карактеристика које прилично одређују начин на који
+се уопште приступа поступку програмирања и решавању проблема. На
+основу те, слободно можемо рећи најзначајније поделе, проблема
+програмски језици се групишу у тзв. <strong>програмске парадигме</strong>. Реч
+парадигма је грчког порекла и значи пример за углед, узор или образац
+и обично се користи да означи групу елемената који имају заједничке
+карактеристике. Стога програмска парадигма одређује начин решавања
+програмерских проблема, начин или стил програмирања, начин писања
+програма коришћењем карактерисничних елемената програмског језика и
+слично. Јасно је да је подела на програмске парадигме ствар договора и
+да постоје различити критеријуми по којима се програмски језици могу
+класификовати. Ипак, с временом су се издвојиле четири основне
+парадигме о којима ће детаљно бити речи у овом курсу.</p>
+<ol class="arabic simple">
+<li><p><strong>Императивна (процедурална)</strong> парадигма</p></li>
+<li><p><strong>ОБјектно-оријентисана</strong> парадигма</p></li>
+<li><p><strong>Функционална</strong> парадигма</p></li>
+<li><p><strong>Логичка</strong> парадигма</p></li>
+</ol>
+<p>Са императивном и са објектно-оријентисаном парадигмом сте се већ
+срели у ранијем школовању, а функционалну и логичку парадигму ћете
+упознати у овом курсу.</p>
+<p>Пошто језици који припадају истој парадигми деле пуно заједничких
+карактеристика, много је лакше након једног наученог језика прећи на
+други језик који припада истој него на други језик који припада некој
+другој парадигми. На пример, онај ко је савладао императивну парадигму
+кроз програмски језик <em>Pascal</em> ће много лакше научити да програмира у
+језику <em>C</em>, који је такође императиван и користи мање више исте
+основне појмове као <em>Pascal</em> (променљиве, изразе, наредбе, петље,
+…), него у језику <em>Java</em> који је објектно-оријентисан (и захтева да
+се науче нови појмови попут учауравања, наслеђивања, полиморфизма) или
+у језику <em>Haskell</em> који је функционалан (и захтева да се науче нови
+појмови попут функција вишег реда, референцијалне транспарентности,
+алгебарских типова података и слично).</p>
+<p>Иако постоје програмски језици који подржавају искључиво једну
+парадигму, најкоришћенији програмски језици данас углавном подржавају
+коришћење неколико парадигми (данас су то најчешће императивна,
+објектно-оријентисана и функционална, док је логичка ипак резервисана
+за посебне програмске језике). За такве језике кажемо да су
+<strong>мулти-парадигматични</strong> (енгл. multi-paradigm). Познавање свих
+парадигми је зато данас веома важно, да би се у тим језицима пронашао
+стил програмирања који омогућава коришћење елемената сваке парадигме
+на најбољи начин тј. кобиновање добрих и избегавање лоших
+карактеристика сваке парадигме.</p>
+<p>Све четири основне парадигме су се развиле прилично рано у развоју
+рачунарства. Императивна парадигма је настала крајем 1950-их кроз
+програмски језик <em>Fortran</em>, функционална већ почетком 1960-их кроз
+<em>Lisp</em>, објектно-оријентисана почетком 1970-их кроз <em>Smalltalk</em>, а
+логичка такође почетком 1970-их кроз <em>Prolog</em>. Све парадигме су
+касније унапређиване и дорађиване кроз нове језике који им припадају.
+Императивна и објектно-оријентисана парадигма се сматрају доминантним
+парадигмама у развоју софтвера и логички и функционални програмски
+језици никада нису достигли ниво употребе који имају императивни и
+објектно-оријентисани језици. Међутим, карактеристике и стил
+програмирања у тим језицим, нарочито функционалним, су се у новије
+време веома проширили кроз мулти-парадигматичне језике и на тај начин
+се веома интензивно користе у развоју софтвера.</p>
+<p>Поред четири основне парадигме, помиљу се још неке чији се елементи
+користе у разним програмским језицима (на пример, скрипт парадигма,
+конкурентна парадигма, компонентна парадигма, парадигма упитних
+језика, реактивна парадигма, генеричка парадигма, агентна парадигма
+итд.).</p>
+<section id="id2">
+<h2>Процедуралност и декларативност<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Поступак програмирања постаје једноставнији што је већи ниво
+апстракције на ком програмер може да се изражава.</p>
+<p>Хардвер разуме само <strong>машински језик</strong> тј. низ нула и јединица које му
+диктирају како електрични сигнали треба да се крећу кроз рачунарски
+систем, покрећу његове делове и на тај начин врше израчунавања,
+обрађују податке, приказују слике и слично.</p>
+<p>Програмирање директним уношењем нула и јединица у меморију рачунара је
+страшно мукотрпно и људи су веома брзо дошли до <strong>асембперских
+језика</strong> којима на симболички начин задају инструкције рачунару.
+На пример, асемблерски програм</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mov</span> <span class="n">eax</span><span class="p">,</span> <span class="mi">5</span>
+<span class="n">mov</span> <span class="n">ebx</span><span class="p">,</span> <span class="p">[</span><span class="mh">0xff35</span><span class="p">]</span>
+<span class="n">add</span> <span class="n">eax</span><span class="p">,</span> <span class="n">ebx</span>
+</pre></div>
+</div>
+<p>садржи три инструкције. Прва налаже да се у регистар процесора <code class="docutils literal notranslate"><span class="pre">eax</span></code>
+упише вредност 5, друга да се у регистар <code class="docutils literal notranslate"><span class="pre">ebx</span></code> пренесе вредност из
+меморије, са наведене адресе, док трећа да се саберу бројеви у
+регистру <code class="docutils literal notranslate"><span class="pre">eax</span></code> и <code class="docutils literal notranslate"><span class="pre">ebx</span></code> (при чему се подразумева да ће збир бити
+смештен у регистар <code class="docutils literal notranslate"><span class="pre">eax</span></code>). Програмирање на асемблеру захтева да
+програмер познаје све детаље рачунара (инструкције процесора,
+регистре, меморијске адресе и слично), што чини процес програмирања
+веома компликованим, а програме непреносивим са једног на други
+рачунар.</p>
+<p>Савремени тзв. <strong>виши програмски језици</strong> се појављују средином
+1950-их, са програмским језиком FORTRAN. Основна новина је то што
+програмер израчунавање описује на апстрактнијем, математичком нивоу, а
+посебан програмски преводилац (компилатор) преводи тај програм на
+асемблерски тј. на машински језик. Име првог реализованог вишег
+програмског језика FORTRAN је скраћеница од FORmula TRANslator, што
+указује управо на то да је то систем који математичке формуле може да
+преведе на језик разумљив рачунару. Тиме програмер не мора више да
+води рачуна о многим техничким детаљима (на пример, распоређивања
+података по меморији и регистрима процесора), већ то компилатор ради
+уместо њега. С временом су компилатори постајали све напреднији и
+преузели су разне послове програмера (на пример, данас се сматра да
+компилатори кроз оптимизацију кода који врше могу да произведу много
+бржи машински код него што би то програмери могли ручно да ураде).</p>
+<p>Развој виших програмских језика и програмских преводилаца стално
+спушта лествицу онога што програмер мора да уради да би дошао до
+ефикасног извршног програма тј. процес програмирања с временом постаје
+све једноставнији и једноставнији. Он је додатно олакшан мноштвом
+библиотека које пружају готову функционалност којима се лако приступа
+помоћу апликативних програмских интерфејса (енгл. application
+programming interface, API).</p>
+<p>Циљ који (у општем случају) никада није достигнут, али коме се стално
+тежи и све више приближава је тај да је довољно да програмер рачунару
+само опише проблем који је потребно решити, а да рачунар онда сам
+проналази решење тог проблема. Такви системи се називају
+<strong>декларативни</strong>, насупрот традиционалним системима у којима програмер
+мора да опише алгоритам тј. процедуру, па се ти системи називају
+<strong>процедурални</strong>. Декларативно програмирање подразумева да програмер
+задаје <strong>шта</strong> треба да се ураде, а не и <strong>како</strong> то треба да се
+спроведе у дело. Ова подела није стриктна и програмирање с временом
+постаје све више декларативно и све мање процедурално. На пример,
+данас је скоро у свим језицима довољно позвати библиотечку функцију за
+сортирање да би се низ сортирао и није потребно описивати алгоритам
+сортирања.</p>
+<p>Сматра се да функционална и нарочито логичка парадигма доприносе
+декларативнијем програмирању, док су објектно-оријентисана и
+императивна парадигма много процедуралније. Стога се у неким књигама
+сматра да је основна подела на процедуралну и декларативну парадигму,
+а затим се процедурална парадигма дели на императивну и
+објектно-оријентисану, а декларативна на функционалну и логичку. Ми
+нећемо користити ову поделу, јер ни функционално ни логичко
+програмирање нису сасвим декларативни и захтевају често да програмер
+ипак опише процедуру тј. алгоритам решавања проблема.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Постоји терминолошка нејасноћа која се тиче императивне и
+процедуралне парадигме. Неки аутори под процедуралном парадигмом
+подразумевају све језике у којима програмер описује процедуру
+(поступак, алгоритам) решавања проблема (претходни текст је
+користио ту терминологију). У тој терминологији императивна
+парадигма је једна од најзначајнијих подврста процедуралне
+парадигме и у њој програмер задаје алгоритам коришћењем наредби.</p>
+<p>Са друге стране, неки аутори користе поделу на императивну и
+декларативну парадигму и под императивном парадигмом подразумевају
+свако програмирање у коме програмер описује алгоритам решавања
+проблема. Термин процедурално се тада користи за подврсту
+императивне парадигме у којој се програми пишу тако што се сложен
+проблем разбије на више потпроблема који се решавају писањем
+појединачних функција и процедура у програмском језику (програмски
+језик Pascal је потпрограме називао баш процедуре и функције).</p>
+<p>Како год да се одлучимо, јасно је да су процедурална и императивна
+парадигма веома тесно повезане и нећемо инсистирати у наставку
+превише на овим финим разликама у њиховим прецизним дефиницијама.</p>
+
+    </div></div>
+</section>
+<section id="id3">
+<h2>Машинско учење као нова декларативна парадигма<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Нова, веома важна парадигма, драстично другачија од свих ранијих је
+заснована на вештачкој интелигенцији и <strong>машинском учењу</strong>. На пример,
+системи за препознавање слика тј. објеката на сликама, раде тако што
+су програмери припремили велики број слика и обележили објекте на
+њима, а онда је систем анализирао те слике и научио како да препозна
+објекте на сликама. Приметимо да у овој парадигми програмер није
+задавао алгоритам препознавања већ је машина сама дошла до алгоритма,
+учењем из података које је прогамер имао задатке да
+припреми. Прецизније алгоритам који се спроводи је фиксиран и зависи
+од великог броја параметара, а машинским учењем се ти параметри
+аутоматски подешавају тако да тако „наштимован” алгоритам решава
+задатак који је потребно да реши. Ова парадигма је по својој природи
+веома декларативна и заиста ослобађа програмера потребе за
+дизајанирањем и описивањем алгоритма за решавање конкретног проблема.</p>
+<p>У последње време су се појавили многи системи засновани на вештачкој
+интелигенцији (на пример, ChatGPT или GitHub Copilot) који на основу
+текстуалног описа проблема могу да генеришу програмски код за његово
+решавање. Тиме се веома подиже ниво апстракције и приближава се у
+великој мери основној идеји декларативности (где програмер само треба
+прецизно да опише проблем, а рачунар самостално проналази алгоритам за
+његово решавање).</p>
+</section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

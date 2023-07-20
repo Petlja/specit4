@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Функционална парадигма</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Shrot description</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Функционална парадигма<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Покушајмо да илуструјемо основне идеје функционалне парадигме кроз
+један једноставни пример.</p>
+<section id="id2">
+<h2>Полазни проблем<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Напишимо програм за одређивање збира квадрата непарних цифара унетог
+позитивног природног броја. То је задатак какав сте сигурно сретали у
+првом разреду и сигурно бисте га коришењем императивне парадигме
+решили на следећи начин.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">zbir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">cifra</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cifra</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">               </span><span class="n">zbir</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="n">cifra</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">cifra</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">zbir</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="n">n</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>Декомпозиција проблема<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Размотримо да ли бисмо могли да идентификујемо појединачне алгоритме
+које смо употребили у овом решењу. Размислимо, да ли бисмо неки од
+њих, у складу са добром праксом процедуралног програмирања, могли да
+издвојимо у посебну функцију која би нам била корисна и у другим
+задацима? Прво, у решењу се користи поступак заснован на целобројном
+дељењу у којој се одређују једна по једна цифра датог броја (и то
+здесна на лево). Тиме од датог броја добијамо серију његових
+цифара. Након тога издвајамо и шаљемо на даљу обраду само оне цифре
+које су непарне. Након тога, сваку од тих цифара квадрирамо. И на
+крају, израчунавамо збир тако добијених квадрата. Разлагањем овог
+алгоритма на саставне делове, добијамо, дакле, да се за улаз 12345,
+добија следећа секвенца међурезултата.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>12345 → [5, 4, 3, 2, 1] → [5, 3, 1] → [25, 9, 1] → 35.
+</pre></div>
+</div>
+<p>Кључна идеја је извршимо декомпозицију проблема тј. да сложени
+алгоритам изазимо као композицију једноставнијих алгоритама. Хајде
+сада да напишемо кôд који ради на овај начин.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Cifre</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="kt">var</span><span class="w"> </span><span class="n">rezultat</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span><span class="w"></span>
+<span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">rezultat</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">10</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">n</span><span class="w"> </span><span class="p">/=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="p">}</span><span class="w"></span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">rezultat</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">IzdvojNeparneCifre</span><span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">cifre</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">rezultat</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span><span class="w"></span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cifra</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">cifre</span><span class="p">)</span><span class="w"></span>
+<span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cifra</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="n">rezultat</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">cifra</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">rezultat</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">kvadrirajCifre</span><span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">cifre</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">rezultat</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span><span class="w"></span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cifra</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">cifre</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">rezultat</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">cifra</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">cifra</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">rezultat</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Saberi</span><span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">zbir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">           </span><span class="n">zbir</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="n">broj</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">zbir</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">Saberi</span><span class="p">(</span><span class="n">KvadrirajCifre</span><span class="p">(</span><span class="n">IzdvojNeparneCifre</span><span class="p">(</span><span class="n">Cifre</span><span class="p">(</span><span class="n">n</span><span class="p">))));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="n">n</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Програм је много дужи, али је свака појединачна функција доста
+једноставнија него она у полазном решењу и исказује само један
+појединачан алгоритам. Можемо рећи да је овај програм знатно
+модуларнији него полазни, који је прилично монолитан. Добра
+декомпозиција и модуларност нам, научили смо, доприноси са једне
+стране разумљивости кода и лакшој имплементацији (јер се фокусирамо на
+мање и једноставније проблеме), а са друге стране доприноси и поновној
+искористивости кода (исту функцију можемо употребити и у другим
+програмима).</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Суштина функционалног програмирања долази у изражавању свих
+израчунавања у облику већег броја мањих функција, по могућности
+стандардног облика и проналажењу начина да те функције компонујемо
+тако да добијемо комплексније функције које изражавају решења нашег
+проблема. Стил разбијања проблема на потпроблеме и њиховог решења
+на композицију једноставнијих блокова присутан је и на другим
+местима местима у рачунарству. Основу UNIX филозофије представља
+колекција једноставних програма који раде јасно дефинисане задатке,
+чијом се композицијом помоћу остварује решавање сложенијих
+задатака.</p>
+<ul class="simple">
+<li><p>Write programs that do one thing and do it well.</p></li>
+<li><p>Write programs to work together.</p></li>
+<li><p>Write programs to handle text streams, because that is a universal interface.</p></li>
+</ul>
+<p>Композиција се остварује компоновањем програма. На пример,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cat datumi.txt | egrep “januar” | sort | uniq
+</pre></div>
+</div>
+<p>Овим излиставамо датотеку <code class="docutils literal notranslate"><span class="pre">datumi.txt</span></code> затим одређујемо све њене
+линије које садрже реч <code class="docutils literal notranslate"><span class="pre">januar</span></code>, сортирамо их и на крају
+елиминишемо дупликате. Оператор | (чита се пајп) изражава
+композицију тако што излаз свог првог аргумента усмерава на улаз
+свог другог аргумента. Дакле, можемо да кажемо да функционално
+програмирање и UNIX деле исту филозофију композионалности
+једноставних целина која се током година показала веома
+успешном. Кључни моменат је то што је имплементација пајп оператора
+(тј. композиције) таква да се међурезултати не материјализују цели
+у меморији, већ се након сваке обрађене линије од стране првог
+програма она одмах прослеђује на улаз другог програма, избегавајући
+да се цео излаз програма истовремено чува у меморији. Ово је
+страшно важна идеја која се користи и у функционалном програмирању
+и сада ћемо је дубље размотрити.</p>
+
+    </div></div>
+</section>
+<section id="id4">
+<h2>Лењост<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>Уз све његове предности, претходно решење не можемо сматрати
+прихватљивим. Свако компоновање две функције подразумевало је да прва
+функција свој резултат врати другој која онда тај резултат преузима
+као свој улазни параметар. Током декомпоновања проблема на
+једноставније већина међурезултата је заправо представљала неке серије
+бројева и у претходмо решењу су те серије бројева представљене
+листама, што значи да је током извршавања претходног алоритма креирано
+неколико листи, чији су сви елементи истовремено заузимали меморију. У
+случају када су серије кратке, као у овом примеру то није критично,
+али можемо лако замислити ситуације у којима се ради са серијама од
+неколико десетина, па и стотина хиљада елемената и јасно је да је тада
+цена коју плаћамо зарад лепе декомпозиције програма превелика. То је
+један од разлога зашто се у класичним програмским језицима
+декомпозиција обично не ради до краја и зашто су кораци који се
+програмирају обично крупни (цео овај задатак би у класичном
+програмирању по правилу био имплементиран у облику једне функције, као
+у нашем почетном решењу), задржавајући се на нижем степену
+модуларности. Да ли постоји начин да овај проблем превазиђемо? Решење
+долази у облику лењог израчунавања. Наиме, функције не морају да
+комуницирају преко листа, већ је могуће да употребимо лење токове о
+којима је било речи у курсу објектно-оријентисаног програмирања у
+језику C#. Подсетимо се, лењи ток представљамо преко интерфејса
+<code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>, а градимо га најједноставније наредбом <code class="docutils literal notranslate"><span class="pre">yield</span>
+<span class="pre">return</span></code> која проузрокује да се извршавање функције суспендује и
+настави тек када је позиваоцу потребан наредни елемент (не извршава се
+цела функција одједном, већ само по потреби и зато кажемо да се она
+извршава лењо).</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Cifre</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">n</span><span class="w"> </span><span class="p">/=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">IzdvojNeparneCifre</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">cifre</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cifra</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">cifre</span><span class="p">)</span><span class="w"></span>
+<span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cifra</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">cifra</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">kvadrirajCifre</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">cifre</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cifra</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">cifre</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">cifra</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">cifra</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Saberi</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">zbir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">           </span><span class="n">zbir</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="n">broj</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">zbir</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">Saberi</span><span class="p">(</span><span class="n">KvadrirajCifre</span><span class="p">(</span><span class="n">IzdvojNeparneCifre</span><span class="p">(</span><span class="n">Cifre</span><span class="p">(</span><span class="n">n</span><span class="p">))));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="n">n</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Лењост нам доноси много боље решење од претходног и омогућава да
+декомпозицију извршимо без меморијских и временских неефикасности које
+би нам суштински спречиле декомпозицију у језицима у којима лењост
+није подржана (покушајте да направите функцију која враћа листу од
+милион елемената и лењи ток од милион елемената, саберите елементе
+резултата и упоредите меморију коју та два програма заузимају током
+извршавања). Иако у претходном програму радимо са токовима које
+замишљамо као серије (низове, листе) цифара, захваљујући лењости, оне
+се не материјализују и ниједан од међурезултата није интегрално
+присутан у меморији и сваки наредни елемент серије се израчунава само
+у тренутку када функција позивалац затражи наредни елемент (у склопу
+своје петље foreach), при чему је организација таква да када наредни
+елемент затреба, претходни елемент обично више није потребан. Јасно је
+да имплементација лењости носи са собом додатне захтеве (потребно је
+на неки начин запамтити где се стало са извршавањем сваке функције
+која суспендована наредбом yield return) и то носи са собом неку цену,
+међутим, у већини случајева та цена неће бити таква да угрожава
+декомпозицију на мање модуле, за разлику од сценарија без лењости у
+коме је јасно да су пенали који плаћамо превелики и да они суштински
+заустављају декомпозицију тј. модуларизацију.</p>
+</section>
+<section id="id5">
+<h2>Апстракција и функције вишег реда<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<p>Решење које смо написали је лепо и довољно ефикасно. Декомпозиција је
+омогућила да се сваки алгоритам појединачно имплементира и свака од
+ових функција се једноставније разуме него полазна сложена
+функција. Ипак, главни добитак ће бити ако успемо да ове функције
+ставимо у библиотеку и употребимо их у више различитих
+контекста. Кључни проблем у овоме је то што оваквих малих, корисних
+функција има заиста прегршт. Ако бисмо у библиотеци имали функцију
+која квадрира све цифре у некој серији, зашто не бисмо имали и
+функцију која израчунава њихове кубове? Ако имамо функцију која
+издваја све непарне цифре, зашто не бисмо имали и ону која издваја све
+парне или све негативне? Таква библиотека би била превелика и јасно је
+да бисмо увек наишли на неки сценарио за који у библиотеци не бисмо
+нашли баш такву функцију која нам треба. Потребно је да направимо
+одређену апстракцију. Размотримо шта би се разликовало код наше
+функције која издваја непарне бројеве и функције која би издвајала
+негативне бројеве из неке серије (лењог тока).</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">IzdvojNeparne</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">broj</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">broj</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">IzdvojNegativne</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">broj</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">broj</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Примећујемо да се разликује само услов наредбе <code class="docutils literal notranslate"><span class="pre">if</span></code>. Да ли постоји
+начин да тај услов проследимо некако функцији као параметар? На основу
+онога што смо данас користили не постоји (осим да евентуално направимо
+неки објекат у којем се методом представља услов који треба
+проверити). C# нам даје боље решење од тога. Функцији је као параметар
+могуће проследити другу функцију! Када то урадимо, добијамо функцију
+вишег реда или функционал. Тај концепт вам сигурно није стран. Извод у
+математици је функционал који прими једну функцију, а врати другу
+функцију. Тип функције се дефинише помоћу <code class="docutils literal notranslate"><span class="pre">Func&lt;&gt;</span></code>. Дакле, уместо
+гомиле појединачних функција које издвајају елементе из серије, можемо
+направити генерички функционал који издваја елементе који задовољавају
+дати услов, при чему се тај услов наводи као параметар у облику
+функције која прима <code class="docutils literal notranslate"><span class="pre">int</span></code> и враћа <code class="docutils literal notranslate"><span class="pre">bool</span></code>.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Izdvoj</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">brojevi</span><span class="p">,</span><span class="w"></span>
+<span class="w">                               </span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">uslov</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">uslov</span><span class="p">(</span><span class="n">broj</span><span class="p">))</span><span class="w"></span>
+<span class="w">          </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">broj</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Слично, функција која је квадрирала сваки елемент серије се може
+једноставно апстраховати до функционала који би примењивао задату
+функцију која слика int у int на сваки елемент серије.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Preslikaj</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">brojevi</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                  </span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">broj</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>У оваквој варијанти наш програм изгледа овако.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Cifre</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">n</span><span class="w"> </span><span class="p">/=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Izdvoj</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">brojevi</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                   </span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">uslov</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">uslov</span><span class="p">(</span><span class="n">broj</span><span class="p">))</span><span class="w"></span>
+<span class="w">              </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">broj</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Preslikaj</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">brojevi</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">broj</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Saberi</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">zbir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">brojevi</span><span class="p">)</span><span class="w"></span>
+<span class="w">           </span><span class="n">zbir</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="n">broj</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">zbir</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">neparan</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">kvadrat</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">broj</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">Saberi</span><span class="p">(</span><span class="n">Preslikaj</span><span class="p">(</span><span class="n">Izdvoj</span><span class="p">(</span><span class="n">Cifre</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="w"> </span><span class="n">neparan</span><span class="p">),</span><span class="w"> </span><span class="n">kvadrat</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="n">n</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Функције <code class="docutils literal notranslate"><span class="pre">Izdvoj</span></code> и <code class="docutils literal notranslate"><span class="pre">Preslikaj</span></code> су већ прилично опште, употребљиве
+у разним програмима и имало би смисла убацити их у библиотеку.  Остаје
+проблем то што раде само над токовима типа int, међутим, то би се лако
+дало уопштити коришћењем параметарског полиморфизма и генеричких
+функција о којима је било речи у курсу објектно-оријентисаног
+програмирања у језику C#, тако да се сада тиме нећемо бавити.  Оно што
+је мало било неконформно у претходном решењу је то што смо морали да
+дефинишемо посебне функције <code class="docutils literal notranslate"><span class="pre">neparan</span></code> и <code class="docutils literal notranslate"><span class="pre">kvadrat</span></code>, које су толико
+једноставне је било више околног, него централног кода. Да би се
+избегло прављење таквих једнократних функција, на располагању нам
+стоје <strong>анонимне функције</strong>, тј. <strong>ламбда-изрази</strong>.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nf">Saberi</span><span class="p">(</span><span class="n">Preslikaj</span><span class="p">(</span><span class="n">Izdvoj</span><span class="p">(</span><span class="n">Cifre</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">x</span><span class="p">));</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Израз <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=&gt;</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">x</span></code> представља функцију која прима број x а враћа
+његов квадрат. Приметимо да није потребно да наведемо тип, већ га
+компилатор одређује из контекста (врши се дедукција типова, слично као
+што је био случај са <code class="docutils literal notranslate"><span class="pre">var</span></code>).</p>
+</section>
+<section id="linq">
+<h2>Библиотека Linq<a class="headerlink" href="#linq" title="Permalink to this heading">¶</a></h2>
+<p>Сада смо се веома приближили циљу. Као што можемо претпоставити,
+функционали <code class="docutils literal notranslate"><span class="pre">Izdvoj</span></code> и <code class="docutils literal notranslate"><span class="pre">Preslikaj</span></code> јесу део библиотеке Linq (која
+је стандардни део језика C#) и доступни су као методе <code class="docutils literal notranslate"><span class="pre">Where</span></code> и
+<code class="docutils literal notranslate"><span class="pre">Select</span></code>, док је <code class="docutils literal notranslate"><span class="pre">Saberi</span></code> такође доступна као метода <code class="docutils literal notranslate"><span class="pre">Sum</span></code> (ово
+су методе проширења над <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>). Тиме долазимо до финалне C#
+верзије нашег програма. Имена <code class="docutils literal notranslate"><span class="pre">Select</span></code> и <code class="docutils literal notranslate"><span class="pre">Where</span></code> долазе од везе
+библиотеке Linq и база података, међутим, том везом се сада нећемо
+бавити.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Cifre</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">n</span><span class="w"> </span><span class="p">/=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">Cifre</span><span class="p">(</span><span class="n">n</span><span class="p">).</span><span class="n">Where</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">).</span><span class="n">Select</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">x</span><span class="p">).</span><span class="n">Sum</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ZbirKvadrataNeparnihCifara</span><span class="p">(</span><span class="n">n</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Иако није написан у функционалном програмском језику, овај програм је
+написан у функционалном програмском стилу. Велики број карактеристика
+функционалних језика је уграђен у савремене програмске језике какав су
+и C#, Python, па у некој мери и C++ и Java (у овом примеру смо
+користили лењост, функције вишег реда, анонимне функције). Савремени
+трендови у свету програмирања управо су на тој линији – коришћење
+функционалног приступа у класичним програмским језицима. Ипак, постоје
+и класични, чисти функционални програмски језици и у наставку ћемо
+упознати једног типичног представника.</p>
+</section>
+<section id="haskell">
+<h2>Решење у језику Haskell<a class="headerlink" href="#haskell" title="Permalink to this heading">¶</a></h2>
+<p>Размотримо сада претходни пример у програмском језику који се назива
+Haskell.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">cifre</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="kt">Int</span><span class="p">]</span><span class="w"></span>
+<span class="nf">cifre</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kt">[]</span><span class="w"></span>
+<span class="nf">cifre</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">`</span><span class="n">mod</span><span class="p">`</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="kt">:</span><span class="w"> </span><span class="n">cifre</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">`</span><span class="n">div</span><span class="p">`</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+
+<span class="nf">zbirKvadrataNeparnihCifara</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Int</span><span class="w"></span>
+<span class="nf">zbirKvadrataNeparnihCifara</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">=</span><span class="w"></span>
+<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="p">(</span><span class="n">map</span><span class="w"> </span><span class="p">(</span><span class="nf">\</span><span class="n">x</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">filter</span><span class="w"> </span><span class="p">(</span><span class="nf">\</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">`</span><span class="n">mod</span><span class="p">`</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">cifre</span><span class="w"> </span><span class="n">n</span><span class="p">)))</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Примећујемо да је осим синтаксичких разлика, претходни програм у свом
+духу прилично сличан програму који смо написали у језику C#.</p>
+<section id="id6">
+<h3>Рекурзивне дефиниције<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<p>Прво је дефинисана функција која на основу броја одређује листу
+његових цифара. Примећујете, наравно, коришћена је рекурзија о којој
+смо већ пуно говорили у другом и трећем разреду (касније ћемо
+образложити разлоге због којих функционални језици обично не
+подржавају итерацију). За број 0 резултат је празна листа означена са
+<code class="docutils literal notranslate"><span class="pre">[]</span></code> (ово нам служи као излаз из рекурзије, а коректно је јер је у
+тексту задатка претпостављено да је број увек позитиван). За бројеве
+различите од нула, то је листа која се добије тако што се остатак при
+дељењу са 10 дода на почетак листе која се добије када се одреди листа
+цифара целобројног количника броја подељеног са 10. Додавање
+појединачног броја на почетак листе остварено је помоћу оператора
+<code class="docutils literal notranslate"><span class="pre">:</span></code> (на пример, <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">:</span> <span class="pre">[3,</span> <span class="pre">2,</span> <span class="pre">4]</span></code> даје листу <code class="docutils literal notranslate"><span class="pre">[5,</span> <span class="pre">3,</span> <span class="pre">2,</span> <span class="pre">4]</span></code>).
+Операторе <code class="docutils literal notranslate"><span class="pre">mod</span></code> и <code class="docutils literal notranslate"><span class="pre">div</span></code> смо писали инфиксно и да бисмо могли да их
+користимо инфиксно морали смо да их наведемо у оквиру ових необичних
+наводника (<code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">12</span> <span class="pre">5</span></code> је исто што и <code class="docutils literal notranslate"><span class="pre">12</span> <span class="pre">`mod`</span> <span class="pre">5</span></code> и
+представља остатак при дељењу броја 12 бројем 5 и вредност му је
+2). Примећујете да се позиви функција пишу без заграда (уместо
+<code class="docutils literal notranslate"><span class="pre">cifre(n)</span></code> пишемо <code class="docutils literal notranslate"><span class="pre">cifre</span> <span class="pre">n</span></code>, уместо <code class="docutils literal notranslate"><span class="pre">mod(12,</span> <span class="pre">5)</span></code> пишемо <code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">12</span>
+<span class="pre">5</span></code>). Ово ће вас у почетку сигурно прилично збуњивати, али када се
+навикнете, може вам се десити да увидите предности оваквог записа и да
+се можда чак и запитате зашто математичари не усвоје овакву
+нотацију. Више детаља о синтакси ћемо, наравно, дати касније.</p>
+</section>
+<section id="id7">
+<h3>Поклапање шаблона<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
+<p>Приметимо да смо дали дефиниције две функције (<code class="docutils literal notranslate"><span class="pre">cifre</span></code> и
+<code class="docutils literal notranslate"><span class="pre">zbirNeparnihCifaraBroja</span></code>) и обе су функције дефинисане помоћу
+математичких једнакости. Веза функционалног програмирања и математике
+је веома дубока и о њој ћемо интензивно причати у наставку курса. У
+првом случају је примењена техника која се зове поклапање шаблона
+(енгл. pattern matching). Наиме, приликом израчунавања функције
+<code class="docutils literal notranslate"><span class="pre">cifre</span></code>, редом се проверавају наведене једнакости и ако се аргумент
+може уклопити у шаблон дат првом левом страном (у овом случају то је
+<code class="docutils literal notranslate"><span class="pre">cifre</span> <span class="pre">0</span></code>), примењиваће се та дефиниција, а ако се не може уклопити,
+онда ће се прећи на другу (зато се друга једнакост односи само на
+случај када је параметар различит од нуле, без потребе да се то
+експлицитно нагласи). Уместо овога могли смо користити гранање (што би
+више одговарало рекурзивној дефиницији у језику C#).</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">cifre</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="kt">[]</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">`</span><span class="n">mod</span><span class="p">`</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="kt">:</span><span class="w"> </span><span class="n">cifre</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">`</span><span class="n">div</span><span class="p">`</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Оператор if-then-else прави услови израз и одговара оператору <code class="docutils literal notranslate"><span class="pre">?:</span></code> у
+језику C# (а не наредби if-else). Сагласићете се да је решење са
+уклапањем шаблона је обично елегантније.</p>
+</section>
+<section id="id8">
+<h3>Лењост<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h3>
+<p>У C# решењу истакли смо разлоге зашто нам је веома битно да функција
+не враћа целу листу одједном, већ да резултат даје у облику лењог
+тока. Haskell је језик који је по својој дефиницији лењ и код њега ће
+се управо ствари одвијати онако како смо у језику C# моделовали помоћу
+IEnumerable и yield return. Дакле, не морамо да бринемо да ће се
+компоновањем функција које раде над листама добити неефикасни
+програми.</p>
+</section>
+<section id="map-filter">
+<h3>Функционали map и filter и ламбда изрази<a class="headerlink" href="#map-filter" title="Permalink to this heading">¶</a></h3>
+<p>Функционал <code class="docutils literal notranslate"><span class="pre">map</span></code> одговара нашем <code class="docutils literal notranslate"><span class="pre">Preslikaj</span></code>, тј. Linq-овом
+<code class="docutils literal notranslate"><span class="pre">Select</span></code>, док filter одговара нашем <code class="docutils literal notranslate"><span class="pre">Izdvoj</span></code>, тј. Linq-овом
+<code class="docutils literal notranslate"><span class="pre">Where</span></code>. Ламбда изрази веома личе на оне у језику C#, једино што
+морају да почну карактером <code class="docutils literal notranslate"><span class="pre">\\</span></code> (који одговара грчком слову ламбда
+λ, додуше са једном поломљеном ногом) и што се уместо <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> користи
+<code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>. Теорију иза ламбда-израза као механизма за опис израчунавања
+дефинисао је Алонзо Черч још 1930-их година и она и данас представља
+теоријску основу функционалних програмских језика. Њоме ћемо се више
+бавити касније.</p>
+</section>
+<section id="id9">
+<h3>Компрехенсија<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
+<p>Ова два функционала су толико честа да су имплицитно присутна у
+математичкој нотацији. Размотримо следеће решење истог задатка.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">zbirKvadrataNeparnihCifara</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Int</span><span class="w"></span>
+<span class="nf">zbirKvadrataNeparnihCifara</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">=</span><span class="w"></span>
+<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="p">[</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">&lt;-</span><span class="w"> </span><span class="n">cifre</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">`</span><span class="n">mod</span><span class="p">`</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Приметите колико се овде Haskell приближио традицоналној математици. У
+овом решењу користили смо тзв. компрехенсију листа која одговара
+скуповној компрехенсији из математике (довољно је замислити да се
+уместо угластих користе витичасте заграде, а да се уместо симбола
+<code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> користи <code class="docutils literal notranslate"><span class="pre">∈</span></code>). Дакле, <code class="docutils literal notranslate"><span class="pre">map</span> <span class="pre">f</span> <span class="pre">l</span></code> можемо обележити са <code class="docutils literal notranslate"><span class="pre">[f</span> <span class="pre">x</span> <span class="pre">|</span> <span class="pre">x</span> <span class="pre">&lt;-</span> <span class="pre">l]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">filter</span> <span class="pre">P</span> <span class="pre">l</span></code> можемо обележити са <code class="docutils literal notranslate"><span class="pre">[x</span> <span class="pre">|</span> <span class="pre">x</span> <span class="pre">&lt;-</span> <span class="pre">l,</span> <span class="pre">P</span> <span class="pre">x]</span></code>,
+док <code class="docutils literal notranslate"><span class="pre">[f</span> <span class="pre">x</span> <span class="pre">|</span> <span class="pre">x</span> <span class="pre">&lt;-</span> <span class="pre">l,</span> <span class="pre">P</span> <span class="pre">x]</span></code> означава композицију функционала <code class="docutils literal notranslate"><span class="pre">map</span></code> и
+<code class="docutils literal notranslate"><span class="pre">filter</span></code> тј. <code class="docutils literal notranslate"><span class="pre">map</span> <span class="pre">f</span> <span class="pre">(filter</span> <span class="pre">P</span> <span class="pre">l)</span></code>.</p>
+</section>
+<section id="id10">
+<h3>Анотације типова<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h3>
+<p>Линије <code class="docutils literal notranslate"><span class="pre">cifre</span> <span class="pre">::</span> <span class="pre">Int</span> <span class="pre">-&gt;</span> <span class="pre">[Int]</span></code> и <code class="docutils literal notranslate"><span class="pre">zbirKvadrataNeparnihCifara</span> <span class="pre">::</span> <span class="pre">Int</span> <span class="pre">-&gt;</span> <span class="pre">Int</span></code>
+одговарају декларацијама функција. Прва, на пример, каже да је cifre
+функција која прима <code class="docutils literal notranslate"><span class="pre">Int</span></code> а враћа листу података типа <code class="docutils literal notranslate"><span class="pre">Int</span></code>. Занимљиво,
+оне су потпуно опционе. Чак и да их не наведемо, језик Haskell има
+механизам дедукције типова и он ће сам закључити ког типа су ове
+функције (могуће је да чак закључи и општије типове него ове које смо
+навели, јер се, на пример, збир може примењивати на листу било којих
+нумеричких елемената, а не само елемената типа <code class="docutils literal notranslate"><span class="pre">Int</span></code>).</p>
+</section>
+<section id="id11">
+<h3>Композиција<a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h3>
+<p>Урадимо сада још један корак карактеристичан функционалном стилу
+програмирања. У само старту смо кренули од тога да наш програм
+декомпонујемо тј. да његово решење предствљамо га као композицију
+мањих елемената. Композионалност лежи у сржи програмирања, и
+функционални језици веома инсистирају на њој. Појам композиције две
+функције <span class="math notranslate nohighlight">\(f\)</span> и <span class="math notranslate nohighlight">\(g\)</span> је у математици веома јасно и прецизно
+дефинисан. Ако је <span class="math notranslate nohighlight">\(g\)</span> функција која слика <span class="math notranslate nohighlight">\(A\)</span> у <span class="math notranslate nohighlight">\(B\)</span>,
+и ако је <span class="math notranslate nohighlight">\(f\)</span> функција која слика <span class="math notranslate nohighlight">\(B\)</span> у <span class="math notranslate nohighlight">\(C\)</span>, онда је
+<span class="math notranslate nohighlight">\(f\circ g\)</span> функција која слика <span class="math notranslate nohighlight">\(A\)</span> у <span class="math notranslate nohighlight">\(C\)</span> и
+дефинисана је помоћу <span class="math notranslate nohighlight">\((f\circ g)(x) = f(g(x))\)</span>. У математици је
+сасвим природно дефинисати функцију помоћу <span class="math notranslate nohighlight">\(h=f\circ g\)</span>, без
+помињања вредности у појединачним тачкама (за ово се каже да је
+нотација без тачака тј. point-free style). Језик Haskell подржава
+директно оператор композиције функција (означен је са тачкицом <code class="docutils literal notranslate"><span class="pre">.</span></code>)
+и у њему је такође могуће користити нотацију без тачака. Размотримо
+следећу дефиницију нашег текућег примера.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">zbirKvadrataNeparnihCifara</span><span class="w"> </span><span class="ow">=</span><span class="w"></span>
+<span class="w">     </span><span class="n">sum</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="p">(</span><span class="nf">\</span><span class="n">x</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="p">(</span><span class="nf">\</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">`</span><span class="n">mod</span><span class="p">`</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="n">cifre</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="id12">
+<h3>Каријеве функције<a class="headerlink" href="#id12" title="Permalink to this heading">¶</a></h3>
+<p>Нашу функцију смо сада експлицитно изразили као композицију четири
+функције. Оне се примењују редом, сдесна на лево. Прва је функција
+<code class="docutils literal notranslate"><span class="pre">cifre</span></code> која узима број и враћа листу његових цифара. Међутим, код
+друге треба мало да застанемо и да се замислимо. Функција <code class="docutils literal notranslate"><span class="pre">filter</span></code>
+је функција којој можемо да задамо два аргумента – услов провере и
+листу и да добијемо листу оних елемената који задовољавају тај дати
+услов провере. Дакле, гледано математички, то би била функција која
+прима уређени пар аргумената и враћа резултат. Међутим, у језику
+Haskell, ствари стоје другачије. Приметите да смо у претходном
+програму функцији <code class="docutils literal notranslate"><span class="pre">filter</span></code> дали само један аргумент (услов провере)
+и да смо тиме добили функцију једне променљиве (функцију која прима
+листу и враћа листу њених непарних елемената, коју смо онда убацили у
+наш ланац композиције. Оваква парцијална примена функција је могућа и
+открива да у Haskell-у заправо не постоје функције више аргумената,
+већ су оне представљене као функције које сликају свој први аргумент у
+нове функције. Ако погледамо тип функције <code class="docutils literal notranslate"><span class="pre">filter</span></code> можемо видети да
+је он <code class="docutils literal notranslate"><span class="pre">filter</span> <span class="pre">::</span> <span class="pre">(a</span> <span class="pre">-&gt;</span> <span class="pre">bool)</span> <span class="pre">-&gt;</span> <span class="pre">[a]</span> <span class="pre">-&gt;</span> <span class="pre">[a]</span></code>.  Дакле, он је моделован
+као функција која прима функцију која слика елементе неког типа a у
+bool (која заправо представља унарни предикат над типом <code class="docutils literal notranslate"><span class="pre">a</span></code>) и враћа
+нову функцију која онда прима листу елемената типа <code class="docutils literal notranslate"><span class="pre">a</span></code> и враћа нову
+листу елемената типа <code class="docutils literal notranslate"><span class="pre">a</span></code>. То нам је јако добро дошло у претходном
+примеру и видећемо и у наставку да ће нам оваква парцијална примена
+функција бити јако корисна. Овај начин предствљања функција више
+променљивих (као функције једне променљиве које враћају функције) се
+назива <strong>Каријевање</strong> (енгл. currying) у част чувеног логичара Хаскела
+Карија који је ово користио (уосталом, и језик Haskell носи његово
+име).</p>
+</section>
+<section id="id13">
+<h3>Везе са математиком<a class="headerlink" href="#id13" title="Permalink to this heading">¶</a></h3>
+<p>У програмима у императивним програмским језицима кључни појам је стање
+програма (одређено вредностима променљивих) и извршавање функција
+зависи од стања и може да промени стање. Зато функција позвана са
+истим аргументима у различитим тренуцима током извршавања програма
+може да врати различити резултат. Ово условљава да је редослед
+израчунавања вредности функција веома битан током извршавања програма
+и не може се тек тако мењати (што, на пример, отежава могућност
+паралелизације програма, и такође чини да резоновање о функцијама није
+могуће вршити независно од контекста у којем се оне
+позивају). Функције које се разматрају у чистом функционалном
+фунционалном програмирању у потпуности одговарају математичким
+функцијама (увек за исте улазе дају исте излазе – каже се да су
+референцијално транспаренте и да немају пропратне ефекте) и о њима се
+може формално резоновати применом класичних математичких техника, што
+је веома значајно у анализи кода и доказивању његове коректности. О
+свему овоме ће бити много више речи у наставку.</p>
+</section>
+<section id="id14">
+<h3>Декларативност<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h3>
+<p>На крају, када упоредимо ово решење са оним полазним, можемо приметити
+да смо након дивергенције у програм са много више линија кода заправо
+дошли до програма који је много краћи, али и разумљивији од полазног
+C# решења (ако вам се тако не чини, верујте да је то само због тога
+што сте на императивни начин размишљања навикли и да ћете током овог
+полугодишта, сигуран сам, променити мишљење).  Нагласимо још једну
+важну особину овог решења. Приметимо блискост овог решења са самим
+текстом задатка (ако читамо редом, примеђујемо речи сума, квадрата,
+непарних, цифара броја и свака од тих речи редом одговара једној од
+наших функција у ланцу композиције). У нашем програму нисмо морали да
+објашњавамо ни како се сумира, ни како се издвајају цифре, ни како се
+пресликавају – захваљујући својој богатој библиотеци, језик је то сам
+урадио уместо нас. Дакле, програм је био много ближи опису самог
+проблема, него опису решења, док се полазно C# решење морало много
+приближити самом поступку израчунавања тј. директном опису сваког
+корака у решавању овог проблема. Зато се за функционалне језике често
+каже да су много више декларативни него императивни језици (много више
+описујемо сам проблем, него процедуру његовог решавања). Наравно, то
+не ради увек (код одређивања цифара у запису броја рекурзивним
+дефиницијама смо директно описали процедуру и тај аспект овог програма
+није декларативан, већ процедуралан).</p>
+</section>
+<section id="id15">
+<h3>Паралелизација<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h3>
+<p>На крају, рецимо и да изражавање програма у функционалном облику често
+може да допринесе паралелизацији. На пример и filter и map су такве
+функције да анализирају независно један по један елемент листе и веома
+једноставно се могу паралелизовати (нпр. један процесор обрађује први
+део дугачке листе, а други процесор други део). Захваљујући овоме,
+функционални стил програмирања је веома популаран у оквиру развоја
+паралелних и дистрибуираних система.</p>
+</section>
+</section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

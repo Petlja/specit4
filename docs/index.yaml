@@ -1,0 +1,105 @@
+courseId: courseID
+description:
+  externalLinks:
+  - href: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+    text: Sphinx Docs
+  - href: https://github.com/Petlja/PetljaDoc/blob/master/README.md
+    text: Petljadoc
+  - href: https://github.com/RunestoneInteractive/overview
+    text: Runestone Interactive
+  longDescription: '<div class="document">
+
+    <p>This is an example of a long description...</p>
+
+    </div>
+
+    '
+  requirements:
+  - Petljadoc
+  - Runestone
+  - Sphinx
+  shortDescription: Shrot description
+  toc:
+  - Intro to Petljadoc INDEX.yaml
+  willLearn:
+  - Preview of Petljadoc course
+lang: en
+lessons:
+- activities:
+  - description: ''
+    file: 01_o_paradigmama.html
+    guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
+    normalized_title: О програмским језицима и парадигмама
+    src: 01_o_paradigmama.rst
+    title: О програмским језицима и парадигмама
+    type: reading
+  - description: ''
+    file: 02_imperativna.html
+    guid: ea60c522-83a4-4335-8ac2-7725a2e8788e
+    normalized_title: Императивна парадигма
+    src: 02_imperativna.rst
+    title: Императивна парадигма
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 01 paradigme
+  guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
+  normalized_title: О програмским парадигмама
+  title: О програмским парадигмама
+- activities:
+  - description: ''
+    file: 01_funkcionalna.html
+    guid: 78f21d5d-3e0b-40e9-a00d-62c8821b6362
+    normalized_title: О функционалној парадигми
+    src: 01_funkcionalna.rst
+    title: О функционалној парадигми
+    type: reading
+  - description: ''
+    file: 02_haskell.html
+    guid: cede1110-aa21-4f7a-8d94-defc41c40001
+    normalized_title: Haskell - изрази и функције
+    src: 02_haskell.rst
+    title: Haskell - изрази и функције
+    type: reading
+  - description: ''
+    file: 02b_haskell_liste.html
+    guid: 75eba30f-7fac-4106-8a91-f2ce1d19c841
+    normalized_title: Haskell - листе
+    src: 02b_haskell_liste.rst
+    title: Haskell - листе
+    type: reading
+  - description: ''
+    file: 02c_haskell_tipovi.html
+    guid: 0feba62b-488a-491c-8711-6d59476a7cf5
+    normalized_title: Haskell - алгебарски типови података
+    src: 02c_haskell_tipovi.rst
+    title: Haskell - алгебарски типови података
+    type: reading
+  - description: ''
+    file: 02z_haskell_vezba.html
+    guid: 8050e6f9-add2-4981-86b5-39abb08599b1
+    normalized_title: Haskell - задаци за вежбу
+    src: 02z_haskell_vezba.rst
+    title: Haskell - задаци за вежбу
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 02 funkcionalna
+  guid: 93e57ce6-7b0f-4c92-adcd-813ce430a492
+  normalized_title: Функционална парадигма
+  title: Функционална парадигма
+- activities:
+  - description: ''
+    file: 01_logicka.html
+    guid: f268c675-d033-4168-a02a-df1883684424
+    normalized_title: О логичкој парадигми
+    src: 01_logicka.rst
+    title: О логичкој парадигми
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 03 logicka
+  guid: e5e07b93-a678-4972-89a8-a6372484c467
+  normalized_title: Логичка парадигма
+  title: Логичка парадигма
+title: Petljadoc Course
