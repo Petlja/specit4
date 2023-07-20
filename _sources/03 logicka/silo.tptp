@@ -1,0 +1,6 @@
+      fof(premisa1, axiom, ![X]: (grk(X) => covek(X))).
+      fof(premisa2, axiom, ![X]: (covek(X) => smrtan(X))).
+      fof(dodatna_premisa, axiom, ?[X]: grk(X)).
+      fof(zakljucak, conjecture, ?[X]: (grk(X) & smrtan(X))).
+
+

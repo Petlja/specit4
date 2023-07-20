@@ -1,0 +1,11 @@
+16-07-2023 [21:08:26] Logfile opened
+16-07-2023 [21:08:26] Executable : vampire-serial
+16-07-2023 [21:08:26] Host name  : filip-HP-250-G7-Notebook-PC:
+16-07-2023 [21:08:26] Directory  : /home/filip/Dropbox/paradigme/_sources/03 logicka
+16-07-2023 [21:08:26] Process ID : 34545
+16-07-2023 [21:08:26] Version    : 5.0.0
+16-07-2023 [21:08:26] Githash    : 333e1e78d8528477ae6e4d24b0238c8a0b16f9d6
+16-07-2023 [21:08:26] Opening main input file "input".
+16-07-2023 [21:08:26] Error opening input file "input" : File does not exist or cannot be opened!
+16-07-2023 [21:08:26] If file exists then check file permissions to ensure it is readable by the user.
+16-07-2023 [21:08:26] Fatal error: Aborting program.

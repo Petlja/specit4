@@ -1,0 +1,3 @@
+fof(ax1, axiom, ![X]: (grk(X) => covek(X))).
+fof(ax2, axiom, ![X]: (covek(X) => smrtan(X))).
+fof(cnj, conjecture, ![X]: (grk(X) => smrtan(X))).

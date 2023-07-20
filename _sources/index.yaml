@@ -79,5 +79,17 @@ lessons:
         file: 01_logicka.rst
         description: #Optional
         guid: f268c675-d033-4168-a02a-df1883684424
+      - type: reading
+        title: Исказна логика
+        file: 01_iskazna_logika.rst
+        description: #Optional
+        guid: 7ae1818a-f9d6-4a19-abe8-bdb44d3c17be
+      - type: reading
+        title: Предикатска логика
+        file: 02_predikatska_logika.rst
+        description: #Optional
+        guid: b7c7481e-2ac9-489b-872c-b645d9a4a2a8
+
+
 
 
