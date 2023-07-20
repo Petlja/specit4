@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Логичка парадигма</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Shrot description</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Логичка парадигма<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Основни појам логике је <strong>исказ</strong>. То је тврдња која може бити тачна
+или нетачна. На пример, <em>„Београд је главни град Републике Србије”</em> је
+тачан исказ, а <em>„7 је паран број”</em> је нетачан исказ.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>У реалности постоје и тврдње које могу бити истините у некој мери,
+попут исказа <em>„напољу је данас топло”</em> који зависи од субјективног
+осећања, контекста (доба године) и слично. Ми се нећемо бавити
+таквом оценом већ ћемо разматрати само класичну логику у којој је
+сваки исказ или потпуно тачан или потпуно нетачан.</p>
+
+    </div></div>
+<p>Исказе повезујемо логичким везницима.</p>
+<p>На пример, исказ <em>„број 6 није прост”</em> је <strong>негација</strong> (<strong>логичко
+не</strong>) исказа <em>„број 6 је прост”</em>, пошто је други исказ нетачан, први
+исказ је тачан. Негацију исказа <span class="math notranslate nohighlight">\(p\)</span> означавамо са <span class="math notranslate nohighlight">\(\neg p\)</span>
+и њена истинитосна вредност је супротна од истинитосне вредности
+полазног исказа.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{|c||c|}
+\hline
+p &amp; \neg p \\
+\hline
+0 &amp; 1 \\
+1 &amp; 0 \\
+\hline
+\end{array}\end{split}\]</div>
+<p>Исказ <em>„7 је непаран прост број”</em> у себи крије <strong>конјункцију</strong>
+(<strong>логичко „и”</strong>) исказа „7 је непаран број” и „7 је прост број”. Сва
+три исказа су тачна. Конјункција исказа је тачна ако и само ако су
+тачна оба исказа.</p>
+<p>Конјункција исказа <span class="math notranslate nohighlight">\(p\)</span> и <span class="math notranslate nohighlight">\(q\)</span> обележава се са <span class="math notranslate nohighlight">\(p
+\wedge q\)</span>. Истинитосна вредност тог исказа у зависности од истинитосне
+вредности исказа <span class="math notranslate nohighlight">\(p\)</span> и истиитосне вредности исказа <span class="math notranslate nohighlight">\(q\)</span>
+одређена је следећом таблицом (0 означава да је исказ нетачан, а 1 да
+је тачан).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{|c|c||c|}
+\hline
+p &amp; q &amp; p \wedge q \\
+\hline
+0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+1 &amp; 1 &amp; 1 \\
+\hline
+\end{array}\end{split}\]</div>
+<p>Купац добија попуст ако је тачан исказ <em>„купац је премијум купац или
+му је рачун већи од 2000 динара”</em>. Тај исказ је <strong>дисјункција</strong>
+(<strong>логичко „или”</strong>) исказа „Купац је премијум купац” и исказа „рачун
+је већи од 2000 динара”. Дисјункција је тачна када је било који од та
+два исказа тачан. Могуће је да се деси и да су оба исказа тачна и
+њихова дисјункција ће бити тачна (ако премијум купац направи рачун
+већи од 1000 динара, исказ ће бити тачан и он ће добити попуст). Таква
+дисјункција се назива <strong>инклузивна дисјункција</strong>. У математици се
+подразумева да је дискункција инклузивна осим ако се другачије не
+нагласи.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{|c|c||c|}
+\hline
+p &amp; q &amp; p \vee q \\
+\hline
+0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 1 \\
+1 &amp; 1 &amp; 1 \\
+\hline
+\end{array}\end{split}\]</div>
+<p>Постоји и <strong>ексклузивна дисјункција</strong> која је тачна када је
+тачно један од два исказа тачна. На пример, <em>„ићи ћу у посластичарницу
+или ако имам пуно пара или ако сам пуно гладан”</em> може бити пример
+ексклузивне дисјункције која је нетачна ако су оба услова испуњена
+(јер неко може да се боји да ће се пуно угојити ако са пуно пара оде у
+посластичарницу). Екслузивност дисјункције обично у говорном језику
+наглашавамо коришћењем везника „или-или”.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{|c|c||c|}
+\hline
+p &amp; q &amp; p \underline{\vee} q \\
+\hline
+0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 1 \\
+1 &amp; 1 &amp; 0 \\
+\hline
+\end{array}\end{split}\]</div>
+<p>Размотримо исказ „ако будеш учио, добићеш добру оцену”. Ово је пример
+<strong>импликације</strong> (<strong>ако-онда</strong>). Размислимо када је овај исказ тачан
+тј. када наставник говори истину, а када лаже.</p>
+<ul class="simple">
+<li><p>Ако је ученик учио и добио добру оцену, наставник је рекао
+истину.</p></li>
+<li><p>Ако је ученик учио, а наставник му није дао добру оцену, јасно је да
+је наставник слагао.</p></li>
+<li><p>Ако ученик није учио и није добио добру оцену, поново је јасно да
+наставник није ништа слагао.</p></li>
+<li><p>Донекле збуњујућ случај је ако ученик није учио, а наставник му ипак
+да добру оцену. Ни у овом случају не можемо рећи да је наставник
+лагао (можемо рећи да поклања оцене). Наиме, наставник у својој
+реченици није рекао ништа о томе шта ће се десити ако ученик не буде
+учио, па какву год оцену да му да, наставник није слагао ученика.</p></li>
+</ul>
+<p>Дакле импликација је нетачна једино када је претпоставка испуњена а
+закључак није (ученик јесте учио, а наставник му није дао добру
+оцену). Импликација је тачна у свим осталим случајевима. Ако
+претпоставка није испуњена, импликација је тачна (ако ученик не учи,
+наставник не може да испадне лажов). Такође, ако је закључак тачан,
+импликација је тачна (ако ученику да добру оцену наставник не може да
+испадне лажов).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{|c|c||c|}
+\hline
+p &amp; q &amp; p \Rightarrow q \\
+\hline
+0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 0 \\
+1 &amp; 1 &amp; 1 \\
+\hline
+\end{array}\end{split}\]</div>
+<p>Честа забуна је да људи мешају импликацију и <strong>еквиваленцију</strong>
+тј. исказ „ако будеш учио, добићеш добру оцену” схватају као исказ
+„добићеш добру цену ако и само ако будеш учио”, што између осталог
+значи да ако ученик не буде учио он сигурно неће добити добру
+оцену. Еквиваленција је тачна једино када два исказа имају исту
+истинитосну вредност (или су оба нетачна или су оба тачна).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{|c|c||c|}
+\hline
+p &amp; q &amp; p \Leftrightarrow q \\
+\hline
+0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+1 &amp; 1 &amp; 1 \\
+\hline
+\end{array}\end{split}\]</div>
+<p>Применом ових логичких везника кренувши од елементарних исказа и
+евентуално логичких константи <span class="math notranslate nohighlight">\(\top\)</span> и <span class="math notranslate nohighlight">\(\bot\)</span> градимо
+сложене исказе тј.  <strong>исказне формуле</strong>.</p>
+<p>Неки сложени искази су тачни без обзира на истинитосну вредност
+полазних исказа од којих су изграђени. Такве формуле се називају
+<strong>таутологије</strong>. На пример, формула <span class="math notranslate nohighlight">\(\neg (p \wedge q)
+\Leftrightarrow \neg p \vee \neg q\)</span> је тачна без обзира на то да ли су
+<span class="math notranslate nohighlight">\(p\)</span> и <span class="math notranslate nohighlight">\(q\)</span> тачни.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{|c|c||c|}
+\hline
+p &amp; q &amp; \neg (p \wedge q) \Leftrightarrow \neg p \vee \neg q\\
+\hline
+0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 1 \\
+1 &amp; 1 &amp; 1 \\
+\hline
+\end{array}\end{split}\]</div>
+<p>Доделу истинитосних вредности променљивих називамо <strong>валуација</strong> (на
+пример, другом реду у претходној табели одговара валуација
+<span class="math notranslate nohighlight">\(p\mapsto 0, q\mapsto 1\)</span>). Таутологије су формуле које су тачне
+у свим валуацијама. Негације таутологија су <strong>незадовољиве</strong>
+тј. нетачне у свим валуацијама. Формуле које су тачне бар у једној
+валуацији називамо <strong>задовољиве формуле</strong> а формуле које нису
+таутлогије, тј. које су нетачне бар у једној валуацији називамо
+<strong>порециве формуле</strong>.</p>
+<p>Испитивање коректности закључивања се може свести на испитивање
+таутологичности неких формула. На пример, претпоставимо да знамо да су
+искази <em>Ако је Цеца победила онда је Марија била друга или је Сандра
+била трећа””</em> и <em>„Сандра није била рећа”</em> тачни. Да ли је исправно из
+њих закључити да је исказ „Ако Марија није била друга, онда Цеца није
+победила”? Желимо да проверимо да ли је трећи исказ <strong>логичка
+последица</strong> прва два тј. да ли је трећи исказ тачан у свим валуацијама
+у којима су прва два тачна. Да би се то проверило довољно је проверити
+да је формула <span class="math notranslate nohighlight">\(I_1 \wedge I_2 \Rightarrow I_3\)</span> таутологија. Ако
+са <span class="math notranslate nohighlight">\(p\)</span> означимо исказ <em>„Цеца је победила”</em>, са <span class="math notranslate nohighlight">\(q\)</span> исказ
+„Марија је била друга” и са <span class="math notranslate nohighlight">\(r\)</span> исказ <em>„Сандра је била трећа”</em>,
+добијамо формулу:</p>
+<div class="math notranslate nohighlight">
+\[(p \Rightarrow q \vee r) \wedge (\neg r) \Rightarrow (\neg q \Rightarrow \neg p)\]</div>
+<p>Ова формула јесте таутологија.</p>
+<p>Испитивање таутологичности (али и задовољивости, незадовољивости и
+порецивости) формула може се извршити испитивањем свих валуација
+тј. прављењем истинитосне таблице. Проблем је то што је тај метод
+веома неефикасан. Наиме, за <span class="math notranslate nohighlight">\(n\)</span> исказних променљивих таблица има
+<span class="math notranslate nohighlight">\(2^n\)</span> врста, па већ формуле од педесетак променљивих није могуће
+обрадити на овакав начин. Ипак, постоји веома ефикасан софтвер који
+може да испита задовољивост исказне формуле. Такви програми се
+називају <strong>SAT решавачи</strong> (енгл. SAT solver). Иако они испитују само
+задовољивост формуле, могу се лако употребити да провере и
+таутологичност. Наиме, решавач треба да провери задовољивост негације
+формуле, па ако утврди да је негација незадовољива, полазна формула је
+таутологија. Савремени SAT решавачи могу да провере неке формуле са
+стотинама хиљада променљивих. Међутим, да би се могли користити
+формула мора бити припремљена на одговарајући начин. Потребно је
+превести формулу у тзв. <strong>конјунктивну нормалну форму (КНФ)</strong>
+тј. представити је у облику конјункције клауза, где је свака клауза
+дисјункција литерала, а литерал је исказно слово или негација исказног
+слова.</p>
+<p>КНФ облик негације формуле из претходног примера је:</p>
+<div class="math notranslate nohighlight">
+\[(\neg p \vee q \vee r) \wedge \neg r \wedge \neg q \wedge p\]</div>
+<p>Заиста, негација претходне формуле еквивалентна је формули</p>
+<div class="math notranslate nohighlight">
+\[(p \Rightarrow q \vee r) \wedge \neg r \wedge \neg (\neg q \Rightarrow \neg p)\]</div>
+<p>Овде смо употребили чињеницу да су <span class="math notranslate nohighlight">\(\neg (A \Rightarrow B)\)</span> и
+<span class="math notranslate nohighlight">\(A \wedge \neg B\)</span> еквивалентне што се лако може утврдити
+провером таутологичности формуле <span class="math notranslate nohighlight">\(\neg (A \Rightarrow B)
+\Leftrightarrow A \wedge \neg B\)</span>. На основу истог правила претходна
+формула се може свести на:</p>
+<div class="math notranslate nohighlight">
+\[(p \Rightarrow q \vee r) \wedge \neg r \wedge (\neg q \wedge \neg \neg p)\]</div>
+<p>Сада можемо употребити чињеницу да су <span class="math notranslate nohighlight">\(A \Rightarrow B\)</span> и
+<span class="math notranslate nohighlight">\(\neg A \vee B\)</span> еквивалентне, што се може лако утврдити
+испитивањем таутологичности формуле <span class="math notranslate nohighlight">\((A \Rightarrow B) \Leftrightarrow (\neg A \vee B)\)</span> и добити:</p>
+<div class="math notranslate nohighlight">
+\[(\neg p \vee (q \vee r)) \wedge \neg r \wedge (\neg q \wedge \neg \neg p)\]</div>
+<p>На крају, применом чињенице да су <span class="math notranslate nohighlight">\(\neg \neg A\)</span> и <span class="math notranslate nohighlight">\(A\)</span>
+еквивалентне и применом закона асоцијативности за конјункцију и
+дисјунцкију (који нам омогућавају да неке заграде изоставимо) добијамо
+КНФ облик:</p>
+<div class="math notranslate nohighlight">
+\[(\neg p \vee q \vee r) \wedge \neg r \wedge \neg q \wedge p\]</div>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
