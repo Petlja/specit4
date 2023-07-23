@@ -89,6 +89,12 @@ lessons:
         file: 02_predikatska_logika.rst
         description: #Optional
         guid: b7c7481e-2ac9-489b-872c-b645d9a4a2a8
+      - type: reading
+        title: PROLOG
+        file: 03_prolog.rst
+        description: #Optional
+        guid: f94ab664-726c-4b43-b1f0-24f43ddf030f
+
 
 
 
