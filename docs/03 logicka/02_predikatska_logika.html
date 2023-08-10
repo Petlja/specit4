@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Предикатска логика</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Shrot description</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03_prolog><i class="fas fa-file-alt activity-icon"></i>PROLOG</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Предикатска логика<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>У претходном поглављу смо видели да се исказна логика може успешно
+примењивати у многим применама у којима је природно било моделовати
+проблем тако да се траже решења која задовољавају неке услове над
+коначним скупом променљивих које имају вредности или 0 или 1
+(променљиве могу бити или тачне или нетачне). На пример, код загонетке
+Судоку свако поље може бити променљива чија је вредност од 1 до 9,
+међутим, да бисмо дошли до исказног модела, увели смо нове променљиве
+које (по једну променљиву за свако поље и сваку вредност од 1 до 9) и
+те променљиве представљају појединачне исказе (који могу бити или
+тачни или нетачни). Ово има смисла када је скуп вредности коначан (и
+релативно мали) и када нисмо вршили никакве променљиве над бројевним
+вредностима. Исказна логика је сасвим природна за моделовање хардвера
+(где се природно ради са променљивима које имају само вредности 0
+или 1) и SAT решавачи се интензивно примењују у дизајну и верификацији
+хардвера.</p>
+<p>Друге примене (пре свега оне које нису над коначним доменима)
+захтевају богатије логике и другачије механизме закључивања.</p>
+<p>Исказна логика не разматра унутрашњу структуру исказа. Исказ се
+представља словом (исказном променљивом) и не анализира се како је он
+изграђен нити шта говори (само се анализурају могућности да буде тачан
+и да буде нетачан). Са друге стране, у предикатској логици разматрамо
+како се искази формирају. Сваки исказ говори о својству неког објекта
+или о вези између нека два или више објеката. На пример, исказ <em>„Број
+7 је прост”</em> говори да број 7 има својство <em>је прост број</em>, исказ
+<em>„Пера је Миленин отац”</em> говори о односу између Пере и Милене, док
+исказ <em>„Тачка А се налази између тачака B и C”</em> говори о односу између
+три тачке. Дакле, <span class="math notranslate nohighlight">\(\mathrm{prost}(x)\)</span>,
+<span class="math notranslate nohighlight">\(\mathrm{је\_otac\_od}(x, y)\)</span>, <span class="math notranslate nohighlight">\(\mathrm{između}(x, y, z)\)</span>
+означавају неке односе тј. <strong>релације</strong> између објеката. Релација
+обухвата неколико објеката (виделимо смо пример унарне, бинарне и
+тернарне релације) и исказ да су објекти у релацији може бити тачан
+или нетачан (број је или прост или није, неко је нечији отац или није,
+тачка је између неке две тачке или није). Дакле сваки исказ
+подразумева да се говори о некој релацији између објеката.</p>
+<p>Објекти могу бити конкретни објекти, који се означавају
+<strong>константама</strong>. У прва два примера објекти су били константе (на
+пример, 7 означава неки конкретан број, а Пера и Милена неке конкретне
+особе). У трећем примеру су уместо константи употребљене променљиве
+(нису у питању константе, јер није баш унапред јасно на које три тачке
+се односе <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> и <span class="math notranslate nohighlight">\(C\)</span>). Као што ћемо касније
+видети, да бисмо могли одредити истинитосну вредност таквих исказа,
+морамо знати вредности променљивих које се у њима јављају (док не
+знамо на које тачке се односе имена <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> и <span class="math notranslate nohighlight">\(C\)</span>
+не можемо знати да ли је исказ тачан).</p>
+<p>Искази могу говорити и објектима који су добијени од неких
+једоставнијих објеката применом неких <strong>функција</strong> или
+<strong>операција</strong>. На пример, <em>„Следбеник броја 6 је прост”</em>, <em>„Збир
+бројева 3 и 5 је паран”</em>, <em>„Перин отац је Миленин деда”</em>. У овим
+примерима <span class="math notranslate nohighlight">\(\mathrm{sledbenik}(x)\)</span>, <span class="math notranslate nohighlight">\(\mathrm{zbir}(x, y)\)</span>
+tj. <span class="math notranslate nohighlight">\(x + y\)</span> и <span class="math notranslate nohighlight">\(\mathrm{otac\_od}(x)\)</span> су функције које
+примају неке објекте и враћају неке друге објекте. На пример, функција
+следбеник прима број 6 и враћа број 7. Обратимо пажљу на разлику
+између функције <span class="math notranslate nohighlight">\(\mathrm{otac}\)</span> и релације
+<span class="math notranslate nohighlight">\(\mathrm{je\_otac\_od}\)</span>. Када смо рекли <em>„Перин отац”</em> применили
+смо функцију која прими особу „Пера” и врати особу (његовог оца).
+Када смо рекли <em>„Пера је Миленин отац”</em> применили смо релацију која
+прима две особе и враћа тачно ако и само ако је прва особа отац од
+друге.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Функције примају објекте и враћају објекте. Релације примају
+објекте, а враћају тачно или нетачно.</p>
+
+    </div></div>
+<p>Применом функција на константе, променљиве и резултате других функција
+добијамо изразе (кажемо <strong>термове</strong>). Сваки исказ (говорићемо и
+<strong>атомичка формула</strong>) се добија применом релације на неке термове,
+тј. тако што се крене од неких константи или променљивих, на њих се
+примењују функције (угнежђене на произвољан начин) и на крају се на
+добијене термове примени једна релација. Пошто је говорни језик
+непрецизан, у математици користимо прецизнији запис, који подразумева
+да смо се у старту договорили којим симболима означавамо константе,
+функције и релације. Да бисмо формално могли да запишемо неки исказ
+тј. атомичку формулу, потребно је да знамо <strong>језик</strong> (кажемо и
+<strong>сигнатуру</strong>) тј. списак симбола којима записујемо константе,
+функције и релације. Исказе које смо раније анализирали у математичком
+запису можемо представити следећим атомичким формулама (при чему смо
+језик уводили постепено).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{prost}(7)\\
+\mathrm{je\_otac\_od}(Pera, Milena)\\
+\mathrm{između}(A, B, C)\\
+\mathrm{prost}(\mathrm{sledbenik(6)})\\
+\mathrm{paran}(3 + 5)\\
+\mathrm{je\_deda\_od}(\mathrm{otac\_od}(Pera), Milena)\\\end{split}\]</div>
+<p>Када се применом функција и релација добију искази, они се даље
+комбинују истим везницима као и у исказној логици. На пример, <em>„Број 7
+је непаран прост број”</em> се записује формулом (не више атомичком)</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{neparan}(7)\wedge\mathrm{prost}(7)\]</div>
+<p>Ако се знају истинитосне вредности исказа који су повезани везником,
+може се одредити и вредност сложеног исказа (на потпуно исти начин као
+у исказној логици).</p>
+<p>Јако важан начин грађења сложених исказа у предикатској логици су
+<strong>квантификатори</strong>. Они су у веома тесној вези са променљивама које
+учествују у исказима. Основни квантификатори су егзистенцијални
+квантификатор <em>„постоји”</em> (<span class="math notranslate nohighlight">\(\exists\)</span>) и универзални
+квантификатор <em>„за сваки”</em> (<span class="math notranslate nohighlight">\(\forall\)</span>). На пример, исказ
+<span class="math notranslate nohighlight">\(x &lt; 1\)</span> садржи <strong>слободну</strong> променљиву <span class="math notranslate nohighlight">\(x\)</span> и не можемо
+знати његову истинитосну вредност док не знамо вредност те променљиве.
+Са друге стране, на овај исказ можемо применити неки квантификатор и
+тиме добити исказе <span class="math notranslate nohighlight">\((\exists x)(x &lt; 1)\)</span> и <span class="math notranslate nohighlight">\((\forall x)(x &lt;
+1)\)</span>.  Ови искази више не садрже слободне променљиве (променљива
+<span class="math notranslate nohighlight">\(x\)</span> је у оба случаја <strong>везана</strong> квантификатором) и њихова
+истинитосна вредност се може одредити без познавање конкретне
+вредности променљиве <span class="math notranslate nohighlight">\(x\)</span> (квантификатори кодирају знање о
+вредностима исказа <span class="math notranslate nohighlight">\(x &lt; 1\)</span> за разне вредности променљиве
+<span class="math notranslate nohighlight">\(x\)</span> – универзални квантификатор представља одређено уопштење
+конјункције, а егзистенцијални дисјункције). Ипак, да бисмо могли
+одредити истинитосне вредности ових исказа морамо још знати домен
+могућих вредности променљиве <span class="math notranslate nohighlight">\(x\)</span>. Свака квантификација
+подразумева да знамо које су све могуће вредности променљиве. Некада
+је то имплицитно јасно тј. подразумева се из контекста (на пример, ако
+је формула у делу књиге о природним бројевима, подразумеваћемо да
+<span class="math notranslate nohighlight">\(x\)</span> може бити било који природан број), а некада је потребно
+бити пажљив и експлицитно нагласити домен променљивих.</p>
+<ul class="simple">
+<li><p>Формула <span class="math notranslate nohighlight">\((\forall x)(x &lt; 1)\)</span> ће бити нетачна без обзира на
+домен, јер том домену мора припадати и константа 1, а не важи да је
+<span class="math notranslate nohighlight">\(1 &lt; 1\)</span> (наиме, уобичајено је да се подразумева да постоји
+јединствен домен у ком се налазе сви објекти, па и објекти који
+представљају константе који се јављају у формулама).</p></li>
+<li><p>Формула <span class="math notranslate nohighlight">\((\exists x)(x &lt; 1)\)</span> ће бити нетачна у домену
+природних бројева (јер се обично подразумева да је 1 најмањи
+природан број), а тачна у домену целих бројева (као и рационалних,
+реалних итд.).</p></li>
+</ul>
+<p>Дакле, да би се могла одредити истинитосна вредност произвољне
+формуле, потребно је да неколико услова буде испуњено.</p>
+<ul class="simple">
+<li><p>Ако формула садржи слободне променљиве (променљиве које нису под
+дејством квантификатора), њену истинитосну вредност је могуће
+одредити само у односу на неке конкретне вредности тих променњивих
+(кажемо вредност при некој валуацији променљивих). Такве формуле се
+обично избегавају и у запису математичких тврђења се користе
+искључиво формуле без слободних променљивих (тзв. <strong>реченице</strong>).
+Истинитосна вредност реченица не зависи од вредности тј. валуације
+променљивих. Некада се усваја договор да се користе само реченице,
+али да се неки квантификатори могу изоставити – када год је
+изостављен квантификатор, подразумева се универзална квантификација.
+Да не би долазило до забуне, ми ћемо увек експлицитно записивати све
+квантификаторе.</p></li>
+<li><p>Потребно је знати <strong>домен</strong> у ком се налазе објекти о којима формула
+говори. У том (јединственом) домену налазе се све константе и све
+променљиве узимају вредност из тог домена.</p></li>
+<li><p>Морамо знати шта означавају сви симболи који се јављају у запису
+формуле: симболи константи, симболи релација, симболи функција. Када
+се формула напише она је само синтаксички објекат и да бисмо
+одредили њену истинитосну вредност, потребно је да му некако
+доделимо и значење тј. семантику. Кажемо да је потребно да знамо
+<strong>интерпретацију</strong> сваког симбола. На пример, ако у формули пише
+<span class="math notranslate nohighlight">\((\forall x)(x \star 1 = x)\)</span>, морамо знати коју операцију
+означава симбол <span class="math notranslate nohighlight">\(\star\)</span> да бисмо разумели о чему формула
+говори и одредили њену истинитосну вредност (ако је у питању
+операција множења, формула је тачна (нпр. у домену реалних бројева),
+а ако је у питању уоперација сабирања, формула је нетачна). Неки
+симболи су стандардни и њихова интерпретација се подразумева (на
+пример, у претходном примеру смо подразумевали да симбол <span class="math notranslate nohighlight">\(&lt;\)</span>
+означава релацију поретка бројева). Ако то није случај, неопходно је
+прецизирати интерпретацију сваког симбола у запису форуле (симболе
+константи интерпретирамо објектима из домена, функцијске симболе
+функцијама у том домену, а релацијске симболе релацијама у том
+домену).</p></li>
+</ul>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Синтакса и семантика предикатске логике се могу и мало прецизније
+дефинисати.</p>
+<p>Дефинишимо прво <strong>синтаксу</strong>. Крећемо од <strong>језика</strong> <span class="math notranslate nohighlight">\(L\)</span> који
+се састоји од скупа функцијских и скупа релацијских симбола. Сваки
+симбол има своју арност. Функцијски симболи арности 0 се називају
+константе, а релацијски симболи арности 0 логичке константе (њих
+увек обележавамо са <span class="math notranslate nohighlight">\(\top\)</span> и <span class="math notranslate nohighlight">\(\bot\)</span>).</p>
+<p><strong>Термови</strong> се рекурзивно дефинишу следећом контекстно слободном
+граматиком:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+term &amp;\rightarrow&amp; x, \quad x\ \textrm{je promenljiva}\\
+term &amp;\rightarrow&amp; f(term_1, \ldots, term_n), \quad f\ \textrm{je funkcijski simbol arnosti}\ n
+\end{eqnarray*}\end{split}\]</div>
+<p><strong>Формуле</strong> се дефинишу на следећи начин:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+\mathit{formula} &amp;\rightarrow&amp; \top\\
+\mathit{formula} &amp;\rightarrow&amp; \bot\\
+\mathit{formula} &amp;\rightarrow&amp; P(term_1, \ldots, term_n), \quad P\ \textrm{je relacijski simbol arnosti}\ n\\
+\mathit{formula} &amp;\rightarrow&amp; \neg \mathit{formula}\\
+\mathit{formula} &amp;\rightarrow&amp; \mathit{formula} \wedge \mathit{formula}\\
+\mathit{formula} &amp;\rightarrow&amp; \mathit{formula} \vee \mathit{formula}\\
+\mathit{formula} &amp;\rightarrow&amp; \mathit{formula} \Rightarrow \mathit{formula}\\
+\mathit{formula} &amp;\rightarrow&amp; \mathit{formula} \Leftrightarrow \mathit{formula}\\
+\mathit{formula} &amp;\rightarrow&amp; (\forall x)(\mathit{formula})\\
+\mathit{formula} &amp;\rightarrow&amp; (\exists x)(\mathit{formula})\\
+\mathit{formula} &amp;\rightarrow&amp; (\mathit{formula})\\
+\end{eqnarray*}\end{split}\]</div>
+<p>Дефинишимо сада <strong>семантику</strong>. <strong>Структура</strong> језика <span class="math notranslate nohighlight">\(L\)</span>
+(скр. <span class="math notranslate nohighlight">\(L\)</span>-структура) је уређен пар <span class="math notranslate nohighlight">\((D, I)\)</span> где је
+<span class="math notranslate nohighlight">\(D\)</span> непразан скуп (домен), а <span class="math notranslate nohighlight">\(I\)</span> функција
+интерпретације која сваком <span class="math notranslate nohighlight">\(n\)</span>-арном функцијском симболу
+<span class="math notranslate nohighlight">\(f\)</span> језика <span class="math notranslate nohighlight">\(L\)</span> додељује функцију <span class="math notranslate nohighlight">\(f^d : D^n
+\rightarrow D\)</span>, а сваком <span class="math notranslate nohighlight">\(n\)</span>-арном релацијском симболу
+<span class="math notranslate nohighlight">\(f\)</span> језика <span class="math notranslate nohighlight">\(L\)</span> додељује релацију <span class="math notranslate nohighlight">\(P^d \subseteq
+D^n\)</span>. <strong>Валуација</strong> <span class="math notranslate nohighlight">\(v\)</span> пресликава променљиве у елементе
+домена <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<p>Тада се може дефинисати функција <span class="math notranslate nohighlight">\(T_{D, I, v}(t)\)</span> која
+израчунава <strong>вредност термова</strong> тј. сваки терм пресликава у
+елементе домена <span class="math notranslate nohighlight">\(D\)</span>. Дефиниција је рекурзивна у односу на
+структуру терма.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T_{D, I, v}(x) = v(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{D, I, v}(f(t_1, \ldots, t_n)) = f^d(T_{D, I, v}(t_1), \ldots, T_{D, I, v}(t_1))\)</span></p></li>
+</ul>
+<p>Затим се може дефинисати функција <span class="math notranslate nohighlight">\(I_{D, I, v}(F)\)</span> којом се
+одређује истинитосна <strong>вредност формуле</strong>. Њена рекурзивна
+дефиниција наслеђује велики број случајева из исказне логике, тако
+да ћемо приказати само оне који су специфични за предикатску
+логику.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I_{D, I, v}(P(t_1, \ldots, t_n)) = 1\)</span> ако и само ако важи
+<span class="math notranslate nohighlight">\(P^d(T_{D, I, v}(t_1), \ldots, T_{D, I, v}(t_1))\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(I_{D, I, v}((\forall x)F) = 1\)</span> ако и само ако за сваку
+валуацију <span class="math notranslate nohighlight">\(v'\)</span> која се поклапа са <span class="math notranslate nohighlight">\(v\)</span> на свим
+променљивим осим на <span class="math notranslate nohighlight">\(x\)</span> важи <span class="math notranslate nohighlight">\(I_{D, I, v'}(F) = 1\)</span>
+(другим речима, за било који избор вредности <span class="math notranslate nohighlight">\(x\)</span> формула
+<span class="math notranslate nohighlight">\(F\)</span> је тачна ту вредност <span class="math notranslate nohighlight">\(x\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_{D, I, v}((\exists x)F) = 1\)</span> ако и само ако постоји
+валуација <span class="math notranslate nohighlight">\(v'\)</span> која се поклапа са <span class="math notranslate nohighlight">\(v\)</span> на свим
+променљивим осим на <span class="math notranslate nohighlight">\(x\)</span> и важи <span class="math notranslate nohighlight">\(I_{D, I, v'}(F) = 1\)</span>
+(другим речима, постоји вредност <span class="math notranslate nohighlight">\(x\)</span> таква да је формула
+<span class="math notranslate nohighlight">\(F\)</span> је тачна за ту вредност <span class="math notranslate nohighlight">\(x\)</span>).</p></li>
+</ul>
+<p>Доказује се да за реченице (формуле без слободних променљивих)
+функција <span class="math notranslate nohighlight">\(I_{D, I, v}\)</span> враћа исту вредност за све валуације
+<span class="math notranslate nohighlight">\(v\)</span> тј. да истинитосна вредност реченица не зависи од
+валуације. Зато се за реченице разматра функција <span class="math notranslate nohighlight">\(I_{D, I}\)</span>.
+Кажемо да је <span class="math notranslate nohighlight">\(L\)</span>-структура <strong>модел</strong> реченице <span class="math notranslate nohighlight">\(F\)</span> ако и
+само ако важи <span class="math notranslate nohighlight">\(I_{D, I}(F) = 1\)</span>. Ово обележавамо и са
+<span class="math notranslate nohighlight">\((D, I) \vDash F\)</span>. У супротном, <span class="math notranslate nohighlight">\(L\)</span>-структура је
+<strong>контра-модел</strong> реченице <span class="math notranslate nohighlight">\(F\)</span>.</p>
+
+    </div></div>
+<p>Размотримо следеће формуле и покушајмо да одредимо њихову истинитосну
+вредност:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x)(\exists y)(\rho(x, y))\\
+(\forall x)(\neg P(x)) \Leftrightarrow \neg(\exists x)(P(x))\\
+(\forall x)(P(x) \wedge \neg P(x))\end{split}\]</div>
+<p>Јасно је да у првој формули не знамо шта означава бинарни релацијски
+симбол <span class="math notranslate nohighlight">\(\rho\)</span>, а да у другој не знамо шта означава унарни
+релацијски симбол <span class="math notranslate nohighlight">\(P\)</span>, као и да ни за једну формулу не знамо
+домен. Ако у првој формули интерпретирамо симбол <span class="math notranslate nohighlight">\(\rho\)</span>
+релацијом <span class="math notranslate nohighlight">\(&lt;\)</span> формула говори да од сваког броја постоји већи
+број и тачна је у свим уобичајеним бројевним доменима (природним
+бројевима, целим, рационалним, реалним). Ако симбол <span class="math notranslate nohighlight">\(\rho\)</span>
+релацијом <span class="math notranslate nohighlight">\(&lt;\)</span> формула говори да од сваког броја постоји мањи
+број и она није тачна у домену природних бројева, а јесте тачна у
+домену целих, рационалних и реалних бројева. Дакле, истинитосна
+вредност прве формула зависи од интерпретације симбола <span class="math notranslate nohighlight">\(\rho\)</span> и
+од домена на који се односи. Та формула има и модел (може бити тачна)
+и контра-модел (може бити нетачна). Формуле које имају модел зовемо
+<strong>задовољиве</strong>, а које имају контра-модел <strong>порециве</strong>.</p>
+<p>Са друге стране, друга формула је тачна на које год својство се односи
+симбол <span class="math notranslate nohighlight">\(P\)</span> и који год домен да посматрамо (подразумевамо да увек
+разматрамо непразне домене). Такве формуле, дакле, не зависе од
+математичких појмова на које се односе већ су тачне искључиво на
+основу своје логичке структуре. За такве формуле кажемо да су
+<strong>универзално ваљане</strong> (или краће, ваљане). Ваљане формуле су на неки
+начин уопштење појма таутологије и исправност закључивања се може
+свести на испитивање ваљаности одређених формула. Појам <strong>логичке
+последице</strong> и <strong>логички еквивалентних</strong> формула се у предикатској
+логици дефинише на исти начин као и у исказној и испитивање ових
+односа између формула (који су основа исправног закључивања) се своди
+на испитивање ваљаности одговарајућих формула.</p>
+<p>Ако, на пример, кренемо од претпоставки <em>„Сви Грци су људи”</em> и <em>„Сви
+људи су смртни”</em>, тада можемо да изведемо закључак <em>„Сви Грци су
+смртни”</em>. Тврдимо, дакле, да је формула</p>
+<div class="math notranslate nohighlight">
+\[(\forall x)(\mathrm{grk}(x) \Rightarrow \mathrm{smrtan}(x))\]</div>
+<p>логичка последица формула</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x)(\mathrm{grk}(x) \Rightarrow \mathrm{covek}(x))\\
+(\forall x)(\mathrm{covek}(x) \Rightarrow \mathrm{smrtan}(x))\end{split}\]</div>
+<p>Ово је чувени први Аристотелов Силогизам (правило исправног
+закључивања). Овај закључак јесте исправан пошто је следећа формула
+ваљана.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x)(\mathrm{grk}(x) \Rightarrow \mathrm{covek}(x))\ \wedge \\
+(\forall x)(\mathrm{covek}(x) \Rightarrow \mathrm{smrtan}(x)) \Rightarrow\\
+(\forall x)(\mathrm{grk}(x) \Rightarrow \mathrm{smrtan}(x))\end{split}\]</div>
+<p>Кључни проблем је то што је испитивање ваљаности тј. задовољивости у
+предикатској логици неупоредиво тежи проблем него испитивање исказне
+таутологичности тј. задовољивости и у општем случају не постоји
+алгоритам који би био у стању да испита ваљаност произвољне формуле
+предикатске логике (и доказано је да такав алгоритам не само да није
+тренутно измишљен, него не може ни да постоји). Постоје алгоритми који
+успевају да испитају ваљаност неких формула, али они су често
+неефикасни, треба им пуно времена и меморије и не могу да увек дају
+одговор. Кажемо да је проблем испитивања ваљаности <strong>неодлучив</strong>.  Са
+друге стране проблем јесте полу-одлучив, што значи да постоје
+алгоритми који (под претпоставком да им се да довољно времена и
+меморије) за било коју ваљану формулу у неком тренутку могу да утврде
+да је ваљана, међутим, за формуле које нису ваљане ти алгоритми раде
+бесконачно, никада се не заустављајући и никада не утврђујући да дата
+формула није ваљана.</p>
+<p>Трећа formula <span class="math notranslate nohighlight">\((\forall x)(P(x) \wedge \neg P(x))\)</span> формула је
+<strong>незадовољива</strong> јер је нетачна у свим доменима и за све могуће
+интерпретације симбола <span class="math notranslate nohighlight">\(P\)</span>. Она нема ниједан модел (сваки домен
+и интерпретација су јој контра-модел).</p>
+<div class="section" id="id2">
+<h2>Примена аутомаских доказивача теорема<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Један од најуспешнијих аутоматских доказивача теорема је <em>Vampire</em>
+(<a class="reference external" href="https://vprover.github.io/">https://vprover.github.io/</a>). Преузми га на свој рачунар. Улаз
+доказивача се обично задаје у формату TPTP. Прикажимо како можемо
+доказати коректност претходног закључка применом аутоматског
+доказивача. Две претпоставке задајемо као аксиоме. Формуле логике
+првог реда се у формату TPTP означавају са <cite>fof</cite>, након чега се задаје
+име формуле, статус (са <cite>axiom</cite> обележавамо претпоставке, а са
+<cite>conjecture</cite> закључке) и на крају сама формула. Приметимо да се
+импликација обележава са <cite>=&gt;</cite>, а универзални квантификатор sa <cite>!</cite>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fof(premisa1, axiom, ![X]: (grk(X) =&gt; covek(X))).
+fof(premisa2, axiom, ![X]: (covek(X) =&gt; smrtan(X))).
+fof(zakljucak, conjecture, ![X]: (grk(X) =&gt; smrtan(X))).
+</pre></div>
+</div>
+<p>Ако ово сачувамо у датотеку <cite>syllogysm1.tptp</cite> и затим покренемо
+Vampire из командне линије, командом <cite>vampire syllogysm1.tpt</cite> добијамо
+поруку:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% Refutation found. Thanks to Tanya!
+</pre></div>
+</div>
+<p>Ово значи да је формула успешно доказана.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Коришћењем аутоматског доказивача оправдајте и следеће Аристотелове
+силогизме.</p>
+<ul class="simple">
+<li><p>Ниједан рептил нема крзно.</p></li>
+<li><p>Све змије су рептили.</p></li>
+<li><p>Дакле, ниједна змија нема крзно.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fof(prem1, axiom, ~(?[X]: (reptil(X) &amp; krzno(X)))).
+fof(prem2, axiom, ![X]: (zmija(X) =&gt; reptil(X))).
+fof(concl, conjecture, ~(?[X]: (zmija(X) &amp; krzno(X)))).
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Сви зечеви имају крзно.</p></li>
+<li><p>Неки љубимци су зечеви.</p></li>
+<li><p>Дакле, неки љубимци имају крзно.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fof(prem1, axiom, ![X]: (zec(X) =&gt; krzno(X))).
+fof(prem2, axiom, ?[X]: ljubimac(X) &amp; zec(X)).
+fof(concl, conjecture, ?[X]: (zec(X) &amp; krzno(X))).
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Нема забавног домаћег.</p></li>
+<li><p>Неке књиге се читају за домаћи.</p></li>
+<li><p>Неке књиге нису забавне.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fof(prem1, axiom, ~(?[X]: (domaci(X) &amp; zabavan(X)))).
+fof(prem2, axiom, ?[X]: knjiga(X) &amp; domaci(X)).
+fof(concl, conjecture, ?[X]: (knjiga(X) &amp; ~zabavan(X))).
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Сви људи су смртни.</p></li>
+<li><p>Сви Грци су људи.</p></li>
+<li><p>Неки Грци су смртни.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fof(premisa1, axiom, ![X]: (grk(X) =&gt; covek(X))).
+fof(premisa2, axiom, ![X]: (covek(X) =&gt; smrtan(X))).
+fof(dodatna_premisa, axiom, ?[X]: grk(X)).
+fof(zakljucak, conjecture, ?[X]: (grk(X) &amp; smrtan(X))).
+</pre></div>
+</div>
+<p>Приметимо да је у овом примеру било неопходно додати претпоставку
+да постоји бар један Грк. Наиме, Аристотел је подразумевао
+имплицитно да сваки предикат о коме се говори мора да буде
+задовољен за бар неки објекат (да су сви скупови објеката које
+разматрамо непразни), док у савременој логици та имплицитна
+претпоставка не постоји и потребно је експлицитно навести. Поставља
+се питање шта се дешава са тачношћу исказа „Сви Грци су смртни” ако
+не постоји ни један Грк. Ово може бити донекле збуњујуће, али је у
+савременој логици недвосмислено да је исказ и тада тачан. Ипак, у
+неким ранијим разматрањима логике исказ је у тој ситуацији сматран
+тачним, у неким погрешим, а у неким неодређеним.</p>
+
+    </div></div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Употребимо сада аутоматски доказивач теорема да докажемо да смо
+успешно решили један детективски случај.</p>
+<ul class="simple">
+<li><p>Алиса, њен муж, син, ћерка и брат су ликови у роману Агате Кристи.</p></li>
+<li><p>Једно од њих петоро је убило неког од преосталих четворо.</p></li>
+<li><p>Мушка и женска особа су биле заједно у бару у време убиства.</p></li>
+<li><p>Жртва и убица су били заједно на плажи у време убиства.</p></li>
+<li><p>Једно дете је било само у време убиства.</p></li>
+<li><p>Жртвин близанац/близнакиња није убица.</p></li>
+<li><p>Убица је млађи од жртве.</p></li>
+</ul>
+<p>Кодирајмо сада ово знање помоћу предикатске логике (вама за вежбу
+остављамо да исто урадите помоћу исказне логике и случај решите помоћу
+SAT решавача).</p>
+<p>У случај је укључено пет особа. Уведимо предикат
+<span class="math notranslate nohighlight">\(\mathrm{osoba}(x)\)</span> и пет константи <span class="math notranslate nohighlight">\(\mathrm{alisa}\)</span>,
+<span class="math notranslate nohighlight">\(\mathrm{muz}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{cerka}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{sin}\)</span> и
+<span class="math notranslate nohighlight">\(\mathrm{brat}\)</span>. Једине особе које су релевантне за овај случај
+су ове, што можемо кодирати следећом формулом.</p>
+<div class="math notranslate nohighlight">
+\[(\forall x)(\mathrm{osoba}(x) \Rightarrow x=\mathrm{alisa} \vee x=\mathrm{muz} \vee x=\mathrm{cerka} \vee x=\mathrm{sin} \vee x=\mathrm{brat})\]</div>
+<p>Нагласимо да се не подразумева да различите константе означавају
+различите објекте и да је понекад потребно увести експлицитно
+претпоставке типа <span class="math notranslate nohighlight">\(\mathrm{alisa} \neq \mathrm{muz}\)</span>. Ипак, у
+овом задатку то неће бити потребно.</p>
+<p>Уводимо још две константе: <span class="math notranslate nohighlight">\(\mathrm{ubica}\)</span> и
+<span class="math notranslate nohighlight">\(\mathrm{zrtva}\)</span>. Из текста задатка је познато је да су оне међу
+ових пет особа, као и да су у питању различите особе. То кодирамо
+следећом формулом.</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{osoba}(\mathrm{ubica}) \wedge \mathrm{osoba}(\mathrm{zrtva}) \wedge \mathrm{ubica} \neq \mathrm{zrtva}\]</div>
+<p>Мушка и женска особа су биле заједно у бару у време убиства. Можемо
+увести константе <span class="math notranslate nohighlight">\(\mathrm{u\_baru\_musko}\)</span> и
+<span class="math notranslate nohighlight">\(\mathrm{u\_baru\_zensko}\)</span> и формулу која описује особине ових
+константи. Имплицитно је јасно ко су мушке, а ко су женске особе, али
+то је потребно експлицитно кодирати. Женске особе можемо експлицитно
+набројати, а мушке особе дефинисати као оне особе које нису женско.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x)(\mathrm{zensko}(x) \Leftrightarrow x=\mathrm{alisa} \vee x=\mathrm{cerka})\\
+(\forall x)(\mathrm{musko}(x) \Leftrightarrow \mathrm{osoba}(x) \wedge \neg\mathrm{zensko}(x))\end{split}\]</div>
+<p>Сада можемо описати особине особа у бару.</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{musko}(\mathrm{u\_baru\_musko}) \wedge \mathrm{zensko}(\mathrm{u\_baru\_zensko})\]</div>
+<p>Жртва и убица су били на плажи у време убиства. Ово можемо кодирати
+или тако што уведмо нове две константе за особе које су биле на плажи
+или, можда мало једноставније, тако што уведемо предикат
+<span class="math notranslate nohighlight">\(\mathrm{na\_plazi}(x)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{na\_plazi}(\mathrm{zrtva}) \wedge \mathrm{na\_plazi}(\mathrm{ubica})\]</div>
+<p>Из текста задатка се имплицитно подразумева да особе не могу
+истовремено бити и на плажи и у бару, али то је неопходно експлицитно
+кодирати.</p>
+<div class="math notranslate nohighlight">
+\[\neg \mathrm{na\_plazi}(\mathrm{u\_baru\_musko}) \wedge \neg \mathrm{na\_plazi}(\mathrm{u\_baru\_zensko})\]</div>
+<p>Једно дете је било само у време убиства. Имплицитно је јасно да су
+једино деца син и ћерка, као и да особе у бару ни особе на плажи нису
+саме. То морамо експлицитно да кодирамо (а уједно ћемо искористити
+прилику и да дефинишемо ко су родитељи). Уводимо предикате
+<span class="math notranslate nohighlight">\(\mathrm{dete}(x)\)</span>, <span class="math notranslate nohighlight">\(\mathrm{roditelj}(x)\)</span> и
+<span class="math notranslate nohighlight">\(\mathrm{samo}(x)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x)(\mathrm{dete}(x) \Leftrightarrow x = \mathrm{cerka} \vee x = \mathrm{sin})\\
+(\forall x)(\mathrm{roditelj}(x) \Leftrightarrow x = \mathrm{alisa} \vee x = \mathrm{muz})\\
+(\forall x)(\mathrm{samo}(x) \Leftrightarrow \neg \mathrm{na\_plazi}(x) \wedge x \neq \mathrm{u\_baru\_musko} \wedge x \neq \mathrm{u\_baru\_zensko})\end{split}\]</div>
+<p>Сада можемо да искажемо да постоји дете које је било само.</p>
+<div class="math notranslate nohighlight">
+\[(\exists x)(\mathrm{dete}(x) \wedge \mathrm{samo}(x))\]</div>
+<p>Алиса није била заједно са мужем у време убиства. То значи да њих
+двоје нису могли бити заједно на плажи нити заједно у бару. Довољно је
+да дефинишемо да су две различите особе на плажи заједно, и да су две
+особе у бару заједно и да кажемо да Алиса и муж нису били
+заједно. Приметимо да овим кодирамо само потребан смер (јер предикат
+<span class="math notranslate nohighlight">\(\mathrm{zajedno}\)</span> не дефинишемо коришћењем еквиваленције, него
+само импликације).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{zajedno}(\mathrm{u\_baru\_musko}, \mathrm{u\_baru\_zensko})\\
+(\forall x_1)(\forall x_2)(x_1 \neq x_2 \wedge \mathrm{na\_plazi}(x_1) \wedge \mathrm{na\_plazi}(x_2) \Rightarrow \mathrm{zajedno}(x_1, x_2))\\
+(\forall x_1)(\forall x_2)(\mathrm{zajedno}(x_1, x_2) \Rightarrow \mathrm{zajedno}(x_2, x_1))\\
+\neg \mathrm{zajedno}(\mathrm{alisa}, \mathrm{muz})\end{split}\]</div>
+<p>Жртвин близанац није убица. Ово значи да жртва сигурно има близанца
+(или близнакињу). Постоје два могућа пара близанаца: син и ћерка и
+Алиса и њен брат. Један од њих сигурно јесте пар близанаца, а други не
+мора бити, међутим, безбедно је кодирати да су оба пара близанци (јер
+за пар у коме није жртва није битно да ли јесу или нису близанци, па
+не смета да се кодира да јесу).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x_1)(\forall x_2)(\mathrm{blizanci}(x_1, x_2) \Leftrightarrow \\
+   (x_1 = \mathrm{sin} \wedge x_2 = \mathrm{cerka}) \vee \\
+   (x_1 = \mathrm{cerka} \wedge x_2 = \mathrm{sin}) \vee \\
+   (x_1 = \mathrm{alisa} \wedge x_2 = \mathrm{brat}) \vee \\
+   (x_1 = \mathrm{brat} \wedge x_2 = \mathrm{alisa}))\end{split}\]</div>
+<p>Постоји жртвин близанац и он није убица.</p>
+<div class="math notranslate nohighlight">
+\[(\exists x)(\mathrm{blizanci}(\mathrm{zrtva}, x) \wedge x \neq \mathrm{ubica})\]</div>
+<p>На крају још кодирамо услов да је убица млађи од жртве. To једино
+значи да убица не може да буде родитељ, а жртва дете (јер остале
+односе година заправо не познајемо). Довољно је да кодирамо да
+родитељи не могу бити млађи од деце и да је убица млађи од жртве.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x_1)(\forall x_2)(\mathrm{roditelj}(x_1) \wedge \mathrm{dete}(x_2) \Rightarrow \neg \mathrm{mladji}(x_1, x_2))\\
+\mathrm{mladji}(\mathrm{ubica}, \mathrm{zrtva})\end{split}\]</div>
+<p>Претходне услове можемо записати у формату TPTP, предати их доказивачу
+Vampire и он ће практично моментално потврдити да су наши закључци
+исправни. Можемо редом пробати закључке облика <span class="math notranslate nohighlight">\(\mathrm{ubica} =
+\mathrm{alisa}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{ubica} = \mathrm{muz}\)</span> итд. и само
+један од њих ће успети да буде доказан (једино решење је да је муж
+убио брата, да је Алиса била са сином у бару, а да је ћерка била сама
+код куће).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% Alisa, njen muž, sin, ćerka i brat su likovi u romanu Agate Kristi.
+% Jedno od njih petoro je ubilo nekog od preostalih četvoro.
+fof(osoba_def, axiom, ![X] : (osoba(X) &lt;=&gt;
+               X = alisa | X = muz | X = sin | X = cerka | X = brat)).
+fof(ubica_zrtva, axiom, osoba(ubica) &amp; osoba(zrtva) &amp; ubica != zrtva).
+
+% Muska i zenska osoba su bile zajedno u baru u vreme ubistva.
+fof(zensko_def, axiom, ![X] : (zensko(X) &lt;=&gt; X = alisa | X = cerka)).
+fof(musko_def, axiom, ![X] : (musko(X) &lt;=&gt; osoba(X) &amp; ~zensko(X))).
+fof(u_baru, axiom, musko(u_baru_musko) &amp; zensko(u_baru_zensko)).
+
+% Zrtva i ubica su bili zajedno na plazi u vreme ubistva.
+fof(na_plazi, axiom, na_plazi(ubica) &amp; na_plazi(zrtva)).
+fof(plaza_bar, axiom, ~na_plazi(u_baru_musko) &amp; ~na_plazi(u_baru_zensko)).
+
+% Jedno dete je bilo samo u vreme ubistva.
+fof(dete_def, axiom, ![X] : (dete(X) &lt;=&gt; X = sin | X = cerka)).
+fof(roditelj_def, axiom, ![X] : (roditelj(X) &lt;=&gt; X = alisa | X = muz)).
+fof(samo_def, axiom, ![X] : (samo(X) &lt;=&gt;
+              ~na_plazi(X) &amp; X != u_baru_musko &amp; X != u_baru_zensko)).
+fof(samo_dete, axiom, ?[X] : (dete(X) &amp; samo(X))).
+
+% Alisa i muz nisu bili zajedno u vreme ubistva.
+fof(zajedno_bar, axiom, zajedno(u_baru_musko, u_baru_zensko)).
+fof(zajedno_na_plazi, axiom, ![X1, X2] :
+       (na_plazi(X1) &amp; na_plazi(X2) &amp; X1 != X2 =&gt; zajedno(X1, X2))).
+fof(zajedno_sym, axiom, ![X1, X2] :
+       (zajedno(X1, X2) =&gt; zajedno(X2, X1))).
+fof(zajedno_alisa_muz, axiom, ~zajedno(alisa, muz)).
+
+% Zrtvin blizanac nije ubica.
+fof(blizanci_def, axiom, ![X1, X2] :
+       (blizanci(X1, X2) &lt;=&gt; (X1 = sin &amp; X2 = cerka) |
+                             (X1 = cerka &amp; X2 = sin) |
+                             (X1 = alisa &amp; X2 = brat) |
+                             (X1 = brat &amp; X2 = alisa))).
+fof(zrtvin_blizanac, axiom, ?[X] : (blizanci(zrtva, X) &amp; X != ubica)).
+
+% Ubica je mladji od zrtve.
+fof(mladji_def, axiom, ![X1, X2] :
+     (roditelj(X1) &amp; dete(X2) =&gt; ~mladji(X1, X2))).
+fof(mladji_ubica, axiom, mladji(ubica, zrtva)).
+
+% Resenje slucaja
+fof(solution, conjecture,
+      ubica = muz &amp;
+      zrtva = brat &amp;
+      u_baru_zensko = alisa &amp;
+      u_baru_musko = sin &amp;
+      samo(cerka)).
+</pre></div>
+</div>
+
+    </div></div>
+</div>
+<div class="section" id="id3">
+<h2>Метода резолуције<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Најпознатија техника за испитивање ваљаности формула јесте <strong>метода
+резолуције</strong> и она представља основу великог броја доказивача теорема
+(програма који се користе у математици и верификацији софтвера), али и
+теоријску основу логичког програмирања (пре свега кроз језик
+PROLOG). Циљ овог поглавља је да вам да неки наговештај како ова
+метода функционише, а не да детаљно научите све њене детаље.</p>
+<p>У питању је метода побијања тј. ваљаност се доказује тако што се
+покаже да је негација формуле незадовољива. Слично као што су се SAT
+решавачи примењивали на формуле у КНФ, тако се метода резолуције
+примењује превођењем формуле у <strong>клаузалну форму</strong>.</p>
+<ul class="simple">
+<li><p>Први корак превођења у ту форму је да се формула доведе у
+тзв. нормалну форму <strong>prenex</strong> тј. облик <span class="math notranslate nohighlight">\(Q_1\ x_1.\ \ldots\
+Q_n\ x_n.\ F\)</span>, где су <span class="math notranslate nohighlight">\(Q_i\)</span> квантификатори, а формула
+<span class="math notranslate nohighlight">\(F\)</span> не садржи квантификаторе.</p></li>
+<li><p>Други корак је да се тело формуле (део испред извучених
+квантификатора) преведе у <strong>КНФ</strong>.</p></li>
+<li><p>На крају се примењује ослобађање егзистенцијалних квантифитора
+(корак познат као <strong>Сколемизација</strong>).</p></li>
+</ul>
+<p>Крећемо од негације наше формуле и преводимо је у клаузалну
+форму. Наша формула има облик <span class="math notranslate nohighlight">\(\phi_1 \wedge \phi_2 \Rightarrow
+\theta\)</span> (две премисе имплицирају закључак), па је њена негација
+логички еквивалентна формули <span class="math notranslate nohighlight">\(\phi_1 \wedge \phi_2 \wedge \neg
+\theta\)</span>.  Превођење у клаузалну форму вршимо између осталог применом
+логичких еквиваленција које смо навели у опису превођења формуле у
+КНФ. Додатно примењујемо и следећа правила која се односе на
+квантифкаторе:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\neg (\forall x)(P(x)) \equiv (\exists x)(\neg P(x))\\
+\neg (\exists x)(P(x)) \equiv (\forall x)(\neg P(x))\\\end{split}\]</div>
+<p>Циљ нам је да све квантификаторе извучемо напоље и да добијемо
+нормалну форму prenex. За превођење користимо следеће логичке
+еквиваленције:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+  (\forall x)(A) \wedge B &amp;\equiv&amp; (\forall x)(A \wedge B)\\
+  (\forall x)(A) \vee B &amp;\equiv&amp; (\forall x)(A \vee B)\\
+  B \wedge (\forall x)(A) &amp;\equiv&amp; (\forall x)(B \wedge A)\\
+  B \vee (\forall x)(A) &amp;\equiv&amp; (\forall x)(B \vee A)\\
+  (\exists x)(A) \wedge B &amp;\equiv&amp; (\exists x)(A \wedge B)\\
+  (\exists x)(A) \vee B &amp;\equiv&amp; (\exists x)(A \vee B)\\
+  B \wedge (\exists x)(A) &amp;\equiv&amp; (\exists x)(B \wedge A)\\
+  B \vee (\exists x)(A) &amp;\equiv&amp; (\exists x)(B \vee A)
+\end{eqnarray*}\end{split}\]</div>
+<p>при чему, ако се променљива <span class="math notranslate nohighlight">\(x\)</span> јавља слободна у <span class="math notranslate nohighlight">\(B\)</span>,
+потребно је да је преименујемо у формули <span class="math notranslate nohighlight">\((\forall x)(A)\)</span> тј.
+<span class="math notranslate nohighlight">\((\exists x)(A)\)</span>. Да бисмо уштедели на броју квантификатора,
+можемо да користимо и следеће формуле.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+ (\forall x)(A) \wedge (\forall x)(B) &amp;\equiv&amp; (\forall x)(A \wedge B)\\
+ (\exists x)(A) \vee (\exists x)(B) &amp;\equiv&amp; (\exists x)(A \vee B)\\
+\end{eqnarray*}\end{split}\]</div>
+<p>Међутим, обратите пажњу на то да наредне две формуле нису исправне
+(квантификатор „за сваки” се слаже са конјункцијом, али не и са
+дисјункцијом, док се квантификатор „постоји” слаже само са
+дисјункцијом, а не и са конјункцијом.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+ (\forall x)(A) \vee (\forall x)(B) &amp;\equiv&amp; (\forall x)(A \vee B)\\
+ (\exists x)(A) \wedge (\exists x)(B) &amp;\equiv&amp; (\exists x)(A \wedge B)\\
+\end{eqnarray*}\end{split}\]</div>
+<p>Вратимо се на формулу из нашег примера. Њена негација је еквивалетна формули</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x)(\mathrm{grk}(x) \Rightarrow \mathrm{covek}(x))\ \wedge \\
+(\forall x)(\mathrm{covek}(x) \Rightarrow \mathrm{smrtan}(x)) \wedge\\
+\neg (\forall x)(\mathrm{grk}(x) \Rightarrow \mathrm{smrtan}(x))\end{split}\]</div>
+<p>Ослобађамо се унутрашњих импликација и увлачимо негацију.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x)(\neg \mathrm{grk}(x) \vee \mathrm{covek}(x))\ \wedge \\
+(\forall x)(\neg \mathrm{covek}(x) \vee \mathrm{smrtan}(x))\ \wedge\\
+(\exists x)(\mathrm{grk}(x) \wedge \neg \mathrm{smrtan}(x))\end{split}\]</div>
+<p>Извлачимо сада прво егзистенцијални квантификатор на почетак формуле
+на основу правила, <span class="math notranslate nohighlight">\(B \wedge (\exists x)(A) \equiv (\exists x)(B
+\wedge A)\)</span>. Пошто се <span class="math notranslate nohighlight">\(x\)</span> не јавља слободно у делу <span class="math notranslate nohighlight">\(B\)</span>,
+нема потребе за преименовањем, па добијамо:</p>
+<div class="math notranslate nohighlight">
+\[(\exists x)\left((\forall x)(\neg \mathrm{grk}(x) \vee \mathrm{covek}(x))\ \wedge
+(\forall x)(\neg \mathrm{covek}(x) \vee \mathrm{smrtan}(x))\ \wedge
+(\mathrm{grk}(x) \wedge \neg \mathrm{smrtan}(x))\right)\]</div>
+<p>Извлачимо сада универзални квантификатор истовремено испред две
+премисе на основу правила <span class="math notranslate nohighlight">\((\forall x)(A) \wedge (\forall x)(B)
+\equiv (\forall x)(A \wedge B)\)</span> и добијамо:</p>
+<div class="math notranslate nohighlight">
+\[(\exists x)\left((\forall x)\left((\neg \mathrm{grk}(x) \vee \mathrm{covek}(x))\ \wedge (\neg \mathrm{covek}(x) \vee \mathrm{smrtan}(x))\right)\ \wedge
+(\mathrm{grk}(x) \wedge \neg \mathrm{smrtan}(x))\right)\]</div>
+<p>На крају извлачимо универзални квантификатор на почетак тела
+егзистенцијално квантификованог дела формуле на основу правила
+<span class="math notranslate nohighlight">\((\forall x)(A) \wedge B \equiv (\forall x)(A \wedge B)\)</span>, али
+пошто се сада променљива <span class="math notranslate nohighlight">\(x\)</span> јавља као слободна у делу <span class="math notranslate nohighlight">\(B\)</span>
+тј. у делу <span class="math notranslate nohighlight">\(\mathrm{grk}(x) \wedge \neg \mathrm{smrtan}(x)\)</span>,
+вршимо преименовање квантификоване променљиве и добијамо.</p>
+<div class="math notranslate nohighlight">
+\[(\exists x)(\forall x')((\neg \mathrm{grk}(x') \vee \mathrm{covek}(x'))\ \wedge (\neg \mathrm{covek}(x') \vee \mathrm{smrtan}(x'))\ \wedge
+\mathrm{grk}(x) \wedge \neg \mathrm{smrtan}(x))\]</div>
+<p>Добијена формула је логички еквивалентна полазној, и у нормалној форми
+prenex, при чему је тело формуле (део испред квантификатора) у КНФ.</p>
+<p>Наредни корак при превођењу у клаузалну форму је ослобађање од
+егзистенцијалних квантификатора. То се ради процедуром која се назива
+<strong>Сколемизација</strong> (у част логичара Сколема). На тај начин се не добија
+формула која је еквивалентна полазној, али се добија формула која је
+еквизадовољива, што је нама довољно (јер ми ваљаност доказујемо тиме
+што доказујемо да негација полазне формуле није
+задовољива). Сколемизација се врши тако што се уместо егзистенцијално
+квантификованих променљивих уводе нове константне.</p>
+<ul class="simple">
+<li><p>Формула <span class="math notranslate nohighlight">\((\exists x)(P(x))\)</span> је еквизадовољива формули
+<span class="math notranslate nohighlight">\(P(c)\)</span>, где је <span class="math notranslate nohighlight">\(c\)</span> нови симбол константе (не сме да се
+јавља нигде другде у формули).</p></li>
+<li><p>Ако је егзистенцијални квантификатор испред једног или више
+универзалних, онда се уместо константе мора увести функција. На
+пример, формула <span class="math notranslate nohighlight">\((\forall x)(\exists x)(P(x, y))\)</span> је
+еквизадовољива формули <span class="math notranslate nohighlight">\((\forall x)P(x, f(x))\)</span>, где је
+<span class="math notranslate nohighlight">\(f\)</span> нови симбол функције (не сме да се јавља негде другде у
+формули)</p></li>
+</ul>
+<p>Сколемизацијом наше формуле добијамо формулу</p>
+<div class="math notranslate nohighlight">
+\[(\forall x')((\neg \mathrm{grk}(x') \vee \mathrm{covek}(x'))\ \wedge (\neg \mathrm{covek}(x') \vee \mathrm{smrtan}(x'))\ \wedge
+\mathrm{grk}(c) \wedge \neg \mathrm{smrtan}(c))\]</div>
+<p>Можемо се сада вратити корак назад увлачећи квантификаторе до сваке
+клаузуле и формулу представити као конјункцију следеће 4 (универзално
+квантификоване) клаузуле (преименоваћемо и променљиве, ради
+једноставности):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\forall x)(\neg \mathrm{grk}(x) \vee \mathrm{covek}(x))\\
+(\forall x)(\neg \mathrm{covek}(x) \vee \mathrm{smrtan}(x))\\
+\mathrm{grk}(c)\\
+\neg \mathrm{smrtan}(c)\end{split}\]</div>
+<p>Потребно је да докажемо да је овај скуп клаузула незадовољив. То се
+ради методом резолуције. Пошто смо се ослободили универзалних
+квантификатора, све преостале променљиве су универзално
+квантификоване, па се обично приликом примене метода резолуције
+квантификатори не пишу.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\neg \mathrm{grk}(x) \vee \mathrm{covek}(x)\\
+\neg \mathrm{covek}(x) \vee \mathrm{smrtan}(x)\\
+\mathrm{grk}(c)\\
+\neg \mathrm{smrtan}(c)\end{split}\]</div>
+<p>Овај скуп клаузула је незадовољив. То можемо видети на следећи начин.
+Пошто прва клаузула важи за свако <span class="math notranslate nohighlight">\(x\)</span> она важи и за <span class="math notranslate nohighlight">\(x=c\)</span>
+тј.  важи и <span class="math notranslate nohighlight">\(\neg \mathrm{grk}(c) \vee \mathrm{covek}(c)\)</span>. Пошто
+на основу треће клаузуле знамо да важи <span class="math notranslate nohighlight">\(\mathrm{grk}(c)\)</span>, мора
+да важи <span class="math notranslate nohighlight">\(\mathrm{covek}(c)\)</span>. Пошто и друга клаузула важи за
+свако <span class="math notranslate nohighlight">\(x\)</span> она важи и за <span class="math notranslate nohighlight">\(x=c\)</span> тј.  важи и <span class="math notranslate nohighlight">\(\neg
+\mathrm{covek}(c) \vee \mathrm{smrtan}(c)\)</span>. Пошто важи
+<span class="math notranslate nohighlight">\(\mathrm{covek}(c)\)</span> мора да важи <span class="math notranslate nohighlight">\(\mathrm{smrtan}(c)\)</span>,
+међутим, то је у супротности са нашом четвртом клаузулом.</p>
+<p>Формално, правило резолуције се примењује тако што се пронађу две
+клаузуле које садрже неки супротан литерал и затим се у скуп клаузуле
+дода њихова резолвента, која се добија обједињавањем свих осталих
+литерала осим тог супротног. Правило резолуције за исказну логику се
+примењује на клаузуле облика</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p \vee q_1 \vee \ldots \vee q_m\\
+\neg p \vee r_1 \vee \ldots \vee r_n\end{split}\]</div>
+<p>и добија се резолвента</p>
+<div class="math notranslate nohighlight">
+\[q_1 \vee \ldots \vee q_m \vee r_1 \vee \ldots \vee r_n.\]</div>
+<p>Када год су полазне две клаузуле тачне, тачна је и њихова резолвента
+(она је њихова логичка последица). Доказ овога је једноставан и
+остављамо ти га за вежбу. Централна теорема метода резолуције за
+исказну логику је следећа:</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Скуп исказних клаузула је незадовољив ако и само ако се
+резолвирањем може извести празна клауза (клауза која не садржи ни
+један литерал).</p>
+
+    </div></div>
+<p>Иако би се SAT решавач могао засновати на методу резолуције за исказну
+логику, SAT решавачи користе друге алгоритме (у којима се ипак
+резолуција јавља као један од корака).</p>
+<p>Правило резолуције за предикатску логику је компликованије, јер
+литерали нису више само исказна слова, већ атомичке формуле које
+садрже променљиве. Литерали преко којих се врши резолуција се не
+разликују само по томе што је један негиран, а други није. Допуштено
+је да се они могу изједначити процесом <strong>унификације</strong>, што значи да
+је допуштено да се променљиве замене произвољним изразима да би се
+добила иста атомичка формула. На пример, могуће је извршити резолуцију
+клаузула <span class="math notranslate nohighlight">\(\neg \mathrm{grk}(x) \vee \mathrm{covek}(x)\)</span> и
+<span class="math notranslate nohighlight">\(grk(c)\)</span>. Заиста, <span class="math notranslate nohighlight">\(\mathrm{grk}(x)\)</span> и <span class="math notranslate nohighlight">\(grk(c)\)</span> нису
+једнаки, али се могу унификовати тиме што се <span class="math notranslate nohighlight">\(x\)</span> замени са
+<span class="math notranslate nohighlight">\(c\)</span>. Након те замене се добија прва клаузула <span class="math notranslate nohighlight">\(\neg
+\mathrm{grk}(c) \vee \mathrm{covek}(c)\)</span> и сада се може извршити
+резолуција те инстанциране клаузуле и клаузуле <span class="math notranslate nohighlight">\(grk(c)\)</span> и добити
+резолвента <span class="math notranslate nohighlight">\(\mathrm{covek}(c)\)</span>.</p>
+<p>Наведимо још неколико примера унификације.</p>
+<ul class="simple">
+<li><p>Литерали <span class="math notranslate nohighlight">\(\rho(x, f(x))\)</span> и <span class="math notranslate nohighlight">\(\rho(g(y), z)\)</span> се могу
+унификовати (пошто литерали долазе из различитих клаузула које су
+засебно универзално квантификоване, увек можемо претпоставити да су
+им променљиве различито назване). Можемо да заменимо <span class="math notranslate nohighlight">\(x\)</span> са
+<span class="math notranslate nohighlight">\(g(y)\)</span>, а <span class="math notranslate nohighlight">\(z\)</span> са <span class="math notranslate nohighlight">\(f(g(y))\)</span>, чиме у оба случаја
+добијамо <span class="math notranslate nohighlight">\(\rho(g(y), f(g(y)))\)</span>.</p></li>
+<li><p>Са друге стране, литерали <span class="math notranslate nohighlight">\(\rho(x)\)</span> и <span class="math notranslate nohighlight">\(\sigma(y)\)</span> се не
+могу унификовати (јер им се разликују релацијски симболи и никаква
+замена променљивих не може довести до њиховог изједначавања).</p></li>
+<li><p>Не могу се унификовати ни литерали <span class="math notranslate nohighlight">\(\rho(f(x))\)</span> и <span class="math notranslate nohighlight">\(\neg
+\rho(g(x))\)</span>, јер им се разликују функцијски симболи на првој
+позицији (никаквом заменом променљивих <span class="math notranslate nohighlight">\(f\)</span> не може постати
+исто што и <span class="math notranslate nohighlight">\(g\)</span>).</p></li>
+</ul>
+<p>Постоји алгоритам који за свака два литерала проверава да ли се могу
+унификовати и ако могу, проналази најопштији унификатор (замену
+променљивих).</p>
+<p>Резолуција у предикатској логици, дакле, покушава да пронађу два
+супротна литерала која се могу унификовати и ако нађе, примењује
+унификатор (замену променљивих) на обе клаузуле и након тога као
+резолвенту у скуп клаузула убацује клаузулу која садржи све остале
+литерале осим та два супротна (али инстанциране на основу пронађеног
+унификатора). Наведимо још један пример примене правила резолуције у
+предикатској логици. Резолвирајмо следећи пар клаузула:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{zivotinja}(g(x)) \vee \mathrm{voli}(f(x), x)\\
+\neg \mathrm{voli}(y, a) \vee \mathrm{pazi}(y, a)\end{split}\]</div>
+<p>Могуће је унификовати формуле <span class="math notranslate nohighlight">\(\mathrm{voli}(f(x), x)\)</span> и
+<span class="math notranslate nohighlight">\(\neg \mathrm{voli}(y, a)\)</span> тако што се променљива <span class="math notranslate nohighlight">\(x\)</span>
+замени са <span class="math notranslate nohighlight">\(a\)</span>, а променљива <span class="math notranslate nohighlight">\(y\)</span> са <span class="math notranslate nohighlight">\(f(a)\)</span>. Након
+инстанцирања тј. примене ове замене променљивих добијамо:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{zivotinja}(g(a)) \vee \mathrm{voli}(f(a), a)\\
+\neg \mathrm{voli}(f(a), a) \vee \mathrm{pazi}(f(a), a)\end{split}\]</div>
+<p>Сада се може извршити резолуција и добити резолвента:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{zivotinja}(g(a)) \vee \mathrm{pazi}(f(a), a)\]</div>
+<p>У нашем примеру, могуће је извршити и резолуцију клаузула</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\neg \mathrm{grk}(x) \vee \mathrm{covek}(x)\\
+\neg \mathrm{covek}(x) \vee \mathrm{smrtan}(x)\\\end{split}\]</div>
+<p>чиме би се добила клазула:</p>
+<div class="math notranslate nohighlight">
+\[\neg \mathrm{grk}(x) \vee \mathrm{smrtan}(x)\]</div>
+<p>Приметимо да правило резолуције на неки начин одговара правилу
+транзитивности импликације.</p>
+<p>Поред правила резолуције потребно је да се допусти и примена правила
+<strong>факторисања</strong>, које допушта да се у скуп клаузула дода клаузула која
+се добија када се у некој полазној клаузули изврши унификација
+неколико њених литерала. На пример, ако имамо клаузлу <span class="math notranslate nohighlight">\(P(x,
+f(y)) \vee P(g(z), f(z)) \vee \neg R(f(x), z)\)</span>, можемo унификовати
+њена прва два литерала заменом <span class="math notranslate nohighlight">\(x\)</span> са <span class="math notranslate nohighlight">\(g(z)\)</span> и <span class="math notranslate nohighlight">\(y\)</span>
+са <span class="math notranslate nohighlight">\(z\)</span> и тиме добити нову клаузулу (фактор полазне)
+<span class="math notranslate nohighlight">\(P(g(z), f(z)) \vee \neg R(f(g(z)), z)\)</span>.</p>
+<p>Основна теорема метода резолуције за предикатску логику је следеће:</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Скуп клаузула је незадовољив ако и само ако се применом правила
+резолуције и факторисања из њега може извести празна клаузула.</p>
+
+    </div></div>
+<p>Правило (бинарне) резолуције и факторисања се могу спојити у једно
+правило н-арне резолуције које допушта да се истовремено унификује
+неколико литерала из једне и неколико њима супротних литерала из друге
+клаузуле.</p>
+<p>Главни проблем у имплементацији је навођење резолуције, јер се
+додавањем резолвенти скуп клаузула веома брзо шири што заузима пуно
+меморије и успорава извођење нових корисних резолвенти. Научници су
+годинама радили на осмишљавању стратегија које би што ефикасније
+усмериле процес резолуције тако да се што пре изведе празна
+клаузула. Као што смо рекли, ако је полазна формула задовољива, процес
+резолуције може да траје бесконачно и да се никада не дође до празне
+клаузуле (програм се тада никада неће зауставити).</p>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="01_iskazna_logika.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

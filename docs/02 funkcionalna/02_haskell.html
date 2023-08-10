@@ -2,8 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Основни појмови језика Haskell</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
@@ -262,6 +261,9 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03_prolog><i class="fas fa-file-alt activity-icon"></i>PROLOG</div></a>
                 </div>
             </div>
                 </div>
@@ -278,10 +280,10 @@
   
     <div id="main-content">
     
-  <section id="haskell">
+  <div class="section" id="haskell">
 <h1>Основни појмови језика Haskell<a class="headerlink" href="#haskell" title="Permalink to this heading">¶</a></h1>
-</section>
-<section id="id1">
+</div>
+<div class="section" id="id1">
 <h1>Изрази<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>Језик Haskell је чист функционални језик и као такав он не подржава
 наредбе. Основни концепт чине изрази. Изрази се граде од променљивих и
@@ -366,8 +368,8 @@
 <span class="s">&quot;Zdravo svima!&quot;</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h1>Дефинисање функција<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h1>
 <p>Кренимо од једноставне функције којом се израчунава обим квадрате чија
 је дужина странице <span class="math notranslate nohighlight">\(a\)</span>. Обим се израчунава на основу формуле
@@ -514,8 +516,8 @@ class) <code class="docutils literal notranslate"><span class="pre">Num</span></
 <p>Услови се проверавају редом (као у конструкцији <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> у
 императивним програмским језицима). Последњи услов је увек испуњен
 (подразумевајући да претходни нису) и одговара грани <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h1>Рекурзивне функције<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h1>
 <p>Пошто је Haskell чист функционални језик, није могућа измена вредности
 променљивих и самим тим није могуће коришћење петљи. Уместо тога,
@@ -611,7 +613,7 @@ class) <code class="docutils literal notranslate"><span class="pre">Num</span></
 <span class="mi">6</span>
 </pre></div>
 </div>
-<section id="id4">
+<div class="section" id="id4">
 <h2>Репна рекурзија<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p>Приметимо да се приликом израчунавања вредности факторијела све
 вредности првог чиноица морају сложити на стек и да се тек при изласку
@@ -664,8 +666,8 @@ class) <code class="docutils literal notranslate"><span class="pre">Num</span></
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
     </div>

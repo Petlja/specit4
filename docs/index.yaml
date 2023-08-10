@@ -96,6 +96,27 @@ lessons:
     src: 01_logicka.rst
     title: О логичкој парадигми
     type: reading
+  - description: ''
+    file: 01_iskazna_logika.html
+    guid: 7ae1818a-f9d6-4a19-abe8-bdb44d3c17be
+    normalized_title: Исказна логика
+    src: 01_iskazna_logika.rst
+    title: Исказна логика
+    type: reading
+  - description: ''
+    file: 02_predikatska_logika.html
+    guid: b7c7481e-2ac9-489b-872c-b645d9a4a2a8
+    normalized_title: Предикатска логика
+    src: 02_predikatska_logika.rst
+    title: Предикатска логика
+    type: reading
+  - description: ''
+    file: 03_prolog.html
+    guid: f94ab664-726c-4b43-b1f0-24f43ddf030f
+    normalized_title: PROLOG
+    src: 03_prolog.rst
+    title: PROLOG
+    type: reading
   archived-activities: []
   description: ''
   folder: 03 logicka

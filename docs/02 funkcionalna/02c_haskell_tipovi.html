@@ -2,8 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Алгебарски типови података</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
@@ -262,6 +261,9 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03_prolog><i class="fas fa-file-alt activity-icon"></i>PROLOG</div></a>
                 </div>
             </div>
                 </div>
@@ -278,7 +280,7 @@
   
     <div id="main-content">
     
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>Алгебарски типови података<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>Поред имплементације алгоритама, програмирање подразумева и дефинисање
 структура података. У језику Haskell постоји неколико начина да
@@ -376,7 +378,7 @@
 <p>У наставку ћемо приказати како је коришћењем индуктивних алгебарских
 типова података могуће дефинисати неколико веома корисних структура
 података.</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>Бинарно дрво<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>Циљ нам је да направимо структуру података којом можемо да
 представљамо скупове елемената тако да ефикасно можемо да убацујемо
@@ -568,8 +570,8 @@
 <span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="n">otherwise</span><span class="w"> </span><span class="ow">=</span><span class="w">  </span><span class="kt">Node</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">right</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>Ред<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p>Листа једноставно може да се користи као стек. Елементи могу да се
 додају са почетка и скидају са почетка листе у линеарној сложености.
@@ -650,8 +652,8 @@ queue) који се састоји од две листе.</p>
 почетку). Приметите да ту листу претварамо у ниску позивом функције
 <code class="docutils literal notranslate"><span class="pre">show</span></code>, међутим, ово није рекурзивни позив јер је позвана функција
 <code class="docutils literal notranslate"><span class="pre">show</span></code> другог типа (она претвара листу, а не ред у ниску карактера).</p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>Вежба - алгебарски типови података<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p>Као вежбу алгебарских типова података имплементирајмо структуру
 података речник.</p>
@@ -832,8 +834,8 @@ queue) који се састоји од две листе.</p>
 <span class="nf">union</span><span class="w"> </span><span class="n">m1</span><span class="w"> </span><span class="n">m2</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">foldlMap</span><span class="w"> </span><span class="p">(</span><span class="nf">\</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="n">insert</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="n">m1</span><span class="w"> </span><span class="n">m2</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
     </div>
