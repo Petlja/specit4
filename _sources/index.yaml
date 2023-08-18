@@ -38,6 +38,15 @@ lessons:
         file: 02_imperativna.rst
         description: #Optional
         guid: ea60c522-83a4-4335-8ac2-7725a2e8788e
+      - type: reading
+        title: Објектнооријентисана парадигма
+        file: 03_oop.rst
+        description: #Optional
+        guid: ccbc6043-02fd-41fb-ad06-388b3dd6e4c9
+      - type: quiz
+        title: Квиз
+        file: 04_o_paradigmama_quiz.rst
+        guid: e0b70068-d864-4e1f-ad16-8f2464dddedc
   - title: Функционална парадигма
     guid: 93e57ce6-7b0f-4c92-adcd-813ce430a492
     description: #Optional
@@ -48,6 +57,10 @@ lessons:
         file: 01_funkcionalna.rst
         description: #Optional
         guid: 78f21d5d-3e0b-40e9-a00d-62c8821b6362
+      - type: quiz
+        title: Квиз
+        file: 01a_funkcionalna_quiz.rst
+        guid: 1b30ba2a-41d5-41ba-8fe2-7d48eba6e198
       - type: reading
         title: Haskell - изрази и функције
         file: 02_haskell.rst
