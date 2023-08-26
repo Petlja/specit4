@@ -2,24 +2,35 @@ courseId: specit4_paradigme_logicko
 lang: en
 title: Petljadoc Course
 description:
-  willLearn: 
-    - Preview of Petljadoc course
+  willLearn:
+    - Научићеш шта су програмске парадигме и које су 4 основне програмске парадигме?
+    - Резимираћеш основне карактеристике императивне и објектнооријентисане парадигме.
+    - Научићеш основне карактеристике функционалне парадигме.
+    - Научићеш основне елементе функционалног програмског језика Haskell.
+    - Научићеш основне појмове математичке логике и аутоматског резоновања.
+    - Научићеш основне карактеристике логичке парадигме.
+    - Научићеш основне елементе логичког програмског језика PROLOG.
   requirements:
-    - Petljadoc
-    - Runestone
-    - Sphinx
+    - Инсталиран интерпретатор/компилатор за програмски језик Haskell (или приступ неком онлајн интерпретатору)
+    - Инсталиран интерпретатор/компиатор за програмски језик Proog (или приступ неком онлајн интерпретатору)
+    - Инсталирано развојно окружење за програмски језик C#
   toc:
     - Intro to Petljadoc INDEX.yaml
   externalLinks:  
-    - text: Sphinx Docs
-      href: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
-    - text: Petljadoc
-      href: https://github.com/Petlja/PetljaDoc/blob/master/README.md
-    - text: Runestone Interactive
-      href: https://github.com/RunestoneInteractive/overview
+    - text: Glasgow haskell compiler
+      href: https://www.haskell.org/ghc/
+    - text: Hugs Haskell interpreter
+      href: https://www.haskell.org/hugs/
+    - text: Haskell online (repl.it)
+      href: https://replit.com/languages/haskell
+    - text: SWI Prolog
+      href: https://www.swi-prolog.org/
+    - text: SWI Prolog online
+      href: https://swish.swi-prolog.org/
   longDescription: |
-    This is an example of a long description...
-  shortDescription: Shrot description
+      Овај курс је намењен за предмет Програмске парадигме у четвртом разреду гимназија за ученике са посебним способностима за рачунарство и информатику.
+      Курс прати одговарајући програм наставе и учења. Поред рада у школи, курс може да се пролази и самостално.    
+  shortDescription: Programske paradigme
 
 
 lessons:
