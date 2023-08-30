@@ -28,8 +28,13 @@ description:
     - text: SWI Prolog online
       href: https://swish.swi-prolog.org/
   longDescription: |
-      Овај курс је намењен за предмет Програмске парадигме у четвртом разреду гимназија за ученике са посебним способностима за рачунарство и информатику.
-      Курс прати одговарајући програм наставе и учења. Поред рада у школи, курс може да се пролази и самостално.    
+      <p> Овај курс је намењен за предмет Програмске парадигме у четвртом разреду гимназија за ученике са посебним способностима за рачунарство и информатику. </p>
+      <p> Курс прати одговарајући програм наставе и учења. Поред рада у школи, курс може да се пролази и самостално. </p>
+      <p>
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+      <br />Овај курс Фондација Петља објавила je под лиценцом <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Creative Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)</a>.
+      </p>  
   shortDescription: Програмске парадигме за четврти разред гимназија за ученике са посебним способностима за рачунарство и информатику
 
 
