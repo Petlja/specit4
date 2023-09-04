@@ -1,6 +1,6 @@
 courseId: specit4_paradigme_logicko 
 lang: en
-title: Програмске парадигме за четврти разред гимназија за ученике са посебним способностима за рачунарство и информатику
+title: Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења. 
 description:
   willLearn:
     - Научићеш шта су програмске парадигме и које су 4 основне програмске парадигме?
@@ -35,7 +35,7 @@ description:
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
       <br />Овај курс Фондација Петља објавила je под лиценцом <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Creative Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)</a>.
       </p>  
-  shortDescription: Програмске парадигме за четврти разред гимназија за ученике са посебним способностима за рачунарство и информатику
+  shortDescription: Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења
 
 
 lessons:
