@@ -108,13 +108,21 @@ lessons:
         file: 01_iskazna_logika.rst
         description: #Optional
         guid: 7ae1818a-f9d6-4a19-abe8-bdb44d3c17be
+      - type: quiz
+        title: Исказна логика - квиз
+        file: 01a_iskazna_logika_quiz.rst
+        guid: 1ba02540-04fd-4027-9f4d-7764220561be
       - type: reading
         title: Предикатска логика
         file: 02_predikatska_logika.rst
         description: #Optional
         guid: b7c7481e-2ac9-489b-872c-b645d9a4a2a8
+      - type: quiz
+        title: Предикатска логика - квиз
+        file: 02a_predikatska_logika_quiz.rst
+        guid: 8f1ef0b8-7871-4264-87cc-2210dbfa71ee
       - type: reading
-        title: PROLOG
+        title: Prolog
         file: 03_prolog.rst
         description: #Optional
         guid: f94ab664-726c-4b43-b1f0-24f43ddf030f
