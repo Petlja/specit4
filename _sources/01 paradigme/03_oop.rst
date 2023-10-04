@@ -2,7 +2,7 @@
 ===============================
 
 Објектно–оријентисану парадигму сте веома детаљно изучили у трећем
-разреду у предмету Објектнооријентисано програмирање, па се нећемо
+разреду у предмету Објектно-оријентисано програмирање, па се нећемо
 пуно задржавати на њеном описивању.
 
 Објектно–оријентисана парадигма (ООП) је концептуални модел
@@ -14,8 +14,43 @@
 методе које су део јавног интерфејса). Ова парадигма пружа низ
 предности као што су модуларност, поновно коришћење кода, лакше
 одржавање и разумевање, те олакшава развој комплексних система.
+Објектно оријентисана парадигма се примењује у многим програмским
+језицима као што су **Java**, **Python**, **C++**, **C#**, **Ruby**
+итд. ООП омогућава организацију кода на начин који одражава стварни
+свет и олакшава развој скалабилних и одрживих апликација.
 
-Кључни концепти ООП су:
+Слично као и струтурно програмирање и објектно-оријентисано
+програмирање је настало као одговор на софтверску кризу. Разбијањем
+монолитних програма у независне целине (класе и објекте), омогућено је
+да више програмера и тимова програмера подели посао тако да софтверске
+компоненте које независно програмирају комуницирају само договореног
+јавног интерфејса. На тај начин један програмер не мора (а коришћењем
+концепта енкапсулације и не може) да зна на који начин је
+имплементирана компонента коју други програмер програмира. То даје
+слободу другом програмеру да у било ком тренутку замени унутрашњу
+имплементацију (на пример, употреби неки ефикаснији алгоритам или
+структуре података), а да други програмери због тога не морају да
+мењају свој кôд). Додатно, једном испрограмиране класе се могу
+користити у већем броју различитих програма (на пример, класа за
+представљање времена и датума, класа за представљање листа
+тј. динамички проширивих низова или класа за представљање дугмета на
+корисничком интерфејсу). Механизам наслеђивања даје могућност да се
+класе прошире и на тај начин прилагоде новим, сложенијим захтевима.
+На пример, класа којом се представљају електрични аутомобили може да
+наследи класу којом се предсављају аутомобили, додајући податке о
+батерији. Полиморфизам омогућава да се се програмирање неких
+компонената врши само према апстрактном интерфејсу других
+поткомпонената, а да се те поткомпоненте накнадно замене новим
+конкретним имплементацијама. Тако, на пример, програм за обраду текста
+може да нуди функционалност штампања, обраћајући се апстрактној класи
+тј. интерфејсу који нуди заједничке функционалности за све
+штампаче. Оваквом систему у било ком тренутку може бити додата класа
+којом се представља неки нови, конкретни штампач, док год та класа
+имплементира све функционалности тог заједничког интерфејса. 
+
+
+Подсетимо се још једном кључних концепата ООП, које сте проучавали у
+трећем разреду:
 
 1. **Објекти:** Објекти су инстанце класа које дефинишу својства
    (атрибуте) и понашање (методе). На пример, у апликацији за
@@ -67,6 +102,69 @@
    програмерима да прецизно дефинишу који делови објекта су доступни
    изван њега, чиме се имплементира принцип енкапсулације.
 
+Подсетимо се ових концепата кроз следећи једноставан пример.
+
+.. code-block:: csharp
+
+    using System;
+
+    public class Circle
+    {
+        // privatno polje u kom čuvamo poluprečnik
+        private double radius;
+     
+        // konstruktor
+        public Circle(double radius)
+        {
+            this.setRadius(radius);
+        }
+     
+        // Metod za čitanje poluprečnika
+        public double GetRadius()
+        {
+            return radius;
+        }
+     
+        // Metod za promenu poluprečnika
+        public void SetRadius(double newRadius)
+        {
+            // obezbeđujemo da poluprečnik ne bude negativan
+            if (radius >= 0)
+                this.radius = radius;
+            else
+                throw new ArgumentException("Poluprečnik ne može biti negativan.");
+        }
+     
+        // Metod za izračunavanje površine
+        public double CalculateArea()
+        {
+            return radius * radius * Math.PI;
+        }
+     
+        // Metod za izračunavanje obima
+        public double CalculateCircumference()
+        {
+            return 2 * radius * Math.PI;
+        }
+    }
+     
+    class Program
+    {
+        static void Main()
+        {
+            // Kreiramo objekat, instancu klase krug
+            Circle circle = new Circle(5.0);
+     
+            // Menjamo mu poluprečnik
+            circle.SetRadius(7.0);
+     
+            // Računamo i ispisujemo poluprečnik, površinu i obim
+            Console.WriteLine($"Radius: {circle.GetRadius()}");
+            Console.WriteLine($"Area: {circle.CalculateArea()}");
+            Console.WriteLine($"Circumference: {circle.CalculateCircumference()}");
+        }
+    }
+   
 4. **Наслеђивање:** Наслеђивање омогућава креирање нових класа на
    основу већ постојећих класа. Ова парадигма подржава идеју да нове
    класе могу наследити (преузети) интерфејс тј. својства и методе
@@ -143,9 +241,197 @@
 
    Полиморфизам чини код флексибилнијим, омогућавајући програмерима да
    раде са различитим типовима објеката користећи исте методе и
-   сучеља. То олакшава развој, одржавањ
+   интерфејс.
 
-Објектно оријентисана парадигма се примењује у многим програмским
-језицима као што су Java, Python, C++, C#, Ruby итд. ООП омогућава
-организацију кода на начин који одражава стварни свет и олакшава
-развој скалабилних и одрживих апликација.
+Подсетимо се наслеђивања и полиморфизма тако што ћемо увести
+апстрактну класу за облике.
+
+.. code-block:: csharp
+
+   using System;
+    
+   // Apstraktna bazna klasa za predstavljanje bilo kog oblika
+   public abstract class Shape
+   {
+       // apstraktna metoda za izračunavanje površine
+       // (potrebno je da se implementira u svim izvedenim klasama)
+       public abstract double CalculateArea();
+   }
+    
+   // Izvedena klasa za predstavljanje krugova
+   // Krug je vrsta oblika, pa klasa Circle nasleđuje klasu Shape
+   public class Circle : Shape
+   {
+       // poluprečnik
+       private double radius;
+
+       // Konstruktor
+       public Circle(double radius)
+       {
+           this.radius = radius;
+       }
+    
+       // Implementacija izračunavanja površine
+       public override double CalculateArea()
+       {
+           return Math.PI * radius * radius;
+       }
+   }
+    
+   // Izvedena klasa za predstavljanje pravougaonika
+   // Pravougaonik je vrsta oblika, pa klasa Rectangle nasleđuje klasu Shape
+   public class Rectangle : Shape
+   {
+       // Dužina i širina
+       private double width;
+       private double height;
+    
+       // Konstruktor
+       public Rectangle(double width, double height)
+       {
+           this.width = width;
+           this.height = height;
+       }
+    
+       // Implementacija izračunavanja površine
+       public override double CalculateArea()
+       {
+           return width * height;
+       }
+   }
+   
+   class Program
+   {
+      static void Main()
+      {
+          // Niz oblika
+          Shape[] shapes = new Shape[]
+          {
+              new Circle(5.0),
+              new Rectangle(4.0, 6.0),
+              new Circle(3.5),
+              new Rectangle(2.0, 8.0)
+          };
+       
+          // Izračunavanje ukupne površine
+          double totalArea = 0.0;
+          foreach (Shape shape in shapes)
+              totalArea += shape.CalculateArea();
+       
+          // Ispis ukupne površine
+          Console.WriteLine($"Total Area of Shapes: {totalArea}");
+      }
+   }
+                   
+Упоредимо овај програм са еквивалентним програмом написаном у духу
+императивне парадигме.
+
+.. code-block:: csharp
+
+   class Program {
+       struct Circle {
+           public double radius;
+       }
+
+       static double CircleArea(Circle circle) {
+           return circle.radius * circle.radius * Math.PI;
+       }
+
+       struct Rectangle {
+           public double width, height;
+       }
+
+       static double RectangleArea(Rectangle rectangle) {
+           return rectangle.width * rectangle.height;
+       }
+
+       static void Main() {
+           Circle circle1; circle1.radius = 5.0;
+           Circle circle2; circle2.radius = 3.5;
+           Rectangle rectangle1; rectangle1.width = 4.0; rectangle1.height = 6.0;
+           Rectangle rectangle2; rectangle2.width = 2.0; rectangle2.height = 8.0;
+           
+          // Izračunavanje ukupne površine
+          double totalArea = 0.0;
+          totalArea += CircleArea(circle1);
+          totalArea += CircleArea(circle2);
+          totalArea += Rectangle1(rectangle1);
+          totalArea += Rectangle2(rectangle2);
+       
+          // Ispis ukupne površine
+          Console.WriteLine($"Total Area of Shapes: {totalArea}");
+       }
+   }
+
+Примећујемо да су структуре за представљање круга и правоугаоника
+(``Circle`` и ``Rectangle``) потпуно неповезане и да стога нисмо могли
+направити низ облика. Могли бисмо увести наткласу за облик и тако
+омогућити креирање низа облика, али наредно решење, као и претходно,
+не користи полиморфизам и не може се сматрати написаним у духу ООП.
+
+.. code-block:: csharp
+
+   class Program {
+       class Shape { }
+       
+       class Circle : Shape {
+           private double radius;
+           
+           public Circle(double radius) {
+               this.radius = radius;
+           }
+
+           public double CircleArea() {
+               return radius * radius * Math.PI;
+           }
+       }
+
+       class Rectangle : Shape {
+           private double width, height;
+
+           public Rectangle(width, height) {
+               this.width = width;
+               this.height = height;
+           }
+
+           public double RectangleArea(Rectangle rectangle) {
+               return width * height;
+           }
+      }
+
+
+       static void Main() {
+          // Niz oblika
+          Shape[] shapes = new Shape[]
+          {
+              new Circle(5.0),
+              new Rectangle(4.0, 6.0),
+              new Circle(3.5),
+              new Rectangle(2.0, 8.0)
+          };
+       
+          // Izračunavanje ukupne površine
+          double totalArea = 0.0;
+          foreach (Shape shape in shapes)
+              if (shape is Circle) 
+                 totalArea += shape.CircleArea();
+              else if (shape is Rectangle)
+                 totalArea += shape.RectangleArea();
+       
+          // Ispis ukupne površine
+          Console.WriteLine($"Total Area of Shapes: {totalArea}");
+       }
+   }
+
+Гранање на основу типа је веома проблематично, јер ствара проблеме
+приликом проширивања система новим класама. Ако бисмо, на пример,
+додали класу за представљање троуглова, у правом ООП решењу заснованом
+на полиморфизму не би било потребе да се мења код који израчунава
+укупну површину. Са друге стране, у претходном решењу би у том коду
+било потребно додати још једну грану којом се обрађују троуглови. Иако
+то није проблем у овако кратком програму, у дужим програмима није
+тешко замислити да постоје десетине па и стотине места где се обрађују
+низови облика, па је измена сваког од њих након додавања нове класе
+веома напоран посао, подложан грешкама (компилатор нас неће упозорити
+ако случајно на неком месту заборавимо да додамо грану у којој се обрађује
+новододата класа).

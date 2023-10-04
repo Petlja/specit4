@@ -59,9 +59,14 @@ lessons:
         file: 03_oop.rst
         description: #Optional
         guid: ccbc6043-02fd-41fb-ad06-388b3dd6e4c9
+      - type: reading
+        title: Скрипт парадигма
+        file: 04_skript.rst
+        description: #Optional
+        guid: da8a1690-cb6f-45a8-97f7-a884e45ad639
       - type: quiz
         title: Квиз
-        file: 04_o_paradigmama_quiz.rst
+        file: 05_o_paradigmama_quiz.rst
         guid: e0b70068-d864-4e1f-ad16-8f2464dddedc
   - title: Функционална парадигма
     guid: 93e57ce6-7b0f-4c92-adcd-813ce430a492
@@ -113,6 +118,11 @@ lessons:
         file: 01_iskazna_logika.rst
         description: #Optional
         guid: 7ae1818a-f9d6-4a19-abe8-bdb44d3c17be
+      - type: reading
+        title: SAT решавачи
+        file: 01_sat.rst
+        description: #Optional
+        guid: 557ec21d-0c26-4079-8cb8-ee05859d2337
       - type: quiz
         title: Исказна логика - квиз
         file: 01a_iskazna_logika_quiz.rst
@@ -122,6 +132,11 @@ lessons:
         file: 02_predikatska_logika.rst
         description: #Optional
         guid: b7c7481e-2ac9-489b-872c-b645d9a4a2a8
+      - type: reading
+        title: Аутоматски доказивачи теорема
+        file: 02_atp.rst
+        description: #Optional
+        guid: 8e1d732c-b1f1-4846-b49d-134013eb5048
       - type: quiz
         title: Предикатска логика - квиз
         file: 02a_predikatska_logika_quiz.rst
