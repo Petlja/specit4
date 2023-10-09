@@ -136,7 +136,7 @@ PROLOG - задаци за самостални рад
    Дефинисати PROLOG предикат ``permutations`` који набраја све
    пермутације елемената дате листе.
 
-   .. reveal:: prologresenje8
+.. reveal:: prologresenje9
    :showtitle: Прикажи решење
    :hidetitle: Сакриј решење
 
@@ -172,3 +172,99 @@ PROLOG - задаци за самостални рад
 
       permutations([], []).
       permutations([H|T], P) :- permutations(T, T1), interleave(H, T1, P).
+
+.. questionnote::
+
+   Дефинисати PROLOG предикат који проверава да ли је листа ``P``
+   подскуп листе ``S`` (обе су сортиране и имају све различите
+   елементе. Предикат треба да може да се употреби и за генерисање
+   свих подскупова дате листе.
+
+.. reveal:: prologresenje10
+   :showtitle: Прикажи решење
+   :hidetitle: Сакриј решење
+
+
+   .. code-block:: prolog
+                   
+      podskup([], []).
+      podskup([X|Xs], [Y|Ys]) :- X = Y, podskup(Xs, Ys).
+      podskup(Xs, [_|Ys]) :- podskup(Xs, Ys)
+
+      
+.. questionnote::
+
+   Напиши PROLOG предикат који решава следећу загонетку:
+
+   Неколико пријатеља је гласало које би градове желели да посете.
+   
+   1. Гласали су за Каиро, Лондон, Пекинг, Москву, Бомбај, Најроби и Џакарту.
+      
+   2. Један град је добио 4 гласа, два града по 2 гласа, два града по 1 глас
+      и два града нису добили ниједан глас.
+
+   3. Каиро и Пекинг су добили различит број гласова.
+      
+   4. Москва је добила или најмање или највише гласова од свих градова.
+      
+   5. Каиро је добио више гласова од Џакарте.
+      
+   6. Гледајући листу из тачке 1, тачно два пута се догодило да је
+      град са два гласа досао непосредно иза града без гласова.
+     
+   7. Џакарта је добила или један глас мање од Лондона или један
+      глас мање од Пекинга.
+
+  
+.. reveal:: prologresenje11
+   :showtitle: Прикажи решење
+   :hidetitle: Сакриј решење
+
+
+   Решење се може представити листом бројева, која мора бити
+   пермутација листе ``[4, 2, 2, 1, 1, 0, 0]``. Сви услови осим оног
+   под бројем 6 се онда могу веома једноставно кодирати. За услов из
+   тачке 6 дефинишемо помоћу функцију која проверава колико се пута
+   двочлана подлиста јавља унутар дате листе.
+      
+   .. code-block:: prolog
+                   
+      brojPojavljivanjaPara([], _, 0).
+      brojPojavljivanjaPara([X1,X2|XS], [X1,X2], N) :-
+          brojPojavljivanjaPara(XS, [X1, X2], N1), N is N1 + 1, !.
+      brojPojavljivanjaPara([_|XS], [X1,X2], N) :-
+          brojPojavljivanjaPara(XS, [X1, X2], N).
+       
+      glasovi(Gradovi) :-
+          Gradovi = [Kairo, London, Peking, Moskva, Bombaj, Najrobi, Dzakarta],
+          permutation(Gradovi, [4, 2, 2, 1, 1, 0, 0]),
+          (Kairo < Peking; Kairo > Peking),
+          (Moskva = 0 ; Moskva = 4),
+          Kairo > Dzakarta,
+          brojPojavljivanjaPara(Gradovi, [0, 2], 2),
+          (Dzakarta is (London-1); Dzakarta is (Peking-1)).
+          
+.. questionnote::
+
+    Напиши PROLOG решење следеће логичке загонетке, дате у облику
+    песме.
+   
+    ::
+       
+       1  Four couples in all
+          Attended a costume ball.
+       2  The lady dressed as a cat
+          Arrived with her husband Matt.
+       3  Two couples were already there,
+          One man dressed like a bear.
+       4  First to arrive wasn't Vince,
+          But he got there before the Prince.
+       5  The witch (not Sue) is married to Chuck,
+          Who was dressed as Donald Duck.
+       6  Mary came in after Lou, 
+          Both were there before Sue.
+       7  The Gipsy arrived before Ann,
+          Neither is wed to Batman.
+       8  If Snow White arrived after Tess,
+          Then how was each couple dressed?
+          
