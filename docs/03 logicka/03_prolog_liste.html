@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Листе</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/ghc/" target="_blank">Glasgow haskell compiler</a></div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/hugs/" target="_blank">Hugs Haskell interpreter</a></div>
+          <div class="useful-link">
+            <a href="https://replit.com/languages/haskell" target="_blank">Haskell online (repl.it)</a></div>
+          <div class="useful-link">
+            <a href="https://www.swi-prolog.org/" target="_blank">SWI Prolog</a></div>
+          <div class="useful-link">
+            <a href="https://swish.swi-prolog.org/" target="_blank">SWI Prolog online</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01%20paradigme-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-01%20paradigme-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                <a href=../01%20paradigme/03_oop.html><div class="studioLecture" id=activity-01%20paradigme-03_oop><i class="fas fa-file-alt activity-icon"></i>Објектнооријентисана парадигма</div></a>
+                <a href=../01%20paradigme/04_skript.html><div class="studioLecture" id=activity-01%20paradigme-04_skript><i class="fas fa-file-alt activity-icon"></i>Скрипт парадигма</div></a>
+                <a href=../01%20paradigme/05_o_paradigmama_quiz.html><div class="studioLecture" id=activity-01%20paradigme-05_o_paradigmama_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-02%20funkcionalna-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/01a_funkcionalna_quiz.html><div class="studioLecture" id=activity-02%20funkcionalna-01a_funkcionalna_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02%20funkcionalna-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02%20funkcionalna-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02%20funkcionalna-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02e_haskell_main.html><div class="studioLecture" id=activity-02%20funkcionalna-02e_haskell_main><i class="fas fa-file-alt activity-icon"></i>Haskell - улаз, излаз, главни програм</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02%20funkcionalna-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                <a href=../02%20funkcionalna/02d_haskell_primeri.html><div class="studioLecture" id=activity-02%20funkcionalna-02d_haskell_primeri><i class="fas fa-file-alt activity-icon"></i>Haskell - пример већег програма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-03%20logicka-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-03%20logicka-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/01_sat.html><div class="studioLecture" id=activity-03%20logicka-01_sat><i class="fas fa-file-alt activity-icon"></i>SAT решавачи</div></a>
+                <a href=../03%20logicka/01a_iskazna_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-01a_iskazna_logika_quiz><i class="far fa-question-circle activity-icon"></i>Исказна логика - квиз</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-03%20logicka-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/02_atp.html><div class="studioLecture" id=activity-03%20logicka-02_atp><i class="fas fa-file-alt activity-icon"></i>Аутоматски доказивачи теорема</div></a>
+                <a href=../03%20logicka/02a_predikatska_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-02a_predikatska_logika_quiz><i class="far fa-question-circle activity-icon"></i>Предикатска логика - квиз</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03%20logicka-03_prolog><i class="fas fa-file-alt activity-icon"></i>Prolog - база знања и правила извођења</div></a>
+                <a href=../03%20logicka/03_prolog_secenje.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_secenje><i class="fas fa-file-alt activity-icon"></i>Prolog - дрво извођења, сечење</div></a>
+                <a href=../03%20logicka/03_prolog_aritmetika.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_aritmetika><i class="fas fa-file-alt activity-icon"></i>Prolog - аритметичка израчунавања</div></a>
+                <a href=../03%20logicka/03_prolog_liste.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_liste><i class="fas fa-file-alt activity-icon"></i>Prolog - листе</div></a>
+                <a href=../03%20logicka/03_prolog_zagonetke.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_zagonetke><i class="fas fa-file-alt activity-icon"></i>Prolog - решавање логичких загонетки</div></a>
+                <a href=../03%20logicka/03z_prolog_zadaci.html><div class="studioLecture" id=activity-03%20logicka-03z_prolog_zadaci><i class="fas fa-file-alt activity-icon"></i>Prolog - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Листе<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Као и други програмски језици, и програмски језик Prolog пружа подршку
+за рад са листама података. Слично као што смо видели у програмском
+језику Haskell, листа је или празна (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) или се разлаже на главу и
+реп (<code class="docutils literal notranslate"><span class="pre">[X|XS]</span></code>). Листе се задају навођењем елемената између угластих
+заграда (нпр. <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">8,</span> <span class="pre">4,</span> <span class="pre">2]</span></code>).</p>
+<p>Кренимо од предиката <code class="docutils literal notranslate"><span class="pre">myMember</span></code>, који проверава да ли елемент <code class="docutils literal notranslate"><span class="pre">E</span></code>
+припада листи (то ради уграђени предикат <code class="docutils literal notranslate"><span class="pre">member</span></code>, тако да ову
+имплементацију приказујемо само ради илустрације).  Елемент не припада
+празној листи, тако да случај празне листе не треба да буде обрађен
+(ако нешто не постоји у бази знања, оно се аутоматски сматра
+нетачним). Елемент припада непразној листи ако и само ако је једнак
+глави или припада репу. Подсетимо се, дисјункцију можемо записати
+оператором <code class="docutils literal notranslate"><span class="pre">;</span></code>.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myMember</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span> <span class="nv">X</span> <span class="o">=</span> <span class="nv">H</span> <span class="p">;</span> <span class="nf">myMember</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">T</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Наравно, ово правило је могуће разбити на два.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myMember</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="k">_</span><span class="p">]).</span>
+<span class="nf">myMember</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="p">[</span><span class="k">_</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span> <span class="nf">myMember</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">T</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Јасно је да коришћењем овог предиката можемо проверити да ли дати број
+припада датој листи, тј. да наредни упити враћају исправне резултате.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">myMember</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]).</span>   <span class="c1">% true</span>
+<span class="s s-Atom">?-</span> <span class="nf">myMember</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]).</span>   <span class="c1">% false</span>
+</pre></div>
+</div>
+<p>Међутим, можда мало неочекивано, овај предикат се може употребити и да
+се наброји један по један елемент листе. Наредни упит</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">myMember</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]).</span>
+</pre></div>
+</div>
+<p>даје резултат <code class="docutils literal notranslate"><span class="pre">X=1</span></code>, затим <code class="docutils literal notranslate"><span class="pre">X=2</span></code>, <code class="docutils literal notranslate"><span class="pre">X=3</span></code> и на крају <code class="docutils literal notranslate"><span class="pre">X=4</span></code>.</p>
+<p>Ако је елемент једнак глави листе, он је члан листе и нема више
+потребе да се проверава да ли припада репу. Зато на крај првог правила
+можемо поставити рез.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myMember</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="k">_</span><span class="p">])</span> <span class="p">:-</span> <span class="p">!.</span>
+<span class="nf">myMember</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="p">[</span><span class="k">_</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span> <span class="nf">myMember</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">T</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Међутим, ова измена спречава употребу предиката <code class="docutils literal notranslate"><span class="pre">myMember</span></code> за
+набрајање свих елемената листе, јер се након пријављивања првог
+елемента спречава бектрекинг преко реза. Зато се верзија без реза ипак
+сматра бољом, ако се планира употреба за набрајање свих елемената
+листе (што је, видећемо, доста чест случај).</p>
+<p>Илуструјмо рад са листама кроз још неколико предиката.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који одређује дужину листе.</p>
+
+    </div></div>
+<p>Дужина празне листе је нула, а непразне листе је за један већа од
+дужине репа.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myLength</span><span class="p">([],</span> <span class="mi">0</span><span class="p">).</span>
+<span class="nf">myLength</span><span class="p">([</span><span class="k">_</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">N</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">myLength</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">N1</span><span class="p">),</span> <span class="nv">N</span> <span class="o">is</span> <span class="nv">N1</span> <span class="o">+</span> <span class="mf">1.</span>
+</pre></div>
+</div>
+<p>Пошто је употребљен оператор <code class="docutils literal notranslate"><span class="pre">is</span></code>, овај се предикат не може
+употребљавати да се наброје све листе дате дужине.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који спаја (надовезује) две листе.</p>
+
+    </div></div>
+<p>Решење тече рекурзијом по првој листи. Ако је она празна, резултат
+је друга листа. Ако је она облика глава-реп, тада резултат добијамо
+тако што рекурзивно спојимо реп <code class="docutils literal notranslate"><span class="pre">R</span></code> и другу листу <code class="docutils literal notranslate"><span class="pre">L</span></code>
+добијајући међурезултат <code class="docutils literal notranslate"><span class="pre">R1</span></code>. Коначан резултат добијамо додајући
+главу <code class="docutils literal notranslate"><span class="pre">H</span></code> на почетак међурезултата.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myAppend</span><span class="p">([],</span> <span class="nv">L</span><span class="p">,</span> <span class="nv">L</span><span class="p">).</span>
+<span class="nf">myAppend</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">L</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">R1</span><span class="p">])</span> <span class="p">:-</span> <span class="nf">myAppend</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">L</span><span class="p">,</span> <span class="nv">R1</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Друго правило можемо изразити и коришћењем оператора унификације на
+десној страни (тада имамо експлицитну променљиву уз резултат којој
+„додељујемо вредност“ на крају, када су познате вредности од којих се
+она гради):</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myAppend</span><span class="p">([],</span> <span class="nv">L</span><span class="p">,</span> <span class="nv">L</span><span class="p">).</span>
+<span class="nf">myAppend</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">L</span><span class="p">,</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">myAppend</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">L</span><span class="p">,</span> <span class="nv">R1</span><span class="p">),</span> <span class="nv">R</span> <span class="o">=</span> <span class="p">[</span><span class="nv">H</span><span class="p">,</span> <span class="nv">R1</span><span class="p">].</span>
+</pre></div>
+</div>
+<p>У зависности од личног стила неком ће прва а неком друга
+имплементација бити јаснија и разумљивија.</p>
+<p>Овај предикат исправно надовезује две дате листе. На упит</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">myAppend</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="nv">R</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>добијамо исправан одговор <code class="docutils literal notranslate"><span class="pre">X=[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code>. Међутим,
+прилично неочекивано, овај предикат успева и да одговори на питање
+надовезивањем које две листе се може добити дата листа.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">myAppend</span><span class="p">(</span><span class="nv">L1</span><span class="p">,</span> <span class="nv">L2</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]).</span>
+</pre></div>
+</div>
+<p>Добијају се одговори <code class="docutils literal notranslate"><span class="pre">L1=[]</span></code>, <code class="docutils literal notranslate"><span class="pre">L2=[1,2,3,4]</span></code>, затим
+<code class="docutils literal notranslate"><span class="pre">L1=[1]</span></code>, <code class="docutils literal notranslate"><span class="pre">L2=[2,3,4]</span></code>, затим <code class="docutils literal notranslate"><span class="pre">L1=[1,2]</span></code>, <code class="docutils literal notranslate"><span class="pre">L2=[3,4]</span></code>,
+затим <code class="docutils literal notranslate"><span class="pre">L1=[1,2,3]</span></code>, <code class="docutils literal notranslate"><span class="pre">L2=[4]</span></code> и на крају  <code class="docutils literal notranslate"><span class="pre">L1=[1,2,3,4]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">L2=[]</span></code>.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који одређује последњи елемент листе.</p>
+
+    </div></div>
+<p>Овај предикат није дефинисан за празне листе. Базу (излаз из
+рекурзије) ће зато представљати случај једночлане листе где је
+једини елемент листе уједно и последњи. Ако је листа непразна, тада
+је последњи елемент репа листе последњи елемент листе.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myLast</span><span class="p">([</span><span class="nv">X</span><span class="p">],</span> <span class="nv">X</span><span class="p">).</span>
+<span class="nf">myLast</span><span class="p">([</span><span class="k">_</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">Res</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">myLast</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">Res</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Овај предикат исправно одређује последњи елемент било које непразне
+листе, а за празну листу враћа одговор <code class="docutils literal notranslate"><span class="pre">false</span></code>. Остаје можда мало
+нејасно да ли је након првог правила додати рез, тј. зашто се
+једночлана листа не обрађује и на основу првог и на основу другог
+правила, пошто је она такође непразна. Једночлана листа се може
+унификовати са листом <code class="docutils literal notranslate"><span class="pre">[_|T]</span></code>, тако што је <code class="docutils literal notranslate"><span class="pre">T</span></code> празна листа.
+Након тога се, због десне стране правила, тражи последњи елемент
+празне листе, и пошто то не успева, не налази се додатно решење.
+Дакле, друго правило се примењује на једночлану листу, али не доводи
+до решења. Ако не ставимо рез након првог правила, овај предикат се
+може искористити и да наброји све листе којима је дати елемент
+последњи. На упит</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myLast</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Добијамо одговоре <code class="docutils literal notranslate"><span class="pre">L=[0]</span></code>, <code class="docutils literal notranslate"><span class="pre">L=[_1412,</span> <span class="pre">0]</span></code>, <code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">[_1412,</span> <span class="pre">_1418,</span>
+<span class="pre">0]</span></code> итд. при чему су <code class="docutils literal notranslate"><span class="pre">_1412</span></code>, <code class="docutils literal notranslate"><span class="pre">_1418</span></code> итд. називи аутоматски
+генерисаних променљивих.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који одређује елемент листе на датој позицији.</p>
+
+    </div></div>
+<p>Елемент на позицији 0 празне листе је њена глава. За <code class="docutils literal notranslate"><span class="pre">K</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>
+елемент на позицији <code class="docutils literal notranslate"><span class="pre">K</span></code> непразне листе је елемент на позицији
+<code class="docutils literal notranslate"><span class="pre">K-1</span></code> њеног репа.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">kth</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="k">_</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">H</span><span class="p">).</span>
+<span class="nf">kth</span><span class="p">([</span><span class="k">_</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="s s-Atom">К</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">K1</span> <span class="o">is</span> <span class="nv">K</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nf">kth</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">K1</span><span class="p">,</span> <span class="nv">R</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Променљива <code class="docutils literal notranslate"><span class="pre">R</span></code> означава резултат.</p>
+<p>У решењу можемо употребити и сечење.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">kth</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="k">_</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">H</span><span class="p">)</span> <span class="p">:-</span> <span class="p">!.</span>
+<span class="nf">kth</span><span class="p">([</span><span class="k">_</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">K1</span> <span class="o">is</span> <span class="nv">K</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nf">kth</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">K1</span><span class="p">,</span> <span class="nv">R</span><span class="p">).</span>
+</pre></div>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који обрће листу.</p>
+
+    </div></div>
+<p>Наивно решење добијамо тако што приметимо да се обртањем празне листе
+добија празна листа, а да се резултат обртања непразне листе, која има
+главу и реп, добија тако што се глава те листе добија на резултат
+обртања репа те листе.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myReverse</span><span class="p">([],</span> <span class="p">[]).</span>
+<span class="nf">myReverse</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">myReverse</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">R1</span><span class="p">),</span> <span class="nf">myAppend</span><span class="p">(</span><span class="nv">R1</span><span class="p">,</span> <span class="nv">H</span><span class="p">,</span> <span class="nv">R</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Потребно је и да дефинишемо предикат којим се елемент додаје на
+крај листе. Додавањем елемента на крај празне листе добија се
+једночлана листа. Ако је листа непразна, додавање елемента на њен
+крај се добија тако што јој се задржи глава, а реп јој се замени
+додавањем елемента на крај њеног репа.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myAppend</span><span class="p">([],</span> <span class="nv">X</span><span class="p">,</span> <span class="p">[</span><span class="nv">X</span><span class="p">]).</span>
+<span class="nf">myAppend</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">X</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">T1</span><span class="p">])</span> <span class="p">:-</span> <span class="nf">myAppend</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">T1</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Уместо да директно наведемо облик резултата на левој страни
+правила, можемо употребити и оператор унификације на десној страни
+правила.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myAppend</span><span class="p">([],</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">R</span> <span class="o">=</span> <span class="p">[</span><span class="nv">X</span><span class="p">].</span>
+<span class="nf">myAppend</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">myAppend</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">T1</span><span class="p">),</span> <span class="nv">R</span> <span class="o">=</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">T1</span><span class="p">].</span>
+</pre></div>
+</div>
+<p>Ова имплементација обртања је неефикасна и ефикасније решење се
+добија ако се користи акумулатор (опис овог алгоритма приказан је у
+поглављу о функционалном програмирању). Узима се један по један
+елемент полазне листе и додаје се на почетак помоћне листе
+(акумулатора) све док се полазна листа не испразни и тада је
+коначан резултат оно што се нагомилало у акумулатору. На почетку се
+креће од празног акумулатора.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myReverse</span><span class="p">([],</span> <span class="nv">A</span><span class="p">,</span> <span class="nv">A</span><span class="p">).</span>
+<span class="nf">myReverse</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">A</span><span class="p">,</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">myReverse</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">A</span><span class="p">],</span> <span class="nv">R</span><span class="p">).</span>
+<span class="nf">myReverse</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">myReverse</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="p">[],</span> <span class="nv">R</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Променљива <code class="docutils literal notranslate"><span class="pre">L</span></code> означава листу која се обрће, <code class="docutils literal notranslate"><span class="pre">R</span></code> резултат
+обртања, а <code class="docutils literal notranslate"><span class="pre">A</span></code> акумулатор.</p>
+<p>Обртање можемо употребити да проверимо, на пример, да ли је ниска
+палиндром.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">proveriPalindrom</span><span class="p">(</span><span class="nv">XS</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">obrni</span><span class="p">(</span><span class="nv">XS</span><span class="p">,</span> <span class="nv">XS</span><span class="p">).</span>
+</pre></div>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који прима угнежђене листе бројева и „пегла”
+их, тј. издваја листу свих бројева који се у њима јављају. На
+пример, треба да важи <code class="docutils literal notranslate"><span class="pre">myFlatten</span> <span class="pre">[[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">[4,</span> <span class="pre">[5,</span> <span class="pre">6]],</span> <span class="pre">7]</span> <span class="pre">[1,</span>
+<span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7]</span></code>.</p>
+
+    </div></div>
+<p>„Пеглањем“ празне листе добија се празна листа. Код непразних листа,
+„пегла“ се реп листе, а затим се анализира глава. Постоје два могућа
+случаја. Ако је глава листа, тада се резултат добије тако што се та
+глава „пегла“ и резултат се спаја са „испегланим“ репом. Ако глава
+није листа, она се таква каква јесте додаје на почетак „испегланог“
+репа. Проверу да ли је дата променљива листа можемо извршити
+библиотечким предикатом <code class="docutils literal notranslate"><span class="pre">is_list</span></code>.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">myFlatten</span><span class="p">([],</span> <span class="p">[]).</span>
+<span class="nf">myFlatten</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">is_list</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="nf">myFlatten</span><span class="p">(</span><span class="nv">H</span><span class="p">,</span> <span class="nv">H1</span><span class="p">),</span> <span class="nf">myFlatten</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">T1</span><span class="p">),</span> <span class="nf">append</span><span class="p">(</span><span class="nv">H1</span><span class="p">,</span> <span class="nv">T1</span><span class="p">,</span> <span class="nv">X</span><span class="p">),</span> <span class="p">!.</span>
+<span class="nf">myFlatten</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">T1</span><span class="p">])</span> <span class="p">:-</span> <span class="nf">myFlatten</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">T1</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Приметимо да ову функционалност није могуће постићи у језику
+Haskell, јер тип полазне листе није могуће дефинисати (тамо сви
+елементи листе морају да имају исти тип, а овде радимо са листама
+које садрже елементе различитих типова).</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који обједињава две сортиране листе у трећу
+сортирану. Дефинисати затим предикат који дели листу на две једнаке
+половине. Дефинисати на крају предикат који применом претходна два
+предиката сортира листу.</p>
+
+    </div></div>
+<p>Ако је било која од две листе које се обједињавају празна, резултат
+је она друга. Ако су обе листе непразне, мању од њихове две главе
+смештамо на почетак резултата, а реп резултата добијамо рекурзивним
+обједињавањем репа листе чија је глава била мања и целе друге
+листе.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">merge</span><span class="p">([],</span> <span class="nv">L2</span><span class="p">,</span> <span class="nv">L2</span><span class="p">).</span>
+<span class="nf">merge</span><span class="p">(</span><span class="nv">L1</span><span class="p">,</span> <span class="p">[],</span> <span class="nv">L1</span><span class="p">).</span>
+<span class="nf">merge</span><span class="p">([</span><span class="nv">H1</span><span class="p">|</span><span class="nv">T1</span><span class="p">],</span> <span class="p">[</span><span class="nv">H2</span><span class="p">|</span><span class="nv">T2</span><span class="p">],</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">H1</span> <span class="o">&lt;</span> <span class="nv">H2</span><span class="p">,</span> <span class="nf">merge</span><span class="p">(</span><span class="nv">T1</span><span class="p">,</span> <span class="p">[</span><span class="nv">H2</span><span class="p">|</span><span class="nv">T2</span><span class="p">],</span> <span class="nv">R1</span><span class="p">),</span> <span class="nv">R</span> <span class="o">=</span> <span class="p">[</span><span class="nv">H1</span><span class="p">|</span><span class="nv">R1</span><span class="p">],</span> <span class="p">!.</span>
+<span class="nf">merge</span><span class="p">([</span><span class="nv">H1</span><span class="p">|</span><span class="nv">T1</span><span class="p">],</span> <span class="p">[</span><span class="nv">H2</span><span class="p">|</span><span class="nv">T2</span><span class="p">],</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">merge</span><span class="p">([</span><span class="nv">H1</span><span class="p">|</span><span class="nv">T1</span><span class="p">],</span> <span class="nv">T2</span><span class="p">,</span> <span class="nv">R1</span><span class="p">),</span> <span class="nv">R</span> <span class="o">=</span> <span class="p">[</span><span class="nv">H2</span><span class="p">|</span><span class="nv">R1</span><span class="p">].</span>
+</pre></div>
+</div>
+<p>Поделу листе на два једнака дела можемо постићи тако што
+наизменично елементе са почетка листе која се дели смештамо у једну
+и другу резултујућу листу. Празна листа се дели на две
+празне. Једночлана се дели тако што ће једна од резултујућих листа
+бити једночлана, а друга празна. Листу која има бар два елемента
+делимо тако што реп без та два елемента делимо на два дела, а онда
+први елемент стављамо на почетак првог од та два дела, а други на
+почетак другог.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">split</span><span class="p">([],</span> <span class="p">[],</span> <span class="p">[]).</span>
+<span class="nf">split</span><span class="p">([</span><span class="nv">X</span><span class="p">],</span> <span class="p">[</span><span class="nv">X</span><span class="p">],</span> <span class="p">[]).</span>
+<span class="nf">split</span><span class="p">([</span><span class="nv">H1</span><span class="p">,</span><span class="nv">H2</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="p">[</span><span class="nv">H1</span><span class="p">|</span><span class="nv">L</span><span class="p">],</span> <span class="p">[</span><span class="nv">H2</span><span class="p">|</span><span class="nv">R</span><span class="p">])</span> <span class="p">:-</span> <span class="nf">split</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="nv">L</span><span class="p">,</span> <span class="nv">R</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>На крају дефинишемо сортирање обједињавањем. Празна и једночлана
+листа се не мењају приликом сортирања. Листа која има бар два
+елемента се дели на две подлисте, оне се независно сортирају и на
+крају обједињавају.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">mergeSort</span><span class="p">([],</span> <span class="p">[]).</span>
+<span class="nf">mergeSort</span><span class="p">([</span><span class="nv">X</span><span class="p">],</span> <span class="p">[</span><span class="nv">X</span><span class="p">])</span> <span class="p">:-</span> <span class="p">!.</span>
+<span class="nf">mergeSort</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="nv">R</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">split</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="nv">L1</span><span class="p">,</span> <span class="nv">L2</span><span class="p">),</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="nv">L1</span><span class="p">,</span> <span class="nv">L1S</span><span class="p">),</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="nv">L2</span><span class="p">,</span> <span class="nv">L2S</span><span class="p">),</span> <span class="nf">merge</span><span class="p">(</span><span class="nv">L1S</span><span class="p">,</span> <span class="nv">L2S</span><span class="p">,</span> <span class="nv">R</span><span class="p">).</span>
+</pre></div>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који одређује листу свих простих бројева који
+су мањи од датог броја. Претпости да на располагању имамо предикат
+<code class="docutils literal notranslate"><span class="pre">prost</span></code> за проверу да ли је број прост и користити га у решењу.</p>
+
+    </div></div>
+<p>У неким случајевима би предикати који се не ограниче резом теоријски
+враћали бесконачна решења, тј. упадали би у бесконачну рекурзију. На
+пример, наредни предикат би тражио све просте бројеве.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">prosti</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="p">[</span><span class="nv">N</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span> <span class="nf">prost</span><span class="p">(</span><span class="nv">N</span><span class="p">),</span> <span class="nv">N1</span> <span class="o">is</span> <span class="nv">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nf">prosti</span><span class="p">(</span><span class="nv">N1</span><span class="p">,</span> <span class="nv">T</span><span class="p">).</span>
+<span class="nf">prosti</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">T</span><span class="p">)</span> <span class="p">:-</span> <span class="o">not</span><span class="p">(</span><span class="nf">prost</span><span class="p">(</span><span class="nv">N</span><span class="p">)),</span> <span class="nv">N1</span> <span class="o">is</span> <span class="nv">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nf">prosti</span><span class="p">(</span><span class="nv">N1</span><span class="p">,</span> <span class="nv">T</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Ако наметнемо горње ограничење на величину бројева које тражимо,
+можемо употребити рез да зауставимо ову бесконачну претрагу, али и да
+избегнемо скупу проверу да ли је број прост у оба правила.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">prosti</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">Max</span><span class="p">,</span> <span class="p">[])</span> <span class="p">:-</span> <span class="nv">N</span> <span class="o">&gt;</span> <span class="nv">Max</span><span class="p">,</span> <span class="p">!.</span>
+<span class="nf">prosti</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">Max</span><span class="p">,</span> <span class="p">[</span><span class="nv">N</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span> <span class="nf">prost</span><span class="p">(</span><span class="nv">N</span><span class="p">),</span> <span class="nv">N1</span> <span class="o">is</span> <span class="nv">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nf">prosti</span><span class="p">(</span><span class="nv">N1</span><span class="p">,</span> <span class="nv">T</span><span class="p">),</span> <span class="p">!.</span>
+<span class="nf">prosti</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">Max</span><span class="p">,</span> <span class="nv">T</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">N1</span> <span class="o">is</span> <span class="nv">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nf">prosti</span><span class="p">(</span><span class="nv">N1</span><span class="p">,</span> <span class="nv">T</span><span class="p">).</span>
+
+<span class="nf">prosti</span><span class="p">(</span><span class="nv">Max</span><span class="p">,</span> <span class="nv">P</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">prosti</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nv">Max</span><span class="p">,</span> <span class="nv">P</span><span class="p">).</span>
+</pre></div>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Покушајте да за вежбу имплементирате решење које користи
+Ератостеново сито. Као помоћни предикат можете дефинисати предикат
+који из дате листе избацује све умношке датог броја.</p>
+
+    </div></div>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="03_prolog_aritmetika.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

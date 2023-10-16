@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Пример сложенијег програма</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/ghc/" target="_blank">Glasgow haskell compiler</a></div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/hugs/" target="_blank">Hugs Haskell interpreter</a></div>
+          <div class="useful-link">
+            <a href="https://replit.com/languages/haskell" target="_blank">Haskell online (repl.it)</a></div>
+          <div class="useful-link">
+            <a href="https://www.swi-prolog.org/" target="_blank">SWI Prolog</a></div>
+          <div class="useful-link">
+            <a href="https://swish.swi-prolog.org/" target="_blank">SWI Prolog online</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01%20paradigme-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-01%20paradigme-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                <a href=../01%20paradigme/03_oop.html><div class="studioLecture" id=activity-01%20paradigme-03_oop><i class="fas fa-file-alt activity-icon"></i>Објектнооријентисана парадигма</div></a>
+                <a href=../01%20paradigme/04_skript.html><div class="studioLecture" id=activity-01%20paradigme-04_skript><i class="fas fa-file-alt activity-icon"></i>Скрипт парадигма</div></a>
+                <a href=../01%20paradigme/05_o_paradigmama_quiz.html><div class="studioLecture" id=activity-01%20paradigme-05_o_paradigmama_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-02%20funkcionalna-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/01a_funkcionalna_quiz.html><div class="studioLecture" id=activity-02%20funkcionalna-01a_funkcionalna_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02%20funkcionalna-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02%20funkcionalna-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02%20funkcionalna-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02e_haskell_main.html><div class="studioLecture" id=activity-02%20funkcionalna-02e_haskell_main><i class="fas fa-file-alt activity-icon"></i>Haskell - улаз, излаз, главни програм</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02%20funkcionalna-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                <a href=../02%20funkcionalna/02d_haskell_primeri.html><div class="studioLecture" id=activity-02%20funkcionalna-02d_haskell_primeri><i class="fas fa-file-alt activity-icon"></i>Haskell - пример већег програма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-03%20logicka-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-03%20logicka-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/01_sat.html><div class="studioLecture" id=activity-03%20logicka-01_sat><i class="fas fa-file-alt activity-icon"></i>SAT решавачи</div></a>
+                <a href=../03%20logicka/01a_iskazna_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-01a_iskazna_logika_quiz><i class="far fa-question-circle activity-icon"></i>Исказна логика - квиз</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-03%20logicka-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/02_atp.html><div class="studioLecture" id=activity-03%20logicka-02_atp><i class="fas fa-file-alt activity-icon"></i>Аутоматски доказивачи теорема</div></a>
+                <a href=../03%20logicka/02a_predikatska_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-02a_predikatska_logika_quiz><i class="far fa-question-circle activity-icon"></i>Предикатска логика - квиз</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03%20logicka-03_prolog><i class="fas fa-file-alt activity-icon"></i>Prolog - база знања и правила извођења</div></a>
+                <a href=../03%20logicka/03_prolog_secenje.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_secenje><i class="fas fa-file-alt activity-icon"></i>Prolog - дрво извођења, сечење</div></a>
+                <a href=../03%20logicka/03_prolog_aritmetika.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_aritmetika><i class="fas fa-file-alt activity-icon"></i>Prolog - аритметичка израчунавања</div></a>
+                <a href=../03%20logicka/03_prolog_liste.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_liste><i class="fas fa-file-alt activity-icon"></i>Prolog - листе</div></a>
+                <a href=../03%20logicka/03_prolog_zagonetke.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_zagonetke><i class="fas fa-file-alt activity-icon"></i>Prolog - решавање логичких загонетки</div></a>
+                <a href=../03%20logicka/03z_prolog_zadaci.html><div class="studioLecture" id=activity-03%20logicka-03z_prolog_zadaci><i class="fas fa-file-alt activity-icon"></i>Prolog - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Пример сложенијег програма<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Као пример сложенијег програма приказаћемо програм за решавање
+загонетке Судоку. Задатак је да се табла димензије <span class="math notranslate nohighlight">\(9 \times 9\)</span>
+попуни цифрама од 1 до 9 тако да су цифре у свакој врсти, свакој
+колони и сваком од 9 квадрата димензије <span class="math notranslate nohighlight">\(3 \times 3\)</span> буду
+различити. Обично се креће од поља на ком се већ налазе неки бројеви
+циљ је попунити сва остала поља. Један пример делимично попуњенe
+Судоку табле и коначног решења је дат на наредној слици.</p>
+<img alt="../_images/sudoku.png" class="align-center" src="../_images/sudoku.png" />
+<p>Иако је оригинална загонетка димензије <span class="math notranslate nohighlight">\(9 \times 9\)</span>, она
+теоријски може бити било које димензије <span class="math notranslate nohighlight">\(d^2 \times d^2\)</span> (у
+оригиналној варијанти је <span class="math notranslate nohighlight">\(d=3\)</span>). Стога ћемо увести константу
+<code class="docutils literal notranslate"><span class="pre">dim</span></code> која одређује димензију табле.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="mi">3</span>
+</pre></div>
+</div>
+<p>Пређимо сада на дефинисање основних типова. Таблу ћемо представити као
+матрицу тј. листу листи које садрже бројеве, при чему ћемо бројеве,
+једноставности ради, представити типом <code class="docutils literal notranslate"><span class="pre">Int</span></code>.  Пошто су бројеви од 0
+до <span class="math notranslate nohighlight">\(d^2\)</span>, могао би бити коришћен и неки ужи тип. Празна поља
+ћемо означавати бројем 0 (уместо овога могао би бити коришћен тип
+<code class="docutils literal notranslate"><span class="pre">Maybe</span> <span class="pre">Int</span></code>, који, подсетимо се, омогућава представљање опционих
+вредности). Декларацијом <code class="docutils literal notranslate"><span class="pre">type</span></code> дефинишемо нови тип тако што дајемо
+ново име постојећем типу.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="kr">type</span><span class="w"> </span><span class="kt">Broj</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kt">Int</span>
+<span class="kr">type</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="p">[[</span><span class="kt">Broj</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Важно је да умемо да за дату таблу прочитамо сваку појединачну врсту,
+сваку колону и сваки квадрат димензије <span class="math notranslate nohighlight">\(d \times
+d\)</span>.</p>
+<p>Претпостављаћемо да је наша табла представљена листом својих врста, па
+је врсту тривијално прочитати (само читамо листу на датој позицији
+унутар наше листе листи, при чему су врсте нумерисане бројевима од 0
+до <span class="math notranslate nohighlight">\(d^2 - 1\)</span>).</p>
+<p>Што се тиче колоне, она се добија тако што се из сваке врсте издвоји
+елемент на датој позицији. Ово се елегантно може реализовати применом
+пресликавања тј. функције <code class="docutils literal notranslate"><span class="pre">map</span></code>.  Квадрате нумеришемо бројевима од 0
+до <span class="math notranslate nohighlight">\(d^2-1\)</span> одозго наниже, слева надесно. Сваком квадрату могу
+бити придружене две координате од 0 до <span class="math notranslate nohighlight">\(d-1\)</span> које се одређују
+као целобројни количник и остатак при дељењу редног броја квадрата
+бројем <span class="math notranslate nohighlight">\(d\)</span>. Множењем тих координата са <span class="math notranslate nohighlight">\(d\)</span> добијају се
+координате горњег левог поља у квадрату. Квадрат онда издвајамо тако
+што прво издвојимо <span class="math notranslate nohighlight">\(d\)</span> врста кренувши од врсте у којој се налази
+горње лево поље квадрата, затим из тих врста издвојимо <span class="math notranslate nohighlight">\(d\)</span>
+колона кренувши од колоне у којој се налази горње лево поље квадрата и
+на крају добијену листу листи димензије <span class="math notranslate nohighlight">\(d\times d\)</span> спојимо у
+једну листу која садржи <span class="math notranslate nohighlight">\(d^2\)</span> елемената (то можемо урадити
+библиотечком функцијом <code class="docutils literal notranslate"><span class="pre">concat</span></code>).</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">vrsta</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="kt">Broj</span><span class="p">]</span>
+<span class="nf">vrsta</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="o">!!</span><span class="w"> </span><span class="n">v</span>
+
+<span class="nf">kolona</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="kt">Broj</span><span class="p">]</span>
+<span class="nf">kolona</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="p">(</span><span class="nf">\</span><span class="w"> </span><span class="n">vrsta</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="n">vrsta</span><span class="w"> </span><span class="o">!!</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="n">tabla</span>
+
+<span class="nf">kvadrat</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="kt">Broj</span><span class="p">]</span>
+<span class="nf">kvadrat</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">kv</span><span class="w"> </span><span class="ow">=</span>
+<span class="w">  </span><span class="kr">let</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">kv</span><span class="w"> </span><span class="p">`</span><span class="n">div</span><span class="p">`</span><span class="w"> </span><span class="n">dim</span><span class="p">;</span>
+<span class="w">      </span><span class="n">k</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">kv</span><span class="w"> </span><span class="p">`</span><span class="n">mod</span><span class="p">`</span><span class="w"> </span><span class="n">dim</span>
+<span class="w">      </span><span class="n">vrste</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="p">(</span><span class="n">vrsta</span><span class="w"> </span><span class="n">tabla</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="n">dim</span><span class="o">*</span><span class="n">v</span><span class="o">..</span><span class="n">dim</span><span class="o">*</span><span class="n">v</span><span class="o">+</span><span class="n">dim</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">      </span><span class="n">kolone</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="p">(</span><span class="n">kolona</span><span class="w"> </span><span class="n">vrste</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="n">dim</span><span class="o">*</span><span class="n">k</span><span class="o">..</span><span class="n">dim</span><span class="o">*</span><span class="n">k</span><span class="o">+</span><span class="n">dim</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">    </span><span class="kr">in</span><span class="w"> </span><span class="n">concat</span><span class="w"> </span><span class="n">kolone</span>
+</pre></div>
+</div>
+<p>Сада можемо да пређемо на основни алгоритам претраге са повратком.
+Алгоритам ће бити реализован кроз функцију</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">popuni</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="kt">Tabla</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>која добија делимично попуњену таблу и враћа све исправно попуњене
+табле које се од ње могу добити. Током претраге ћемо попуњавати једно
+по једно празно поље и то на све могуће исправне начине. Стога ћемо
+дефинисати рекурзивну функцију</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">popuniPolje</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="kt">Tabla</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>која прима делимично попуњену таблу и координате неког поља на њој и
+затим попуњава то поље на све могуће начине и наставља попуњавање
+рекурзивно од следећег поља све док се не попуни цела табла. Поља су
+суштински представљена као уређени парови координата, међутим, да
+бисмо добили читљивији код увешћемо посебан тип.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="kr">newtype</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Након попуњавања текућег поља прелазићемо на попуњавање следећег поља
+и стога дефинишемо функцију која проналази следеће на основу датог
+текућег поља (она увећава колону за један, а ако се тиме добије
+координата колоне која је ван опсега, увећава врсту за један).
+Претрага ће се завршавати када следеће поље не постоји, па стога
+дефинишемо и помоћну функцију којом проверавамо да ли је добијено
+следеће поље исправно.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">sledece</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Polje</span>
+<span class="nf">sledece</span><span class="w"> </span><span class="p">(</span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">dim</span><span class="o">*</span><span class="n">dim</span>
+<span class="w">                         </span><span class="kr">then</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">                         </span><span class="kr">else</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nf">ispravno</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Bool</span>
+<span class="nf">ispravno</span><span class="w"> </span><span class="p">(</span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">dim</span><span class="o">*</span><span class="n">dim</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">dim</span><span class="o">*</span><span class="n">dim</span>
+</pre></div>
+</div>
+<p>Дефинишимо сада функције за читање броја са датог поља и упис броја на
+дато поље. Операција измене елемента на датој позицији у листи није
+карактеристична за функционално програмирање (јер је линеарне
+сложености, па је веома неефикасна). Уместо листа постоји могућност
+коришћења других структура података које омогућавају ефикасну измену
+елемента на датој позицији (наравно, измена није у месту већ се враћа
+измењена структура података, док оригинална остаје непромењена),
+међутим, пошто су наше листе кратке, ми ћемо се задржати на листама.</p>
+<p>Дефинишимо прво функцију која враћа листу која се добија изменом
+полазне листе тако што се на дату позицију упише дата вредност. Њу је
+веома лако дефинисати помоћу функција <code class="docutils literal notranslate"><span class="pre">take</span></code> која узима дати број
+елемената са почетка листе, <code class="docutils literal notranslate"><span class="pre">drop</span></code> која избацује дати број елемената
+са почетка листе и оператора <code class="docutils literal notranslate"><span class="pre">++</span></code> који надовезује листе.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">upisi</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+<span class="nf">upisi</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">take</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="n">drop</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">xs</span>
+</pre></div>
+</div>
+<p>Сада лако можемо дефинисати функције за читање и упис броја. Упис
+вршимо тако што у полазну таблу на позицију <code class="docutils literal notranslate"><span class="pre">v</span></code> упишемо врсту која
+се добија када се у врсту на позицији <code class="docutils literal notranslate"><span class="pre">v</span></code> у полазној табли, на
+позицију <code class="docutils literal notranslate"><span class="pre">k</span></code> упише жељени број.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">brojNaPolju</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Broj</span>
+<span class="nf">brojNaPolju</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="p">(</span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="o">!!</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">!!</span><span class="w"> </span><span class="n">k</span>
+
+<span class="nf">upisiBroj</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Broj</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Tabla</span>
+<span class="nf">upisiBroj</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="p">(</span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">upisi</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="p">(</span><span class="n">upisi</span><span class="w"> </span><span class="p">(</span><span class="n">vrsta</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>У главној функцији претраге на текуће поље треба да упишемо све могуће
+исправне вредности. Ако је број на том пољу различит од нуле, он мора
+остати такав и претрага се наставља од наредног поља. Ако на пољу пише
+нула, која означава да је поље празно, тада за све бројеве од 1 до
+<span class="math notranslate nohighlight">\(d\)</span> треба испитати да ли је могуће уписати их на то поље. То је
+могуће ако се у врсти у којој се налази то поље, у колони у којој се
+налази то поље и у квадрату у ком се налази то поље већ не налази тај
+број. За дато поље познати су редни број врсте и колоне у којој се оно
+налази, а дефинисаћемо помоћну функцију која израчунава редни број
+квадрата у ком се то поље налази, а затим коришћењем раније дефинисане
+функције <code class="docutils literal notranslate"><span class="pre">kvadrat</span></code> одређује и бројеве уписане у тај квадрат.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">kvadratOko</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="kt">Broj</span><span class="p">]</span>
+<span class="nf">kvadratOko</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="p">(</span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="ow">=</span>
+<span class="w">  </span><span class="kr">let</span><span class="w"> </span><span class="n">vv</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="p">`</span><span class="n">div</span><span class="p">`</span><span class="w"> </span><span class="n">dim</span><span class="p">;</span>
+<span class="w">      </span><span class="n">kk</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">`</span><span class="n">div</span><span class="p">`</span><span class="w"> </span><span class="n">dim</span>
+<span class="w">   </span><span class="kr">in</span><span class="w"> </span><span class="n">kvadrat</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="p">(</span><span class="n">dim</span><span class="o">*</span><span class="n">vv</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kk</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Провера да ли се број може уписати у квадрат се сада своди на проверу
+елемената врсте, колоне и квадрата.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">mozeSeUpisati</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Broj</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Bool</span>
+<span class="nf">mozeSeUpisati</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="p">(</span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="ow">=</span>
+<span class="w">  </span><span class="n">broj</span><span class="w"> </span><span class="p">`</span><span class="n">notElem</span><span class="p">`</span><span class="w"> </span><span class="p">(</span><span class="n">vrsta</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">  </span><span class="n">broj</span><span class="w"> </span><span class="p">`</span><span class="n">notElem</span><span class="p">`</span><span class="w"> </span><span class="p">(</span><span class="n">kolona</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">  </span><span class="n">broj</span><span class="w"> </span><span class="p">`</span><span class="n">notElem</span><span class="p">`</span><span class="w"> </span><span class="p">(</span><span class="n">kvadratOko</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="p">(</span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>На крају можемо дефинисати и централну функцију која врши бектрекинг
+претрагу. Прокоментаришимо функцију <code class="docutils literal notranslate"><span class="pre">popuniPolje</span></code>. Ако поље које
+треба попунити није исправно, тј. излази ван граница табле, то значи
+да се стигло до краја, да је цела табла исправно попуњена и стога је
+она једино своје исправно проширење. У супротном, ако је на датом пољу
+већ уписана нека вредност, рекурзивно се прелази на попуњавање
+следећег поља. У супротном одређујемо прво низ <code class="docutils literal notranslate"><span class="pre">brojevi</span></code> који садржи
+све бројеве од 1 до <span class="math notranslate nohighlight">\(d^2\)</span> који се могу уписати на текуће поље
+тако да табла и даље остане исправна, затим се одређује низ <code class="docutils literal notranslate"><span class="pre">table</span></code>
+који садржи табле које се добијају уписом тих бројева на текуће поље,
+затим се за сваку тако добијену таблу рекурзивно одређују сва исправна
+проширења до потпуно попуњене табле (добија се листа табли) и на крају
+се све тако добијене табле спајају у једну листу. Приметимо да користимо
+функцију <code class="docutils literal notranslate"><span class="pre">concatMap</span></code> која спаја функционалност функције
+<code class="docutils literal notranslate"><span class="pre">map</span> <span class="pre">(popuniPolje</span> <span class="pre">(sledece</span> <span class="pre">polje))</span> <span class="pre">table</span></code> којом покрећемо рекурзивно
+претрагу за сваку таблу из листе <code class="docutils literal notranslate"><span class="pre">table</span></code> и <code class="docutils literal notranslate"><span class="pre">concat</span></code> која спаја добијену
+листу листи у јединствену листу.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">popuni</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="kt">Tabla</span><span class="p">]</span>
+<span class="nf">popuni</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">popuniPolje</span><span class="w"> </span><span class="p">(</span><span class="kt">Polje</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="n">tabla</span>
+<span class="w">    </span><span class="kr">where</span><span class="w"> </span><span class="n">popuniPolje</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Polje</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Tabla</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="p">[</span><span class="kt">Tabla</span><span class="p">]</span>
+<span class="w">          </span><span class="n">popuniPolje</span><span class="w"> </span><span class="n">polje</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="ow">=</span>
+<span class="w">            </span><span class="kr">if</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="p">(</span><span class="n">ispravno</span><span class="w"> </span><span class="n">polje</span><span class="p">)</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="p">[</span><span class="n">tabla</span><span class="p">]</span>
+<span class="w">            </span><span class="kr">else</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="n">brojNaPolju</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">polje</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">              </span><span class="n">popuniPolje</span><span class="w"> </span><span class="p">(</span><span class="n">sledece</span><span class="w"> </span><span class="n">polje</span><span class="p">)</span><span class="w"> </span><span class="n">tabla</span>
+<span class="w">            </span><span class="kr">else</span>
+<span class="w">              </span><span class="kr">let</span>
+<span class="w">                </span><span class="n">brojevi</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="p">(</span><span class="n">mozeSeUpisati</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">polje</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="n">dim</span><span class="o">*</span><span class="n">dim</span><span class="p">];</span>
+<span class="w">                </span><span class="n">table</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="p">(</span><span class="n">upisiBroj</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="n">polje</span><span class="p">)</span><span class="w"> </span><span class="n">brojevi</span>
+<span class="w">              </span><span class="kr">in</span>
+<span class="w">                </span><span class="n">concatMap</span><span class="w"> </span><span class="p">(</span><span class="n">popuniPolje</span><span class="w"> </span><span class="p">(</span><span class="n">sledece</span><span class="w"> </span><span class="n">polje</span><span class="p">))</span><span class="w"> </span><span class="n">table</span>
+</pre></div>
+</div>
+<p>На крају програм можемо тестирати на конкретним примерима.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">sudoku</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">Tabla</span>
+<span class="nf">sudoku</span><span class="ow">=</span><span class="p">[[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Може се приметити да иако нису вршене никакве специфичне оптимизације,
+програм сасвим ефикасно ради за све табле димензије <span class="math notranslate nohighlight">\(3 \times
+3\)</span>. Позив</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">popuni</span><span class="w"> </span><span class="n">sudoku</span>
+</pre></div>
+</div>
+<p>даје резултат</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">]]]</span>
+</pre></div>
+</div>
+<p>што значи да постоји само један начин да се полазни проблем реши (по
+правилима Судоку, загонетке се конструишу тако да имају јединствено
+решење).</p>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="02z_haskell_vezba.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

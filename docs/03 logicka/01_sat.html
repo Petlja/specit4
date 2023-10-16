@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>SAT решавачи</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/ghc/" target="_blank">Glasgow haskell compiler</a></div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/hugs/" target="_blank">Hugs Haskell interpreter</a></div>
+          <div class="useful-link">
+            <a href="https://replit.com/languages/haskell" target="_blank">Haskell online (repl.it)</a></div>
+          <div class="useful-link">
+            <a href="https://www.swi-prolog.org/" target="_blank">SWI Prolog</a></div>
+          <div class="useful-link">
+            <a href="https://swish.swi-prolog.org/" target="_blank">SWI Prolog online</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01%20paradigme-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-01%20paradigme-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                <a href=../01%20paradigme/03_oop.html><div class="studioLecture" id=activity-01%20paradigme-03_oop><i class="fas fa-file-alt activity-icon"></i>Објектнооријентисана парадигма</div></a>
+                <a href=../01%20paradigme/04_skript.html><div class="studioLecture" id=activity-01%20paradigme-04_skript><i class="fas fa-file-alt activity-icon"></i>Скрипт парадигма</div></a>
+                <a href=../01%20paradigme/05_o_paradigmama_quiz.html><div class="studioLecture" id=activity-01%20paradigme-05_o_paradigmama_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-02%20funkcionalna-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/01a_funkcionalna_quiz.html><div class="studioLecture" id=activity-02%20funkcionalna-01a_funkcionalna_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02%20funkcionalna-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02%20funkcionalna-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02%20funkcionalna-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02e_haskell_main.html><div class="studioLecture" id=activity-02%20funkcionalna-02e_haskell_main><i class="fas fa-file-alt activity-icon"></i>Haskell - улаз, излаз, главни програм</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02%20funkcionalna-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                <a href=../02%20funkcionalna/02d_haskell_primeri.html><div class="studioLecture" id=activity-02%20funkcionalna-02d_haskell_primeri><i class="fas fa-file-alt activity-icon"></i>Haskell - пример већег програма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-03%20logicka-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-03%20logicka-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/01_sat.html><div class="studioLecture" id=activity-03%20logicka-01_sat><i class="fas fa-file-alt activity-icon"></i>SAT решавачи</div></a>
+                <a href=../03%20logicka/01a_iskazna_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-01a_iskazna_logika_quiz><i class="far fa-question-circle activity-icon"></i>Исказна логика - квиз</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-03%20logicka-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/02_atp.html><div class="studioLecture" id=activity-03%20logicka-02_atp><i class="fas fa-file-alt activity-icon"></i>Аутоматски доказивачи теорема</div></a>
+                <a href=../03%20logicka/02a_predikatska_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-02a_predikatska_logika_quiz><i class="far fa-question-circle activity-icon"></i>Предикатска логика - квиз</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03%20logicka-03_prolog><i class="fas fa-file-alt activity-icon"></i>Prolog - база знања и правила извођења</div></a>
+                <a href=../03%20logicka/03_prolog_secenje.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_secenje><i class="fas fa-file-alt activity-icon"></i>Prolog - дрво извођења, сечење</div></a>
+                <a href=../03%20logicka/03_prolog_aritmetika.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_aritmetika><i class="fas fa-file-alt activity-icon"></i>Prolog - аритметичка израчунавања</div></a>
+                <a href=../03%20logicka/03_prolog_liste.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_liste><i class="fas fa-file-alt activity-icon"></i>Prolog - листе</div></a>
+                <a href=../03%20logicka/03_prolog_zagonetke.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_zagonetke><i class="fas fa-file-alt activity-icon"></i>Prolog - решавање логичких загонетки</div></a>
+                <a href=../03%20logicka/03z_prolog_zadaci.html><div class="studioLecture" id=activity-03%20logicka-03z_prolog_zadaci><i class="fas fa-file-alt activity-icon"></i>Prolog - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="sat">
+<h1>SAT решавачи<a class="headerlink" href="#sat" title="Permalink to this heading">¶</a></h1>
+<p>Постоји веома ефикасан софтвер који може да испита задовољивост
+исказне формуле (који је, наравно, заснован на коришћењу другачијих
+метода). Такви програми се називају <strong>SAT решавачи</strong> (енг. <em>SAT
+solvers</em>). Постоје многи програми ове врсте, а најпознатији од њих је
+вероватно решавач MiniSat (<a class="reference external" href="http://minisat.se/">http://minisat.se/</a>,
+<a class="reference external" href="http://logicrunch.it.uu.se:4096/~wv/minisat/">http://logicrunch.it.uu.se:4096/~wv/minisat/</a>). Основни алгоритам на
+ком су засновани SAT решавачи је DPLL алгоритам
+(Дејвис-Патнам-Логеман-Ловеланд).</p>
+<p>Иако они испитују само задовољивост формуле, могу се лако употребити
+да провере и таутологичност. Наиме, решавач треба да провери
+задовољивост негације формуле, па ако утврди да је негација
+незадовољива, полазна формула је таутологија. Савремени SAT решавачи
+могу да провере неке формуле са стотинама хиљада променљивих.</p>
+<p>Да би се SAT решавачи могли користити, формула мора бити припремљена
+на одговарајући начин. Потребно је превести формулу у
+тзв. <strong>конјунктивну нормалну форму (КНФ)</strong>, тј. представити је у облику
+конјункције <strong>клаузула</strong> (каже се и клауза), где је свака клаузула
+дисјункција <strong>литерала</strong>, а литерал је исказно слово или негација
+исказног слова. На пример, наредна формула је у КНФ.</p>
+<div class="math notranslate nohighlight">
+\[(p \vee \neg q) \wedge (\neg p \vee q \vee r) \wedge \neg r\]</div>
+<p>Она се састоји од 3 клаузуле: <span class="math notranslate nohighlight">\(p \vee \neg q\)</span> (она има два
+литерала), <span class="math notranslate nohighlight">\(\neg p \vee q \vee r\)</span> (она има три литерала) и
+<span class="math notranslate nohighlight">\(\neg r\)</span> (она има један литерал).</p>
+<p>Превођење формуле у КНФ се може извршити коришћењем следећих логичких
+еквиваленција:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+A \Leftrightarrow B &amp;\equiv&amp; (A \Rightarrow B) \wedge (B \Rightarrow A)\\
+A \Rightarrow B &amp;\equiv&amp; \neg A \vee B\\
+\neg (A \wedge B) &amp;\equiv&amp; \neg A \vee \neg B\\
+\neg (A \vee B) &amp;\equiv&amp; \neg A \wedge \neg B\\
+\neg (\neg A) &amp;\equiv&amp; A\\
+A \vee (B \wedge C) &amp;\equiv&amp; (A \vee B) \wedge (A \vee C)\\
+(A \wedge B) \vee C &amp;\equiv&amp; (A \vee C) \wedge (B \vee C)
+\end{eqnarray*}\end{split}\]</div>
+<p>Прве две омогућавају да се из формуле уклоне сва појављивања везника
+<span class="math notranslate nohighlight">\(\Leftrightarrow\)</span> и <span class="math notranslate nohighlight">\(\Rightarrow\)</span>, наредне три да се све
+негације спусте до нивоа исказних слова, а последње две да се применом
+дистрибутивности добије жељени однос конјункција и дисјункција. Када
+је потребно, може се примењивати и асоцијативност конјункције и
+дисјункције.</p>
+<p>За вежбу вам остављамо да докажете да су све претходне везе заиста
+логичке еквиваленције.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>КНФ облик негације формуле из претходног примера је:</p>
+<div class="math notranslate nohighlight">
+\[(\neg p \vee q \vee r) \wedge \neg r \wedge \neg q \wedge p\]</div>
+<p>Формуле <span class="math notranslate nohighlight">\(\neg (A \Rightarrow B)\)</span> и <span class="math notranslate nohighlight">\(A \wedge \neg B\)</span>
+еквивалентне (што се лако може утврдити провером таутологичности
+формуле <span class="math notranslate nohighlight">\(\neg (A \Rightarrow B) \Leftrightarrow A \wedge \neg
+B\)</span>). Зато је негација формуле облика <span class="math notranslate nohighlight">\(I_1 \wedge I_2
+\Rightarrow I\)</span> еквивалентна формули <span class="math notranslate nohighlight">\(I_1 \wedge I_2 \wedge
+\neg I\)</span>, па је негација полазне формуле еквивалентна формули:</p>
+<div class="math notranslate nohighlight">
+\[(p \Rightarrow q \vee r) \wedge \neg r \wedge \neg (\neg q \Rightarrow \neg p)\]</div>
+<p>На основу истог правила претходна формула се може свести на:</p>
+<div class="math notranslate nohighlight">
+\[(p \Rightarrow q \vee r) \wedge \neg r \wedge (\neg q \wedge \neg \neg p)\]</div>
+<p>Сада можемо употребити чињеницу да су <span class="math notranslate nohighlight">\(A \Rightarrow B\)</span> и
+<span class="math notranslate nohighlight">\(\neg A \vee B\)</span> еквивалентне (што се може лако утврдити
+испитивањем таутологичности формуле <span class="math notranslate nohighlight">\((A \Rightarrow B)
+\Leftrightarrow (\neg A \vee B)\)</span>) и добити:</p>
+<div class="math notranslate nohighlight">
+\[(\neg p \vee (q \vee r)) \wedge \neg r \wedge (\neg q \wedge \neg \neg p)\]</div>
+<p>На крају, применом чињенице да су <span class="math notranslate nohighlight">\(\neg \neg A\)</span> и <span class="math notranslate nohighlight">\(A\)</span>
+еквивалентне и применом закона асоцијативности за конјункцију и
+дисјункцију (који нам омогућавају да неке заграде изоставимо) добијамо
+КНФ облик:</p>
+<div class="math notranslate nohighlight">
+\[(\neg p \vee q \vee r) \wedge \neg r \wedge \neg q \wedge p\]</div>
+
+    </div></div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Применом дистрибутивности може се добити КНФ формула која је много
+већа од полазне (чак експоненцијално већа). Постоје и ефикасније
+методе свођења формуле на КНФ.  Најпознатија од њих је <strong>Цајтинова
+трансформација</strong> (енг. <em>Tseitin transform</em>) која уводи нова исказна
+слова којим се обележавају потформуле, пре превођења у КНФ. На
+пример, размотримо следећу формулу:</p>
+<div class="math notranslate nohighlight">
+\[(p \vee (q \wedge r)) \wedge (\neg p \vee \neg r)\]</div>
+<p>Њену потформулу <span class="math notranslate nohighlight">\(q \wedge r\)</span> можемо обележити новим словом
+<span class="math notranslate nohighlight">\(s_1\)</span>, чиме добијамо формулу:</p>
+<div class="math notranslate nohighlight">
+\[(p \vee s_1) \wedge (\neg p \vee \neg r) \wedge (s_1 \Leftrightarrow q \wedge r)\]</div>
+<p>Њену потформулу <span class="math notranslate nohighlight">\(p \vee s_1\)</span> можемо обележити новим словом
+<span class="math notranslate nohighlight">\(s_2\)</span>, чиме добијамо формулу:</p>
+<div class="math notranslate nohighlight">
+\[s_2 \wedge (\neg p \vee \neg r) \wedge (s_1 \Leftrightarrow q \wedge r) \wedge (s_2 \Leftrightarrow p \vee s_1)\]</div>
+<p>Њену потформулу <span class="math notranslate nohighlight">\(\neg p \vee \neg r\)</span> можемо обележити новим словом
+<span class="math notranslate nohighlight">\(s_3\)</span>, чиме добијамо формулу:</p>
+<div class="math notranslate nohighlight">
+\[s_2 \wedge s_3 \wedge (s_1 \Leftrightarrow q \wedge r) \wedge (s_2 \Leftrightarrow p \vee s_1) \wedge (s_3 \Leftrightarrow \neg p \vee \neg r)\]</div>
+<p>На крају, њену потформулу <span class="math notranslate nohighlight">\(s_2 \wedge s_3\)</span> можемо обележити
+новим словом <span class="math notranslate nohighlight">\(s_4\)</span>, чиме добијамо формулу:</p>
+<div class="math notranslate nohighlight">
+\[s_4 \wedge (s_1 \Leftrightarrow q \wedge r) \wedge (s_2 \Leftrightarrow p \vee s_1) \wedge (s_3 \Leftrightarrow \neg p \vee \neg r) \wedge (s_4 \Leftrightarrow s_2 \wedge s_3)\]</div>
+<p>Сада се свака од логичких еквиваленција лако може засебно превести
+у КНФ, чиме се добија коначан КНФ облик полазне формуле.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{l}
+s_4 \\
+(\neg s_1 \vee q) \wedge (\neg s_1 \vee r) \wedge (\neg q \vee \neg r \vee s_1)\ \wedge \\
+(\neg s_2 \vee p \vee s_1) \wedge (\neg p \vee s_2) \wedge (\neg s_1 \vee s_2)\ \wedge\\
+(\neg s_3 \vee \neg p \vee \neg r) \wedge (p \vee s_3)\wedge (r \vee s_3)\ \wedge \\
+(\neg s_4 \vee s_2) \wedge (\neg s_4 \vee s_3)\wedge (\neg s_2 \vee \neg s_3 \vee s_4)
+\end{array}\end{split}\]</div>
+<p>Тиме се полазна формула увећава само за константни фактор.  Додуше,
+добијена формула неће више бити логички еквивалентна полазној, већ
+само еквизадовољива, што значи да је КНФ облик задовољив ако и само
+ако је задовољива полазна формула. Приметимо да нам је то сасвим
+довољно за примену SAT решавача, јер утврђивањем незадовољивости
+КНФ облика аутоматски знамо да је и полазна формула незадовољива,
+док се утврђивањем задовољивости КНФ облика добија валуација која
+је уједно и валуација у којој је полазна формула тачна (довољно је
+просто занемарити вредности новоуведних променљивих у тој
+валуацији).</p>
+
+    </div></div>
+<p>Формуле у КНФ облику се обично описују у формату DIMACS (то је
+стандардни формат улаза SAT решавача). Променљиве се обележавају
+бројевима 1, 2, 3 итд. Негативни бројеви означавају негације
+променљивих. Свака клаузула се записује као низ бројева завршен нулом.
+На пример, DIMACS запис формуле <span class="math notranslate nohighlight">\((p \vee \neg q) \wedge (\neg p
+\vee q \vee r) \wedge \neg r\)</span> је:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="n">cnf</span> <span class="mi">3</span> <span class="mi">3</span>
+<span class="mi">1</span> <span class="o">-</span><span class="mi">2</span> <span class="mi">0</span>
+<span class="o">-</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="o">-</span><span class="mi">3</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Прва линија је заглавље и говори о томе да формула има 3 променљиве и
+3 клаузуле. Променљиве <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span> и <span class="math notranslate nohighlight">\(r\)</span> су означене
+редом бројевима 1, 2 и 3.</p>
+<p>Ако овај текст снимимо у датотеку <cite>formula.cnf</cite> и покренемо SAT
+решавач (на пример, MiniSAT) или је унесемо у веб-интерфејс SAT
+решавача MiniSAT (<a class="reference external" href="http://logicrunch.it.uu.se:4096/~wv/minisat/">http://logicrunch.it.uu.se:4096/~wv/minisat/</a>),
+добићемо резултат</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SAT</span>
+<span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">3</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Ово значи да је формула задовољива и једна валуација у којој је та
+формула тачна је <span class="math notranslate nohighlight">\(p \mapsto 0, q \mapsto 0, r \mapsto 0\)</span>.</p>
+<section id="id1">
+<h2>Судоку<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<p>Прикажимо сада како можемо искористити SAT решавач да решимо логичку
+загонетку Судоку. Ова загонетка захтева да се поље димензије <span class="math notranslate nohighlight">\(9
+\times 9\)</span> попуни бројевима од 1 до 9 тако да су у свакој врсти, у
+свакој колони и у сваком троуглу димензије <span class="math notranslate nohighlight">\(3 \times 3\)</span> бројеви
+различити. Потребно је да кодирамо овај проблем коришћењем исказне
+логике. Означимо поља табеле са <span class="math notranslate nohighlight">\(A_{ij}\)</span> за <span class="math notranslate nohighlight">\(1 \leq i, j
+\leq 9\)</span>. На сваком пољу може бити уписан било који број од 1
+до 9. Основни искази ће бити означени са <span class="math notranslate nohighlight">\(p_{ijv}\)</span> за <span class="math notranslate nohighlight">\(1
+\leq i, j, v \leq 9\)</span> и означаваће да је на пољу <span class="math notranslate nohighlight">\(A_{ij}\)</span> уписана
+вредност <span class="math notranslate nohighlight">\(v\)</span>. Сваки од ових исказа може бити или тачан или
+нетачан. Потребно је да одредимо и везе између исказа које ће
+осигурати да ће њихове истинитосне вредности одређивати исправно решење
+загонетке Судоку.</p>
+<p>За почетак, на сваком пољу треба да пише тачно једна вредност, што
+значи да за сваки пар <span class="math notranslate nohighlight">\(i\)</span> и <span class="math notranslate nohighlight">\(j\)</span> од 1 до 9 тачно једна од
+променљивих <span class="math notranslate nohighlight">\(p_{ij1}, \ldots, p_{ij9}\)</span> треба да има вредност
+тачно. Ово можемо кодирати следећим формулама:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+p_{ij1} \vee p_{ij2} \vee \ldots \vee p_{ij9}\\
+p_{ij1} \Rightarrow \neg p_{ij2} \wedge \neg p_{ij3} \ldots \neg p_{ij9}\\
+p_{ij2} \Rightarrow \neg p_{ij1} \wedge \neg p_{ij3} \ldots \neg p_{ij9}\\
+\ldots\\
+p_{ij9} \Rightarrow \neg p_{ij1} \wedge \neg p_{ij2} \ldots \neg p_{ij8}
+\end{eqnarray*}\end{split}\]</div>
+<p>Свака од ових импликација се може разбити на 8 мањих импликација, а
+затим се трансформацијом <span class="math notranslate nohighlight">\(p \Rightarrow q\)</span> у <span class="math notranslate nohighlight">\(\neg p \vee
+q\)</span> може добити следећи низ клаузула (генеришу се засебно клаузуле за
+свако <span class="math notranslate nohighlight">\(i, j\)</span> од 1 до 9):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+p_{ij1} \vee p_{ij2} \vee \ldots \vee p_{ij9}\\
+\neg p_{ij1} \vee \neg p_{ij2} \\
+\neg p_{ij1} \vee \neg p_{ij3} \\
+\ldots \\
+\neg p_{ij1} \vee \neg p_{ij9} \\
+\neg p_{ij2} \vee \neg p_{ij3} \\
+\neg p_{ij2} \vee \neg p_{ij4} \\
+\ldots \\
+\neg p_{ij2} \vee \neg p_{ij9} \\
+\ldots \\
+\ldots \\
+\neg p_{ij8} \vee \neg p_{ij9} \\
+\end{eqnarray*}\end{split}\]</div>
+<p>На сличан начин треба да кодирамо услове да ће за сваку врсту
+<span class="math notranslate nohighlight">\(i\)</span> и сваку вредност <span class="math notranslate nohighlight">\(v\)</span> од 1 до 9 тачно једна променљива
+<span class="math notranslate nohighlight">\(p_{i1v}, p_{i2v}, \ldots, p_{i9v}\)</span> бити тачна, а затим услове
+да ће за сваку колону <span class="math notranslate nohighlight">\(j\)</span> и сваку вредност <span class="math notranslate nohighlight">\(v\)</span> од 1 до 9
+тачно једна променљива <span class="math notranslate nohighlight">\(p_{1jv}, p_{2jv}, \ldots, p_{9jv}\)</span> бити
+тачна. На крају је потребно додати и услове за сваки од квадрата
+димензије <span class="math notranslate nohighlight">\(3\times 3\)</span>. Сваки од 9 квадрата се може задати паром
+индекса <span class="math notranslate nohighlight">\((k, l)\)</span> између 0 и 2 (нпр. <span class="math notranslate nohighlight">\((0, 0)\)</span> означава
+горњи леви квадрат, а <span class="math notranslate nohighlight">\((2, 2)\)</span> доњи десни). За сваки квадрат
+<span class="math notranslate nohighlight">\((k, l)\)</span> и сваку вредност <span class="math notranslate nohighlight">\(v\)</span> између 1 и 9, тачно једна од
+променљивих</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p_{(3k+1)(3l+1)v},\ p_{(3k+1)(3l+2)v},\ p_{(3k+1)(3l+3)v}\\
+p_{(3k+2)(3l+1)v},\ p_{(3k+2)(3l+2)v},\ p_{(3k+2)(3l+3)v}\\
+p_{(3k+3)(3l+1)v},\ p_{(3k+3)(3l+2)v},\ p_{(3k+3)(3l+3)v}\end{split}\]</div>
+<p>треба да буде тачна.</p>
+<p>У загонетнки Судоку обично су задате вредности које су уписане у нека
+поља (и то често тако да се гарантује да се остала поља могу попунити
+на јединствен начин, тј. да постоји само једно тачно решење
+загонетке).  Задате вредности једноставно кодирамо тако што решавачу
+дамо једночлане клаузуле које садрже само променљиве за које унапред
+знамо да су тачне. Наредни програм у језику C# кодира загонетку Судоку
+у формату DIMACS, који је стандардни улазни формат SAT
+решавача. Имплементација је прилично праволинијска. Потребно је
+пресликати променљиве <span class="math notranslate nohighlight">\(p_{ijv}\)</span> на бројеве од <span class="math notranslate nohighlight">\(1\)</span> до
+<span class="math notranslate nohighlight">\(9^3 = 729\)</span>. Најједноставнији начин да се то уради је да се
+индекси <span class="math notranslate nohighlight">\(ijv\)</span> тумаче као цифре (увећане за 1) у основи 9, тј. да
+се свака променљива <span class="math notranslate nohighlight">\(p_{ijv}\)</span> преслика у број <span class="math notranslate nohighlight">\((i-1) +
+9\cdot (j-1) + 81\cdot (v-1) + 1\)</span>. Тада је и декодирање једноставно (и
+своди се на одређивање вредности цифара у основи 9):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i = (p - 1)\ \mathrm{mod}\ 9 + 1\\
+j = ((p - 1)\ \mathrm{div}\ 9)\ \mathrm{mod}\ 9 + 1\\
+v = ((p - 1)\ \mathrm{div}\ 81) + 1\end{split}\]</div>
+<p>Програм генерише 81 услов јединствености броја на пољу (за 81 поље),
+81 услов јединствености броја у врсти (за 9 врста и по 9 бројева), 81
+услов јединствености броја у колони (за 9 колона и по 9 бројева) и 81
+услов јединствености броја у малом квадрату (за 9 малих квадрата и по 9
+бројева). Сваки услов јединствености има једну позитивну клаузулу са 9
+литерала и <span class="math notranslate nohighlight">\({9 \choose 2} = 36\)</span> негативних клаузула са по 2
+литерала. Укупан број општих клаузула је зато <span class="math notranslate nohighlight">\(4 \cdot 81 \cdot
+37\)</span>, а њима се додају у једночлане клаузуле за свако унапред попуњено
+поље.</p>
+<p>Коначна верзија програма дата је у наставку.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ispisuje DIMACS zaglavlje</span>
+<span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Zaglavlje</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">BrojPromenljivih</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BrojKlauzula</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;p cnf {0} {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">BrojPromenljivih</span><span class="p">,</span><span class="w"> </span><span class="n">BrojKlauzula</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// ispisuje klauzulu kao red u formatu DIMACS</span>
+<span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Klauzula</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">promenljive</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="k">foreach</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">promenljive</span><span class="p">)</span>
+<span class="w">      </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// kodira se uslov da je tacno jedna od promenljivih iz datog niza tacna</span>
+<span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">TacnoJedna</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">promenljive</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// klauzula koja dovodi do toga da bar jedna promenljiva iz niza</span>
+<span class="w">    </span><span class="c1">// mora biti tacna</span>
+<span class="w">    </span><span class="n">Klauzula</span><span class="p">(</span><span class="n">promenljive</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// klauzule koje za svaki par promenljivih zabranju da su obe</span>
+<span class="w">    </span><span class="c1">// promenljive istovremeno tacne</span>
+<span class="w">    </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">kl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="m">2</span><span class="p">];</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">promenljive</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">promenljive</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">kl</span><span class="p">[</span><span class="m">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">promenljive</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="n">kl</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">promenljive</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<span class="w">            </span><span class="n">Klauzula</span><span class="p">(</span><span class="n">kl</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// trojke (i, j, v) se kodiraju brojevima između 1 i 729</span>
+<span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">P</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">9</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">81</span><span class="o">*</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// ucitavamo vrednosti na zadatim poljima</span>
+<span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">zadate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">linija</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">linija</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">delovi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linija</span><span class="p">.</span><span class="n">Split</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">delovi</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">delovi</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">delovi</span><span class="p">[</span><span class="m">2</span><span class="p">]);</span>
+<span class="w">        </span><span class="n">zadate</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">P</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// stampamo DIMACS zaglavlje</span>
+<span class="w">    </span><span class="n">Zaglavlje</span><span class="p">(</span><span class="m">729</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="o">*</span><span class="m">81</span><span class="o">*</span><span class="m">37</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zadate</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// jedinstvenost vrednosti na svakom polju</span>
+<span class="w">    </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">promenljive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="m">9</span><span class="p">];</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">       </span><span class="p">{</span>
+<span class="w">           </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span>
+<span class="w">              </span><span class="n">promenljive</span><span class="p">[</span><span class="n">v</span><span class="o">-</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">);</span>
+<span class="w">           </span><span class="n">TacnoJedna</span><span class="p">(</span><span class="n">promenljive</span><span class="p">);</span>
+<span class="w">       </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// jedinstvenost vrednosti u svakoj vrsti</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span>
+<span class="w">       </span><span class="p">{</span>
+<span class="w">           </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">              </span><span class="n">promenljive</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">);</span>
+<span class="w">           </span><span class="n">TacnoJedna</span><span class="p">(</span><span class="n">promenljive</span><span class="p">);</span>
+<span class="w">       </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// jedinstvenost vrednosti u svakoj koloni</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span>
+<span class="w">       </span><span class="p">{</span>
+<span class="w">           </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">              </span><span class="n">promenljive</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">);</span>
+<span class="w">           </span><span class="n">TacnoJedna</span><span class="p">(</span><span class="n">promenljive</span><span class="p">);</span>
+<span class="w">       </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// jedinstvenost vrednosti u svakom kvadratu 3x3</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span>
+<span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span><span class="n">l</span><span class="o">++</span><span class="p">)</span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">              </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="o">++</span><span class="p">)</span>
+<span class="w">                 </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="o">++</span><span class="p">)</span>
+<span class="w">                     </span><span class="n">promenljive</span><span class="p">[</span><span class="m">3</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="m">1</span><span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="m">3</span><span class="o">*</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="o">*</span><span class="n">l</span><span class="o">+</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">);</span>
+<span class="w">              </span><span class="n">TacnoJedna</span><span class="p">(</span><span class="n">promenljive</span><span class="p">);</span>
+<span class="w">          </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ispisujemo zadate promenljive</span>
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">zadate</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">kl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">p</span><span class="p">};</span>
+<span class="w">        </span><span class="n">Klauzula</span><span class="p">(</span><span class="n">kl</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Програм учитава унапред попуњене вредности. На пример, судоку загонетка:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="mi">3</span>
+<span class="mi">9</span> <span class="o">.</span> <span class="o">.</span> <span class="mi">3</span> <span class="o">.</span> <span class="mi">2</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="mi">6</span> <span class="mi">8</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="mi">5</span> <span class="o">.</span>
+<span class="mi">1</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="mi">5</span> <span class="o">.</span> <span class="o">.</span> <span class="mi">9</span>
+<span class="mi">5</span> <span class="o">.</span> <span class="o">.</span> <span class="mi">7</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="mi">6</span> <span class="mi">2</span>
+<span class="o">.</span> <span class="o">.</span> <span class="mi">4</span> <span class="o">.</span> <span class="mi">1</span> <span class="o">.</span> <span class="mi">5</span> <span class="mi">3</span> <span class="mi">8</span>
+<span class="mi">3</span> <span class="mi">4</span> <span class="o">.</span> <span class="mi">8</span> <span class="o">.</span> <span class="o">.</span> <span class="mi">7</span> <span class="o">.</span> <span class="o">.</span>
+<span class="o">.</span> <span class="o">.</span> <span class="mi">1</span> <span class="mi">9</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="o">.</span> <span class="mi">5</span> <span class="o">.</span> <span class="o">.</span> <span class="mi">7</span> <span class="mi">3</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>се описује улазом:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">9</span> <span class="mi">3</span>
+<span class="mi">2</span> <span class="mi">1</span> <span class="mi">9</span>
+<span class="mi">2</span> <span class="mi">4</span> <span class="mi">3</span>
+<span class="mi">2</span> <span class="mi">6</span> <span class="mi">2</span>
+<span class="mi">3</span> <span class="mi">1</span> <span class="mi">6</span>
+<span class="mi">3</span> <span class="mi">2</span> <span class="mi">8</span>
+<span class="mi">3</span> <span class="mi">8</span> <span class="mi">5</span>
+<span class="mi">4</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="mi">4</span> <span class="mi">6</span> <span class="mi">5</span>
+<span class="mi">4</span> <span class="mi">9</span> <span class="mi">9</span>
+<span class="mi">5</span> <span class="mi">1</span> <span class="mi">5</span>
+<span class="mi">5</span> <span class="mi">4</span> <span class="mi">7</span>
+<span class="mi">5</span> <span class="mi">8</span> <span class="mi">6</span>
+<span class="mi">5</span> <span class="mi">9</span> <span class="mi">2</span>
+<span class="mi">6</span> <span class="mi">3</span> <span class="mi">4</span>
+<span class="mi">6</span> <span class="mi">5</span> <span class="mi">1</span>
+<span class="mi">6</span> <span class="mi">7</span> <span class="mi">5</span>
+<span class="mi">6</span> <span class="mi">8</span> <span class="mi">3</span>
+<span class="mi">6</span> <span class="mi">9</span> <span class="mi">8</span>
+<span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span>
+<span class="mi">7</span> <span class="mi">2</span> <span class="mi">4</span>
+<span class="mi">7</span> <span class="mi">4</span> <span class="mi">8</span>
+<span class="mi">7</span> <span class="mi">7</span> <span class="mi">7</span>
+<span class="mi">8</span> <span class="mi">3</span> <span class="mi">1</span>
+<span class="mi">8</span> <span class="mi">4</span> <span class="mi">9</span>
+<span class="mi">9</span> <span class="mi">2</span> <span class="mi">5</span>
+<span class="mi">9</span> <span class="mi">5</span> <span class="mi">7</span>
+<span class="mi">9</span> <span class="mi">6</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Ако унесемо тај улаз када покренемо наш програм, добијамо исказну
+формулу <a class="reference external" href="sudoku1.cnf">sudoku1.cnf</a>. Њеним решавањем помоћу SAT решавача добијамо
+задовољавајућу валуацију у којој су тачне следеће променљиве (све
+остале променљиве су нетачне):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="mi">4</span>  <span class="mi">11</span>  <span class="mi">26</span>  <span class="mi">30</span>  <span class="mi">42</span>  <span class="mi">52</span>  <span class="mi">59</span>  <span class="mi">64</span>  <span class="mi">81</span>
+ <span class="mi">90</span>  <span class="mi">91</span> <span class="mi">103</span> <span class="mi">114</span> <span class="mi">125</span> <span class="mi">128</span> <span class="mi">138</span> <span class="mi">151</span> <span class="mi">158</span>
+<span class="mi">169</span> <span class="mi">175</span> <span class="mi">183</span> <span class="mi">191</span> <span class="mi">203</span> <span class="mi">216</span> <span class="mi">224</span> <span class="mi">231</span> <span class="mi">235</span>
+<span class="mi">244</span> <span class="mi">259</span> <span class="mi">267</span> <span class="mi">279</span> <span class="mi">281</span> <span class="mi">293</span> <span class="mi">301</span> <span class="mi">314</span> <span class="mi">318</span>
+<span class="mi">329</span> <span class="mi">342</span> <span class="mi">344</span> <span class="mi">352</span> <span class="mi">367</span> <span class="mi">373</span> <span class="mi">384</span> <span class="mi">390</span> <span class="mi">404</span>
+<span class="mi">408</span> <span class="mi">420</span> <span class="mi">432</span> <span class="mi">436</span> <span class="mi">442</span> <span class="mi">458</span> <span class="mi">461</span> <span class="mi">473</span> <span class="mi">484</span>
+<span class="mi">492</span> <span class="mi">503</span> <span class="mi">505</span> <span class="mi">518</span> <span class="mi">531</span> <span class="mi">534</span> <span class="mi">547</span> <span class="mi">553</span> <span class="mi">560</span>
+<span class="mi">575</span> <span class="mi">579</span> <span class="mi">590</span> <span class="mi">601</span> <span class="mi">607</span> <span class="mi">613</span> <span class="mi">630</span> <span class="mi">632</span> <span class="mi">645</span>
+<span class="mi">650</span> <span class="mi">662</span> <span class="mi">673</span> <span class="mi">683</span> <span class="mi">687</span> <span class="mi">699</span> <span class="mi">703</span> <span class="mi">720</span> <span class="mi">724</span>
+</pre></div>
+</div>
+<p>Њиховим декодирањем добијамо следеће решење:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="mi">2</span> <span class="mi">7</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">1</span> <span class="mi">3</span>
+<span class="mi">9</span> <span class="mi">1</span> <span class="mi">5</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">7</span>
+<span class="mi">6</span> <span class="mi">8</span> <span class="mi">3</span> <span class="mi">1</span> <span class="mi">9</span> <span class="mi">7</span> <span class="mi">2</span> <span class="mi">5</span> <span class="mi">4</span>
+<span class="mi">1</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">5</span> <span class="mi">4</span> <span class="mi">7</span> <span class="mi">9</span>
+<span class="mi">5</span> <span class="mi">9</span> <span class="mi">8</span> <span class="mi">7</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span>
+<span class="mi">7</span> <span class="mi">6</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">9</span> <span class="mi">5</span> <span class="mi">3</span> <span class="mi">8</span>
+<span class="mi">3</span> <span class="mi">4</span> <span class="mi">9</span> <span class="mi">8</span> <span class="mi">5</span> <span class="mi">1</span> <span class="mi">7</span> <span class="mi">2</span> <span class="mi">6</span>
+<span class="mi">8</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">9</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="mi">2</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">4</span> <span class="mi">7</span> <span class="mi">3</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Вама препуштамо да сами напишете програм који ће приказати решење на
+основу решења добијеног од SAT решавача (програм треба да прочита
+решење, издвоји позитивне бројеве, декодира сваки од њих и да на
+основу тога формира и испише Судоку матрицу). Покушајте и да проширите
+формулу клаузулом која ће забранити добијање овог решења, да поново
+покренете SAT решавач и на тај начин да проверите да ли је ово решење
+јединствено.</p>
+<p>Приметимо да је решавање Судоку загонетке свођењем на SAT веома
+декларативно. У програму смо само морали да опишемо (клаузулама)
+услове које решење мора да задовољава, а не и алгоритам како се до
+решења долази (SAT решавач је коришћењем веома ефикасних метода до тог
+решења дошао практично моментално).</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Уместо да C# програм исписује излазну датотеку у формату DIMACS,
+која се онда шаље спољашњем SAT решавачу, могуће је SAT решавач
+покренути директно из C# програма преко API, које SAT решавачи
+обично нуде. Препуштамо ти да, на пример, инсталираш библиотеку
+<strong>Microsoft.Solver.Foundation</strong> (за то можеш користити NuGet), да
+проучиш како се она користи и да прилагодиш претходни програм тако
+да коришћењем ове библиотеке решава Судоку и приказује његово
+решење.</p>
+
+    </div></div>
+</section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="01_iskazna_logika.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

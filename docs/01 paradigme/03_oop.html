@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Објектно–оријентисана парадигма</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/ghc/" target="_blank">Glasgow haskell compiler</a></div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/hugs/" target="_blank">Hugs Haskell interpreter</a></div>
+          <div class="useful-link">
+            <a href="https://replit.com/languages/haskell" target="_blank">Haskell online (repl.it)</a></div>
+          <div class="useful-link">
+            <a href="https://www.swi-prolog.org/" target="_blank">SWI Prolog</a></div>
+          <div class="useful-link">
+            <a href="https://swish.swi-prolog.org/" target="_blank">SWI Prolog online</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01%20paradigme-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-01%20paradigme-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                <a href=../01%20paradigme/03_oop.html><div class="studioLecture" id=activity-01%20paradigme-03_oop><i class="fas fa-file-alt activity-icon"></i>Објектнооријентисана парадигма</div></a>
+                <a href=../01%20paradigme/04_skript.html><div class="studioLecture" id=activity-01%20paradigme-04_skript><i class="fas fa-file-alt activity-icon"></i>Скрипт парадигма</div></a>
+                <a href=../01%20paradigme/05_o_paradigmama_quiz.html><div class="studioLecture" id=activity-01%20paradigme-05_o_paradigmama_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-02%20funkcionalna-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/01a_funkcionalna_quiz.html><div class="studioLecture" id=activity-02%20funkcionalna-01a_funkcionalna_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02%20funkcionalna-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02%20funkcionalna-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02%20funkcionalna-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02e_haskell_main.html><div class="studioLecture" id=activity-02%20funkcionalna-02e_haskell_main><i class="fas fa-file-alt activity-icon"></i>Haskell - улаз, излаз, главни програм</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02%20funkcionalna-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                <a href=../02%20funkcionalna/02d_haskell_primeri.html><div class="studioLecture" id=activity-02%20funkcionalna-02d_haskell_primeri><i class="fas fa-file-alt activity-icon"></i>Haskell - пример већег програма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-03%20logicka-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-03%20logicka-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/01_sat.html><div class="studioLecture" id=activity-03%20logicka-01_sat><i class="fas fa-file-alt activity-icon"></i>SAT решавачи</div></a>
+                <a href=../03%20logicka/01a_iskazna_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-01a_iskazna_logika_quiz><i class="far fa-question-circle activity-icon"></i>Исказна логика - квиз</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-03%20logicka-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/02_atp.html><div class="studioLecture" id=activity-03%20logicka-02_atp><i class="fas fa-file-alt activity-icon"></i>Аутоматски доказивачи теорема</div></a>
+                <a href=../03%20logicka/02a_predikatska_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-02a_predikatska_logika_quiz><i class="far fa-question-circle activity-icon"></i>Предикатска логика - квиз</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03%20logicka-03_prolog><i class="fas fa-file-alt activity-icon"></i>Prolog - база знања и правила извођења</div></a>
+                <a href=../03%20logicka/03_prolog_secenje.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_secenje><i class="fas fa-file-alt activity-icon"></i>Prolog - дрво извођења, сечење</div></a>
+                <a href=../03%20logicka/03_prolog_aritmetika.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_aritmetika><i class="fas fa-file-alt activity-icon"></i>Prolog - аритметичка израчунавања</div></a>
+                <a href=../03%20logicka/03_prolog_liste.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_liste><i class="fas fa-file-alt activity-icon"></i>Prolog - листе</div></a>
+                <a href=../03%20logicka/03_prolog_zagonetke.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_zagonetke><i class="fas fa-file-alt activity-icon"></i>Prolog - решавање логичких загонетки</div></a>
+                <a href=../03%20logicka/03z_prolog_zadaci.html><div class="studioLecture" id=activity-03%20logicka-03z_prolog_zadaci><i class="fas fa-file-alt activity-icon"></i>Prolog - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Објектно–оријентисана парадигма<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Објектно–оријентисану парадигму сте веома детаљно изучили у трећем
+разреду у предмету Објектно-оријентисано програмирање, па се нећемо
+пуно задржавати на њеном описивању.</p>
+<p>Објектно–оријентисана парадигма (ООП) је модел програмирања који се
+темељи на организовању и структуирању кода око „објеката”, који су
+инстанциране представе стварних ентитета (на пример, аутомобил,
+штампач, запослени) или апстрактних концепта (на пример, датотека,
+израз). ООП промовише начин размишљања о програмима као колекцији
+објеката који међусобно комуницирају путем дефинисаних
+интеракција. Објекти једни другима шаљу поруке (тако што позивају
+методе које су део јавног интерфејса). Ова парадигма пружа низ
+предности као што су модуларност, поновно коришћење кода, лакше
+одржавање и разумевање, те олакшава развој комплексних система.  ООП
+омогућава организацију кода на начин који одражава стварни свет и
+олакшава развој скалабилних и одрживих апликација. Објектно
+оријентисана парадигма је веома брзо прихваћена у софтверској
+индустрији и може се рећи да је данас вероватно и доминантна
+парадигма. ООП се данас примењује у многим програмским језицима као
+што су <strong>Java</strong>, <strong>Python</strong>, <strong>C++</strong>, <strong>C#</strong>, <strong>Ruby</strong> итд.</p>
+<p>Слично као и струтурно програмирање и објектно-оријентисано
+програмирање је настало као одговор на софтверску кризу. Разбијањем
+монолитних програма у независне целине (класе и објекте), омогућено је
+да више програмера и тимова програмера подели посао тако да софтверске
+компоненте које независно програмирају комуницирају само договореног
+јавног интерфејса. На тај начин један програмер не мора (а коришћењем
+концепта енкапсулације и не може) да зна на који начин је
+имплементирана компонента коју други програмер програмира. То даје
+слободу другом програмеру да у било ком тренутку замени унутрашњу
+имплементацију (на пример, употреби неки ефикаснији алгоритам или
+структуре података), а да други програмери због тога не морају да
+мењају свој кôд. Додатно, једном испрограмиране класе се могу
+користити у већем броју различитих програма (на пример, класа за
+представљање времена и датума, класа за представљање листа
+тј. динамички проширивих низова или класа за представљање дугмета на
+корисничком интерфејсу). Механизам наслеђивања даје могућност да се
+класе прошире и на тај начин прилагоде новим, сложенијим захтевима.
+На пример, класа којом се представљају електрични аутомобили може да
+наследи класу којом се предсављају аутомобили, додајући податке о
+батерији. Полиморфизам омогућава да се се програмирање неких
+компонената врши само према апстрактном интерфејсу других
+поткомпонената, а да се те поткомпоненте накнадно замене новим
+конкретним имплементацијама. Тако, на пример, програм за обраду текста
+може да нуди функционалност штампања, обраћајући се апстрактној класи
+тј. интерфејсу који нуди заједничке функционалности за све
+штампаче. Оваквом систему у било ком тренутку може бити додата класа
+којом се представља неки нови, конкретни штампач, док год та класа
+имплементира све функционалности тог заједничког интерфејса.</p>
+<p>Подсетимо се још једном кључних концепата ООП, које сте проучавали у
+трећем разреду:</p>
+<ol class="arabic">
+<li><p><strong>Објекти:</strong> Објекти су инстанце класа које дефинишу својства
+(атрибуте) и понашање (методе). На пример, у апликацији за
+управљање корисницима, сваки корисник може бити представљен као
+објекат са својим атрибутима као што су име, мејл адреса и старост.</p></li>
+<li><p><strong>Класе:</strong> Класе су шаблони који дефинишу структуру и понашање
+објеката. Оне садрже дефиниције атрибута и метода које ће објекти
+имати. На пример, „Корисник” може бити класа која дефинише својства
+и методе заједничке свим корисницима.</p></li>
+<li><p><strong>Енкапсулација</strong> се односи на паковање података (атрибута) и
+функционалности (метода) унутар једног ентитета - објекта. Идеја је
+да се објекти делују као „капсуле” које садрже своје унутрашње
+стање и операције, док су детаљи имплементације скривени од
+спољашњег света тј. од програмера који користе класе и
+објекте. Енкапсулација омогућава да се приступ и баратање
+подацима врше само путем добро дефинисаних метода, чиме се
+осигурава конзистентно стање објекта и смањује ризик од нежељених
+модификација.</p>
+<p>Предности енкапсулације укључују:</p>
+<p><em>Скривање детаља имплементације:</em> Енкапсулација омогућава да се
+промене у унутрашњој имплементацији објекта изврше без утицаја на
+кориснике тог објекта. Корисници само користе јавне методе за
+интеракцију са објектима, док је комплексност детаља сакривена.</p>
+<p><em>Заштита и валидација:</em> Објекти могу примењивати правила за приступ
+и манипулацију подацима. Ово омогућава да се валидира унос података
+и да се осигура њихова исправност пре него што буду записани.</p>
+<p><em>Модуларност и поновно коришћење:</em> Енкапсулација омогућава
+развијање модула који се могу користити независно од других делова
+апликације. Објекти се могу поновно користити у различитим
+контекстима, смањујући потребу за писањем истог кода више пута.</p>
+<p><em>Одржавање и рефакторисање:</em> Промене у имплементацији објекта могу
+се обавити унутар саме капсуле без утицаја на остатак система. Ово
+олакшава одржавање и рефакторисање кода.</p>
+<p><em>Смањење грешака:</em> Енкапсулација смањује могућност грешака јер се
+манипулација подацима обавља само путем строго дефинисаних метода
+које су тестиране и верификоване.</p>
+<p>Да би се постигла енкапсулација, програмски језици омогућавају
+дефинисање приступних модификатора који контролишу видљивост
+атрибута и метода изван објекта. Приступни модификатори омогућавају
+програмерима да прецизно дефинишу који делови објекта су доступни
+изван њега, чиме се имплементира принцип енкапсулације.</p>
+</li>
+</ol>
+<p>Подсетимо се ових концепата кроз следећи једноставан пример.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Circle</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// privatno polje u kom čuvamo poluprečnik</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// konstruktor</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Circle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">setRadius</span><span class="p">(</span><span class="n">radius</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Metod za čitanje poluprečnika</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">GetRadius</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Metod za promenu poluprečnika</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetRadius</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">newRadius</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// obezbeđujemo da poluprečnik ne bude negativan</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">radius</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentException</span><span class="p">(</span><span class="s">&quot;Poluprečnik ne može biti negativan.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Metod za izračunavanje površine</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalculateArea</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Metod za izračunavanje obima</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalculateCircumference</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Kreiramo objekat, instancu klase krug</span>
+<span class="w">        </span><span class="n">Circle</span><span class="w"> </span><span class="n">circle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Circle</span><span class="p">(</span><span class="m">5.0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Menjamo mu poluprečnik</span>
+<span class="w">        </span><span class="n">circle</span><span class="p">.</span><span class="n">SetRadius</span><span class="p">(</span><span class="m">7.0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Računamo i ispisujemo poluprečnik, površinu i obim</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;Radius: {circle.GetRadius()}&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;Area: {circle.CalculateArea()}&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;Circumference: {circle.CalculateCircumference()}&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic" start="4">
+<li><p><strong>Наслеђивање:</strong> Наслеђивање омогућава креирање нових класа на
+основу већ постојећих класа. Ова парадигма подржава идеју да нове
+класе могу наследити (преузети) интерфејс тј. својства и методе
+постојећих класа, чиме се олакшава поновно коришћење кода и
+организација структуре.</p>
+<p><em>Базна Класа:</em> Базна класа је оригинална класа која дефинише
+својства и методе које ће бити наслеђене. Ова класа се такође
+назива и родитељском класом, надкласом или суперкласом.</p>
+<p><em>Изведена Класа:</em> Изведена класа је нова класа која се креира на
+основу постојеће класе. Ова класа наслеђује својства и методе базне
+класе, али може додати своје додатне карактеристике или
+предефинисати постојеће методе.</p>
+<p><em>Наслеђивање атрибута и метода:</em> Изведена класа аутоматски
+наслеђује све атрибуте (својства) и методе (укључујући и њихову
+имплементацију) дефинисане у базној класи. То омогућава да се
+сличне класе репрезентују на логичан и организован начин.</p>
+<p><em>Додатни атрибути и методи:</em> Изведена класа може додати нове методе
+и атрибути који нису присутни у базној класи. Ово омогућава да се
+прошири функционалност и додају нове карактеристике без утицаја на
+базну класу.</p>
+<p><em>Предефинисање Метода:</em> Изведена класа може предефинисати
+(енгл. override) методе базне класе тако да се прилагоде
+специфичним потребама. Ово омогућава да се исте методе понашају
+другачије у различитим контекстима.</p>
+<p><em>Вишеструко наслеђивање (у одређеним језицима):</em> Неки програмски
+језици подржавају вишеструко наслеђивање, што значи да изведена
+класа може наследити својства и методе из више базних
+класа. Међутим, ова функционалност може постати комплексна и
+довести до „дијамантског проблема” у неким случајевима.</p>
+<p>Наслеђивање омогућава ефикасно поновно коришћење кода, јер се
+постојеће имплементације могу користити као основа за нове
+класе. Ово олакшава организацију, одржавање и разумевање кода, јер
+се сличне класе групишу заједно, а заједнички код се дели.</p>
+</li>
+<li><p><strong>Полиморфизам:</strong> Полиморфизам омогућава истоименим методама да се
+понашају различито у зависности од класе којој припадају тј.
+омогућава различитим објектима да се понашају на различите начине,
+чак и ако деле исти назив методе. Полиморфизам омогућава да се иста
+метода користи за различите типове објеката, чиме се
+поједностављује кôд и олакшава рад са разноликим ентитетима.</p>
+<p>Полиморфизам омогућава и да класа има методе са истим именом, али
+са различитим потписима.</p>
+<p><em>Предефинисање метода</em>: Када изведена класа наслеђује методу од
+своје базне класе, може предефинисати (override) ту методу да би се
+прилагодила свом специфичном понашању. Ово омогућава да метода има
+другачији садржај у различитим класама.</p>
+<p><em>Динамичко везивање</em>: Полиморфизам омогућава да се одабере права
+верзија методе током извршавања, а не током компилације. Ово се
+назива динамичко повезивање или касно повезивање, и омогућава да се
+изабере права метода на основу стварног типа објекта који се
+обрађује.</p>
+<p><em>Интерфејси и апстрактне класе</em>: Полиморфизам често се постиже кроз
+употребу интерфејса и апстрактних класа. Интерфејси дефинишу скуп
+метода које се морају имплементирати у изведеним класама, док
+апстрактне класе садрже недефинисане методе које се морају
+имплементирати у конкретним подкласама.</p>
+<p><em>Поједностављена комуникација</em>: Полиморфизам омогућава да се исте
+операције примењују на различите типове објеката без потребе за
+анализом њиховог типа наредбама гранања. На пример, ако имате
+различите геометријске облике, можете користити исту методу за
+израчунавање површине без обзира на то који облик користите.</p>
+<p>Полиморфизам чини код флексибилнијим, омогућавајући програмерима да
+раде са различитим типовима објеката користећи исте методе и
+интерфејс.</p>
+</li>
+</ol>
+<p>Подсетимо се наслеђивања и полиморфизма тако што ћемо увести
+апстрактну класу за облике.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+
+<span class="c1">// Apstraktna bazna klasa za predstavljanje bilo kog oblika</span>
+<span class="k">public</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Shape</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// apstraktna metoda za izračunavanje površine</span>
+<span class="w">    </span><span class="c1">// (potrebno je da se implementira u svim izvedenim klasama)</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalculateArea</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Izvedena klasa za predstavljanje krugova</span>
+<span class="c1">// Krug je vrsta oblika, pa klasa Circle nasleđuje klasu Shape</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Circle</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Shape</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// poluprečnik</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Konstruktor</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Circle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Implementacija izračunavanja površine</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalculateArea</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Izvedena klasa za predstavljanje pravougaonika</span>
+<span class="c1">// Pravougaonik je vrsta oblika, pa klasa Rectangle nasleđuje klasu Shape</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Rectangle</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Shape</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Dužina i širina</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Konstruktor</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Implementacija izračunavanja površine</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalculateArea</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">   </span><span class="p">{</span>
+<span class="w">       </span><span class="c1">// Niz oblika</span>
+<span class="w">       </span><span class="n">Shape</span><span class="p">[]</span><span class="w"> </span><span class="n">shapes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">[]</span>
+<span class="w">       </span><span class="p">{</span>
+<span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="nf">Circle</span><span class="p">(</span><span class="m">5.0</span><span class="p">),</span>
+<span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="m">4.0</span><span class="p">,</span><span class="w"> </span><span class="m">6.0</span><span class="p">),</span>
+<span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="nf">Circle</span><span class="p">(</span><span class="m">3.5</span><span class="p">),</span>
+<span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="m">2.0</span><span class="p">,</span><span class="w"> </span><span class="m">8.0</span><span class="p">)</span>
+<span class="w">       </span><span class="p">};</span>
+
+<span class="w">       </span><span class="c1">// Izračunavanje ukupne površine</span>
+<span class="w">       </span><span class="kt">double</span><span class="w"> </span><span class="n">totalArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0</span><span class="p">;</span>
+<span class="w">       </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Shape</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">shapes</span><span class="p">)</span>
+<span class="w">           </span><span class="n">totalArea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">shape</span><span class="p">.</span><span class="n">CalculateArea</span><span class="p">();</span>
+
+<span class="w">       </span><span class="c1">// Ispis ukupne površine</span>
+<span class="w">       </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;Total Area of Shapes: {totalArea}&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Упоредимо овај програм са еквивалентним програмом написаном у духу
+императивне парадигме.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Circle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CircleArea</span><span class="p">(</span><span class="n">Circle</span><span class="w"> </span><span class="n">circle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">circle</span><span class="p">.</span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">circle</span><span class="p">.</span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Rectangle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">RectangleArea</span><span class="p">(</span><span class="n">Rectangle</span><span class="w"> </span><span class="n">rectangle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">rectangle</span><span class="p">.</span><span class="n">width</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">rectangle</span><span class="p">.</span><span class="n">height</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Circle</span><span class="w"> </span><span class="n">circle1</span><span class="p">;</span><span class="w"> </span><span class="n">circle1</span><span class="p">.</span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5.0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Circle</span><span class="w"> </span><span class="n">circle2</span><span class="p">;</span><span class="w"> </span><span class="n">circle2</span><span class="p">.</span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.5</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Rectangle</span><span class="w"> </span><span class="n">rectangle1</span><span class="p">;</span><span class="w"> </span><span class="n">rectangle1</span><span class="p">.</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4.0</span><span class="p">;</span><span class="w"> </span><span class="n">rectangle1</span><span class="p">.</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6.0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Rectangle</span><span class="w"> </span><span class="n">rectangle2</span><span class="p">;</span><span class="w"> </span><span class="n">rectangle2</span><span class="p">.</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2.0</span><span class="p">;</span><span class="w"> </span><span class="n">rectangle2</span><span class="p">.</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8.0</span><span class="p">;</span>
+
+<span class="w">       </span><span class="c1">// Izračunavanje ukupne površine</span>
+<span class="w">       </span><span class="kt">double</span><span class="w"> </span><span class="n">totalArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0</span><span class="p">;</span>
+<span class="w">       </span><span class="n">totalArea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">CircleArea</span><span class="p">(</span><span class="n">circle1</span><span class="p">);</span>
+<span class="w">       </span><span class="n">totalArea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">CircleArea</span><span class="p">(</span><span class="n">circle2</span><span class="p">);</span>
+<span class="w">       </span><span class="n">totalArea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">Rectangle1</span><span class="p">(</span><span class="n">rectangle1</span><span class="p">);</span>
+<span class="w">       </span><span class="n">totalArea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">Rectangle2</span><span class="p">(</span><span class="n">rectangle2</span><span class="p">);</span>
+
+<span class="w">       </span><span class="c1">// Ispis ukupne površine</span>
+<span class="w">       </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;Total Area of Shapes: {totalArea}&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Примећујемо да су структуре за представљање круга и правоугаоника
+(<code class="docutils literal notranslate"><span class="pre">Circle</span></code> и <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>) потпуно неповезане и да стога нисмо могли
+направити низ облика. Могли бисмо увести наткласу за облик и тако
+омогућити креирање низа облика, али наредно решење, као и претходно,
+не користи полиморфизам и не може се сматрати написаним у духу ООП.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Shape</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Circle</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Circle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CircleArea</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Rectangle</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">RectangleArea</span><span class="p">(</span><span class="n">Rectangle</span><span class="w"> </span><span class="n">rectangle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="c1">// Niz oblika</span>
+<span class="w">       </span><span class="n">Shape</span><span class="p">[]</span><span class="w"> </span><span class="n">shapes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">[]</span>
+<span class="w">       </span><span class="p">{</span>
+<span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="nf">Circle</span><span class="p">(</span><span class="m">5.0</span><span class="p">),</span>
+<span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="m">4.0</span><span class="p">,</span><span class="w"> </span><span class="m">6.0</span><span class="p">),</span>
+<span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="nf">Circle</span><span class="p">(</span><span class="m">3.5</span><span class="p">),</span>
+<span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="m">2.0</span><span class="p">,</span><span class="w"> </span><span class="m">8.0</span><span class="p">)</span>
+<span class="w">       </span><span class="p">};</span>
+
+<span class="w">       </span><span class="c1">// Izračunavanje ukupne površine</span>
+<span class="w">       </span><span class="kt">double</span><span class="w"> </span><span class="n">totalArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0</span><span class="p">;</span>
+<span class="w">       </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Shape</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">shapes</span><span class="p">)</span>
+<span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shape</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Circle</span><span class="p">)</span>
+<span class="w">              </span><span class="n">totalArea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">shape</span><span class="p">.</span><span class="n">CircleArea</span><span class="p">();</span>
+<span class="w">           </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">shape</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">)</span>
+<span class="w">              </span><span class="n">totalArea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">shape</span><span class="p">.</span><span class="n">RectangleArea</span><span class="p">();</span>
+
+<span class="w">       </span><span class="c1">// Ispis ukupne površine</span>
+<span class="w">       </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;Total Area of Shapes: {totalArea}&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Гранање на основу типа је веома проблематично, јер ствара проблеме
+приликом проширивања система новим класама. Ако бисмо, на пример,
+додали класу за представљање троуглова, у правом ООП решењу заснованом
+на полиморфизму не би било потребе да се мења код који израчунава
+укупну површину. Са друге стране, у претходном решењу би у том коду
+било потребно додати још једну грану којом се обрађују троуглови. Иако
+то није проблем у овако кратком програму, у дужим програмима није
+тешко замислити да постоје десетине па и стотине места где се обрађују
+низови облика, па је измена сваког од њих након додавања нове класе
+веома напоран посао, подложан грешкама (компилатор нас неће упозорити
+ако случајно на неком месту заборавимо да додамо грану у којој се обрађује
+новододата класа).</p>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="02_imperativna.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

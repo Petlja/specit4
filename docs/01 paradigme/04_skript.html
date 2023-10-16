@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Скрипт парадигма</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/ghc/" target="_blank">Glasgow haskell compiler</a></div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/hugs/" target="_blank">Hugs Haskell interpreter</a></div>
+          <div class="useful-link">
+            <a href="https://replit.com/languages/haskell" target="_blank">Haskell online (repl.it)</a></div>
+          <div class="useful-link">
+            <a href="https://www.swi-prolog.org/" target="_blank">SWI Prolog</a></div>
+          <div class="useful-link">
+            <a href="https://swish.swi-prolog.org/" target="_blank">SWI Prolog online</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01%20paradigme-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-01%20paradigme-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                <a href=../01%20paradigme/03_oop.html><div class="studioLecture" id=activity-01%20paradigme-03_oop><i class="fas fa-file-alt activity-icon"></i>Објектнооријентисана парадигма</div></a>
+                <a href=../01%20paradigme/04_skript.html><div class="studioLecture" id=activity-01%20paradigme-04_skript><i class="fas fa-file-alt activity-icon"></i>Скрипт парадигма</div></a>
+                <a href=../01%20paradigme/05_o_paradigmama_quiz.html><div class="studioLecture" id=activity-01%20paradigme-05_o_paradigmama_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-02%20funkcionalna-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/01a_funkcionalna_quiz.html><div class="studioLecture" id=activity-02%20funkcionalna-01a_funkcionalna_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02%20funkcionalna-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02%20funkcionalna-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02%20funkcionalna-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02e_haskell_main.html><div class="studioLecture" id=activity-02%20funkcionalna-02e_haskell_main><i class="fas fa-file-alt activity-icon"></i>Haskell - улаз, излаз, главни програм</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02%20funkcionalna-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                <a href=../02%20funkcionalna/02d_haskell_primeri.html><div class="studioLecture" id=activity-02%20funkcionalna-02d_haskell_primeri><i class="fas fa-file-alt activity-icon"></i>Haskell - пример већег програма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-03%20logicka-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-03%20logicka-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/01_sat.html><div class="studioLecture" id=activity-03%20logicka-01_sat><i class="fas fa-file-alt activity-icon"></i>SAT решавачи</div></a>
+                <a href=../03%20logicka/01a_iskazna_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-01a_iskazna_logika_quiz><i class="far fa-question-circle activity-icon"></i>Исказна логика - квиз</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-03%20logicka-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/02_atp.html><div class="studioLecture" id=activity-03%20logicka-02_atp><i class="fas fa-file-alt activity-icon"></i>Аутоматски доказивачи теорема</div></a>
+                <a href=../03%20logicka/02a_predikatska_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-02a_predikatska_logika_quiz><i class="far fa-question-circle activity-icon"></i>Предикатска логика - квиз</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03%20logicka-03_prolog><i class="fas fa-file-alt activity-icon"></i>Prolog - база знања и правила извођења</div></a>
+                <a href=../03%20logicka/03_prolog_secenje.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_secenje><i class="fas fa-file-alt activity-icon"></i>Prolog - дрво извођења, сечење</div></a>
+                <a href=../03%20logicka/03_prolog_aritmetika.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_aritmetika><i class="fas fa-file-alt activity-icon"></i>Prolog - аритметичка израчунавања</div></a>
+                <a href=../03%20logicka/03_prolog_liste.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_liste><i class="fas fa-file-alt activity-icon"></i>Prolog - листе</div></a>
+                <a href=../03%20logicka/03_prolog_zagonetke.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_zagonetke><i class="fas fa-file-alt activity-icon"></i>Prolog - решавање логичких загонетки</div></a>
+                <a href=../03%20logicka/03z_prolog_zadaci.html><div class="studioLecture" id=activity-03%20logicka-03z_prolog_zadaci><i class="fas fa-file-alt activity-icon"></i>Prolog - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Скрипт парадигма<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p><strong>Скрипт језици</strong> су посебно дизајнирани програмски језици који се
+користе за писање <strong>скриптова</strong>. Скрипт језици оригинално нису били
+намењени програмирању самосталних апликација, већ је основни циљ
+скриптова био да се коришћењем програмирања постојеће апликације
+подесе, прилагоде и прошире неком новом функционалношћу као и да
+допринесу аутоматизацију разних задатака. То значи да се скриптови не
+компилирају већ се интерпретирају (често из система који проширују).
+Ова парадигма се истиче својом једноставношћу и брзином развоја,
+чинећи је идеалним алатом за администрирање система, веб-програмирање,
+анализу података и многе друге области.</p>
+<section id="id2">
+<h2>Скриптови на вебу<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>На пример, језик <strong>JavaScript</strong> је био намењен проширивању могућности
+веб-прегледача тако да се до тада пасивним веб-страницама може додати
+могућност аутоматског генерисања одређеног садржаја и интеракције са
+корисницима. Иако се скриптови написани у језику JavaScript и даље
+најчешће извршавају у склопу прегледача веба (мада постоје платформе
+потпут Node.js које омогућавају самостално извршавање JavaScript
+скриптова на веб-серверу, ван прегледача), ови скриптови су постали
+толико важни на савременом вебу, али и толико комплексни да се данас
+често сматрају самосталним веб-апликацијама.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Размотримо један мали пример скрипта написаног у језику JavaScript (о
+овом језику ћете детаљније учити у курсу веб-програмирање).</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;pasus&quot;</span><span class="p">&gt;</span>Tekst u ovom pasusu se može sakriti.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;dugme&quot;</span><span class="p">&gt;</span>Sakrij pasus<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+<span class="w">   </span><span class="kd">const</span><span class="w"> </span><span class="nx">dugme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;dugme&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">dugme</span><span class="p">.</span><span class="nx">getEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="kd">const</span><span class="w"> </span><span class="nx">pasus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;pasus&quot;</span><span class="p">);</span>
+<span class="w">         </span><span class="nx">pasus</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">;</span>
+<span class="w">   </span><span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Веб-страница садржи пасус и дугме. Када корисник притиска дугме,
+пасус се сакрива. Цео скрипт ћеш разумети када научиш JavaScript, а
+за сада је довољно само да видиш како отприлике изгледа додавање
+функционалности веб-странама.</p>
+
+    </div></div>
+<p>Поред скриптова који се извршавају унутар прегледача веба (кажемо на
+страни клијента), на вебу се користе и скриптови који се извршавају на
+веб-серверу (кажемо на страни сервера). Они се обично пишу у језицима
+<strong>PHP</strong>, <strong>C# / ASP.NET</strong>, <strong>Java / JSP</strong>, <strong>Python</strong>, <strong>JavaScript /
+Node.js</strong> итд. Ти скриптови обично примају податке са клијента, на
+основу њих прибављају податке из базе (или их уписују у базу), након
+чега резултате уписују у веб-страницу коју формирају (записану у
+формату HTML) и шаљу назад клијенту да је прикаже.</p>
+</section>
+<section id="id3">
+<h2>Скриптови у играма<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Још један пример примене скриптова су скриптови у рачунарским играма,
+који се користе за њихово прилагођавање. Игре су обично испрограмиране
+у језицима попут језика C или C++, који служе за програмирање веома
+ефикасних апликација. Неке игре допуштају напредним корисницима да
+коришћењем једноставнијих, специјализованих скрипт језика подесе неке
+елементе игре (на пример, положај и изглед неких ликова у игри,
+понашање непријатељских ликова и слично). Игра написана у ефикасном
+језику чита и извршава такве скриптове током свог извршавања. На тај
+начин онај ко подешава игру има на располагању изражајност које
+програмирање нуди (на пример, сам може да осмисли и опише алгоритам
+кретања неких ликова), а са друге стране не мора да има приступ
+целокупном изворном коду ире који је веома компликован и написан у
+напредном језику. На пример, популарна игра <em>World of Warcraft</em> је
+имплементирана у језику C++, а корисницима нуди могућност писања
+скриптова у језику <strong>Lua</strong> којима могу, на пример, да прилагођавају и
+подешавају изглед корисничког интерфејса у овој игри.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Размотримо један пример скрипта написаног у језику Lua за игру
+World of Warcraft.</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">castFire</span><span class="p">(</span><span class="n">pUnit</span><span class="p">,</span> <span class="n">Event</span><span class="p">)</span>
+   <span class="kr">if</span> <span class="n">pUnit</span><span class="p">:</span><span class="n">GetHealthPct</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">50</span> <span class="kr">then</span>
+      <span class="n">pUnit</span><span class="p">:</span><span class="n">RemoveEvents</span><span class="p">();</span>
+      <span class="n">pUnit</span><span class="p">:</span><span class="n">SendChatMessage</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Burning Fire!&quot;</span><span class="p">)</span>
+      <span class="n">pUnit</span><span class="p">:</span><span class="n">FullCastSpellOnTarget</span><span class="p">(</span><span class="mi">30926</span><span class="p">)</span>
+   <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">OnCombat</span><span class="p">(</span><span class="n">pUnit</span><span class="p">,</span> <span class="n">Event</span><span class="p">)</span>
+    <span class="n">pUnit</span><span class="p">:</span><span class="n">RegisterEvent</span><span class="p">(</span><span class="s2">&quot;castFire&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="n">RegisterpUnitEvent</span><span class="p">(</span><span class="n">ID</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;OnCombat&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Играчу са идентификатором 1 се придружује додатно понашање – када
+му проценат здравља падне испод 50%, он аутоматски баца ватрену чин
+(и обавештава све о томе поруком „Burnihg Fire!”). Ако те занима да
+разумеш све детаље ове технике, можеш самостално кренути да
+проучаваш језик Lua и његову примену у игри WoW (овде смо га навели
+чисто да добијеш неку основну идеју функционише скриптовање у
+играма).</p>
+
+    </div></div>
+</section>
+<section id="id4">
+<h2>Командни скриптови<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>Скриптови се често пишу и да олакшају послове администрирања
+(одржавања) рачунара. Оперативни системи подржавају извршавање
+скриптова написаних у специјализованим скрипт језицима. Краћи
+скриптови се могу навести директно у командној линији (до које се
+долази када се покрене посебан програм који се у систему Windows
+назива Command Prompt, а у системима Linux обично Terminal или
+Console). На пример, ако желимо да направимо резервну копију сваке
+текстуалне датотеке у командој линији система Windows можемо
+употребити наредну команду:</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="se">%%</span>i <span class="k">in</span> <span class="p">(</span>*.txt<span class="p">)</span> <span class="k">do</span> <span class="p">(</span><span class="k">copy</span> <span class="s2">&quot;</span><span class="se">%%</span><span class="s2">i&quot;</span> <span class="s2">&quot;</span><span class="se">%%</span><span class="s2">i.bak&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Исти задатак би се у оперативном систему и његовом командом
+интерпретатору <strong>Bash</strong> извршио следећом командом:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>f<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.txt<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>cp<span class="w"> </span><span class="nv">$f</span><span class="w"> </span><span class="nv">$f</span>.bak<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</pre></div>
+</div>
+<p>Дужи скриптови се често смештају у такозване <strong>беч датотеке</strong>
+(енгл. <em>batch files</em>). У систему Windows оне имају екстензију
+<code class="docutils literal notranslate"><span class="pre">bat</span></code>. У систему Линукс се оне обично чувају у датотекама које имају
+екстензију <code class="docutils literal notranslate"><span class="pre">sh</span></code> (енгл. <em>shell scripts</em>).</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Име <strong>беч обрада</strong> потиче још из доба рачунара који су се
+програмирали бушеним картицама. Рачунару се тада кутија
+(енгл. batch) картица које су се обрађивале једна за другом. Тако
+беч датотека садржи команде које се извршавају серијски, једна за
+другом.</p>
+
+    </div></div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Размотримо беч датотеку која прави резервну копију датотеке чије се
+име задаје као аргумент приликом покретања беч датотеке. Резервна
+копија се креира у директоријуму <code class="docutils literal notranslate"><span class="pre">backup</span></code> а на име датотеке се
+додаје текући датум. На пример, <code class="docutils literal notranslate"><span class="pre">beleske.txt</span></code> се назива
+<code class="docutils literal notranslate"><span class="pre">beleske_23-09-2023.txt</span></code>). Наравно, у овом тренутку не можете
+разумети све детаље наведених скриптова, али на основу наведених
+коментара у коду можете стећи неку идеју како изгледају командни
+скриптови.</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">echo</span> off
+
+<span class="c1">rem Ime datoteke se zadaje kao argument komandne linije</span>
+<span class="k">set</span> <span class="s2">&quot;sourceFile=</span><span class="nv">%1</span><span class="s2">&quot;</span>
+<span class="k">set</span> <span class="s2">&quot;backupFolder=backup&quot;</span>
+
+<span class="c1">rem Određujemo sistemski datum i postavljamo odgovarajuće promenljive</span>
+<span class="k">for</span> <span class="k">/f</span> <span class="s2">&quot;tokens=2-4 delims=/ &quot;</span> <span class="se">%%</span>a <span class="k">in</span> <span class="p">(</span><span class="s1">&#39;date /t&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="p">(</span>
+    <span class="k">set</span> <span class="s2">&quot;year=</span><span class="se">%%</span><span class="s2">c&quot;</span>
+    <span class="k">set</span> <span class="s2">&quot;month=</span><span class="se">%%</span><span class="s2">a&quot;</span>
+    <span class="k">set</span> <span class="s2">&quot;day=</span><span class="se">%%</span><span class="s2">b&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">rem Kreiramo nisku koja sadrži tekući datum</span>
+<span class="k">set</span> <span class="s2">&quot;date=</span><span class="nv">%year%%month%%day%</span><span class="s2">&quot;</span>
+
+<span class="c1">rem Izdvajamo naziv datoteke i ekstenziju</span>
+<span class="k">for</span> <span class="se">%%</span>i <span class="k">in</span> <span class="p">(</span><span class="s2">&quot;</span><span class="nv">%sourceFile%</span><span class="s2">&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="p">(</span>
+    <span class="k">set</span> <span class="s2">&quot;filename=</span><span class="se">%%</span><span class="s2">~ni&quot;</span>
+    <span class="k">set</span> <span class="s2">&quot;extension=</span><span class="se">%%</span><span class="s2">~xi&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">rem Kreiramo ceo naziv rezervne kopije</span>
+<span class="k">set</span> <span class="s2">&quot;backupFile=</span><span class="nv">%sourceFile:.=_%</span><span class="s2">date</span><span class="nv">%.%</span><span class="s2">extension%&quot;</span>
+
+<span class="c1">rem Ako ne postoji, kreiramo direktorijum u koji ćemo smestiti rezervnu kopiju</span>
+<span class="k">if</span> <span class="k">not</span> <span class="k">exist</span> <span class="s2">&quot;</span><span class="nv">%backupFolder%</span><span class="s2">&quot;</span> <span class="p">(</span>
+    <span class="k">mkdir</span> <span class="s2">&quot;</span><span class="nv">%backupFolder%</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">rem Kopiramo originalnu datoteku</span>
+<span class="k">copy</span> <span class="s2">&quot;</span><span class="nv">%sourceFile%</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">%backupFolder%</span><span class="s2">\</span><span class="nv">%backupFile%</span><span class="s2">&quot;</span>
+
+<span class="c1">rem Ispisujemo poruku da je napravljena rezervna kopija</span>
+<span class="k">echo</span> Backed up <span class="s2">&quot;</span><span class="nv">%sourceFile%</span><span class="s2">&quot;</span> to <span class="s2">&quot;</span><span class="nv">%backupFolder%</span><span class="s2">\</span><span class="nv">%backupFile%</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Наведимо и еквивалентан скрипт написан за командни интерпретатор
+Bash који се користи у систему Linux.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Ime datoteke se zadaje kao argument komandne linije</span>
+<span class="nv">sourceFile</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="nv">backupFolder</span><span class="o">=</span><span class="s2">&quot;backup&quot;</span>
+
+<span class="c1"># Ako nije navedeno ime datoteke, štampa se poruka o grešci</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$sourceFile</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Usage: </span><span class="nv">$0</span><span class="s2"> source_file&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Kreiramo nisku koja sadrži tekući datum</span>
+<span class="nv">timestamp</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>+<span class="s2">&quot;%Y%m%d&quot;</span><span class="k">)</span>
+
+<span class="c1"># Izdvajamo naziv datoteke i ekstenziju</span>
+<span class="nv">filename</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span>--<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$sourceFile</span><span class="s2">&quot;</span><span class="k">)</span>
+<span class="nv">extension</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="p">##*.</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Kreiramo ceo naziv rezervne kopije</span>
+<span class="nv">backupFile</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">timestamp</span><span class="si">}</span><span class="s2">.</span><span class="si">${</span><span class="nv">extension</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Ako ne postoji, kreiramo direktorijum u koji ćemo smestiti rezervnu kopiju</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$backupFolder</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>mkdir<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$backupFolder</span><span class="s2">&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># Kopiramo originalnu datoteku</span>
+cp<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$sourceFile</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$backupFolder</span><span class="s2">/</span><span class="nv">$backupFile</span><span class="s2">&quot;</span>
+
+<span class="c1"># Ispisujemo poruku da je napravljena rezervna kopija</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Backed up \&quot;</span><span class="nv">$sourceFile</span><span class="s2">\&quot; to \&quot;</span><span class="nv">$backupFolder</span><span class="s2">/</span><span class="nv">$backupFile</span><span class="s2">\&quot;&quot;</span>
+</pre></div>
+</div>
+
+    </div></div>
+<p>Још један чест избор за писање командних скриптова данас је језик
+<strong>Python</strong>. У његовој стандардној библиотеци присутна је подршка за
+све основне операције над датотекама и директоријумима. Важна предност
+коришења језика Python је то што се тако написани скриптови могу
+користити на разним оперативним системима (кажемо да су преносиви, за
+разлику од скриптова написаних у командном интерпретатору неког
+специфичног оперативног система).</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Претходни скрипт се може написати у језику Python на следећи начин.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="c1"># Ime datoteke se zadaje kao argument komandne linije</span>
+<span class="c1"># Ako argument nije naveden, prijavljuje se greška</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage: python backup_script.py source_file&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">source_file</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">backup_folder</span> <span class="o">=</span> <span class="s2">&quot;backup&quot;</span>
+
+<span class="c1"># Ako originalna datoteka ne postoji, prijavljuje se greška</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">source_file</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: Source file &#39;</span><span class="si">{</span><span class="n">source_file</span><span class="si">}</span><span class="s2">&#39; does not exist.&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Kreiramo nisku koja sadrži tekući datum</span>
+<span class="n">timestamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Izdvajamo naziv datoteke i ekstenziju</span>
+<span class="n">filename</span><span class="p">,</span> <span class="n">extension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">source_file</span><span class="p">))</span>
+
+<span class="c1"># Konstruišemo naziv rezervne kopije</span>
+<span class="n">backup_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}{</span><span class="n">extension</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Ako ne postoji, kreiramo direktorijum u koji ćemo smestiti rezervnu kopiju</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">backup_folder</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">backup_folder</span><span class="p">)</span>
+
+<span class="c1"># Kopiramo originalnu datoteku</span>
+<span class="n">destination_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">backup_folder</span><span class="p">,</span> <span class="n">backup_file</span><span class="p">)</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy2</span><span class="p">(</span><span class="n">source_file</span><span class="p">,</span> <span class="n">destination_file</span><span class="p">)</span>
+
+<span class="c1"># Ispisujemo poruku da je napravljena rezervna kopija</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Backed up &#39;</span><span class="si">{</span><span class="n">source_file</span><span class="si">}</span><span class="s2">&#39; to &#39;</span><span class="si">{</span><span class="n">destination_file</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div></div>
+</section>
+</section>
+<section id="id5">
+<h1>Задаци за самостални рад<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h1>
+<ol class="arabic simple">
+<li><p>Проучи историјат језика JavaScript. Када је и како настао, за шта
+се у почетку користио, а како се сада све користи. Какав је однос
+језика JavaScript са језиком Java?</p></li>
+</ol>
+<ol class="arabic simple">
+<li><p>Проучи шта је PowerShell, која компанија га је развила, чему служи
+и на којим све оперативним системима може да се користи.</p></li>
+</ol>
+<ol class="arabic simple">
+<li><p>Пронађи на интернету неколико примера рачунарских игара које
+допуштају прилагођавање коришћењем скриптова. Ако имаш неку од тих
+игара, покушај да је прилегодиш писањем неког једноставног скрипта.</p></li>
+</ol>
+<ol class="arabic simple">
+<li><p>Покушај да напишеш командни скрипт за твој оперативни систем који
+пребројава колико слика у формату <code class="docutils literal notranslate"><span class="pre">jpg</span></code> и <code class="docutils literal notranslate"><span class="pre">png</span></code> се налази у
+задатом директоријуму.</p></li>
+</ol>
+<ol class="arabic simple">
+<li><p>Покушај да напишеш командни скрипт за твој оперативни систем који
+уклања све помоћне датотеке (са екстензојом <code class="docutils literal notranslate"><span class="pre">bak</span></code>, <code class="docutils literal notranslate"><span class="pre">log</span></code> и
+слично) у текућем директоријуму и свим његовим поддиректоријумима.</p></li>
+</ol>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="03_oop.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

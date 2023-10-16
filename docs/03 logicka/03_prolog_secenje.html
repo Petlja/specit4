@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Дрво извођења</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/ghc/" target="_blank">Glasgow haskell compiler</a></div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/hugs/" target="_blank">Hugs Haskell interpreter</a></div>
+          <div class="useful-link">
+            <a href="https://replit.com/languages/haskell" target="_blank">Haskell online (repl.it)</a></div>
+          <div class="useful-link">
+            <a href="https://www.swi-prolog.org/" target="_blank">SWI Prolog</a></div>
+          <div class="useful-link">
+            <a href="https://swish.swi-prolog.org/" target="_blank">SWI Prolog online</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01%20paradigme-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-01%20paradigme-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                <a href=../01%20paradigme/03_oop.html><div class="studioLecture" id=activity-01%20paradigme-03_oop><i class="fas fa-file-alt activity-icon"></i>Објектнооријентисана парадигма</div></a>
+                <a href=../01%20paradigme/04_skript.html><div class="studioLecture" id=activity-01%20paradigme-04_skript><i class="fas fa-file-alt activity-icon"></i>Скрипт парадигма</div></a>
+                <a href=../01%20paradigme/05_o_paradigmama_quiz.html><div class="studioLecture" id=activity-01%20paradigme-05_o_paradigmama_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-02%20funkcionalna-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/01a_funkcionalna_quiz.html><div class="studioLecture" id=activity-02%20funkcionalna-01a_funkcionalna_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02%20funkcionalna-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02%20funkcionalna-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02%20funkcionalna-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02e_haskell_main.html><div class="studioLecture" id=activity-02%20funkcionalna-02e_haskell_main><i class="fas fa-file-alt activity-icon"></i>Haskell - улаз, излаз, главни програм</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02%20funkcionalna-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                <a href=../02%20funkcionalna/02d_haskell_primeri.html><div class="studioLecture" id=activity-02%20funkcionalna-02d_haskell_primeri><i class="fas fa-file-alt activity-icon"></i>Haskell - пример већег програма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-03%20logicka-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-03%20logicka-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/01_sat.html><div class="studioLecture" id=activity-03%20logicka-01_sat><i class="fas fa-file-alt activity-icon"></i>SAT решавачи</div></a>
+                <a href=../03%20logicka/01a_iskazna_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-01a_iskazna_logika_quiz><i class="far fa-question-circle activity-icon"></i>Исказна логика - квиз</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-03%20logicka-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/02_atp.html><div class="studioLecture" id=activity-03%20logicka-02_atp><i class="fas fa-file-alt activity-icon"></i>Аутоматски доказивачи теорема</div></a>
+                <a href=../03%20logicka/02a_predikatska_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-02a_predikatska_logika_quiz><i class="far fa-question-circle activity-icon"></i>Предикатска логика - квиз</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03%20logicka-03_prolog><i class="fas fa-file-alt activity-icon"></i>Prolog - база знања и правила извођења</div></a>
+                <a href=../03%20logicka/03_prolog_secenje.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_secenje><i class="fas fa-file-alt activity-icon"></i>Prolog - дрво извођења, сечење</div></a>
+                <a href=../03%20logicka/03_prolog_aritmetika.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_aritmetika><i class="fas fa-file-alt activity-icon"></i>Prolog - аритметичка израчунавања</div></a>
+                <a href=../03%20logicka/03_prolog_liste.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_liste><i class="fas fa-file-alt activity-icon"></i>Prolog - листе</div></a>
+                <a href=../03%20logicka/03_prolog_zagonetke.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_zagonetke><i class="fas fa-file-alt activity-icon"></i>Prolog - решавање логичких загонетки</div></a>
+                <a href=../03%20logicka/03z_prolog_zadaci.html><div class="studioLecture" id=activity-03%20logicka-03z_prolog_zadaci><i class="fas fa-file-alt activity-icon"></i>Prolog - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Дрво извођења<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Задатак програмера је да кроз базу знања опише чињенице и правила
+закључивања, а задатак Prolog система је да провери да ли је дати упит
+логичка последица базе знања. Иако програмер не би требало да води
+рачуна о томе како се та провера врши (рекли смо да се у основи крије
+механизам резолуције), често се ипак тај механизам представља дрветом
+које помаже да се разуме шта се у позадини дешава.</p>
+<p>Постоје разни начин да се дрво извођења прикаже. Један начин је дрво
+које садржи сва решења упита. Оно може да се нацрта на основу следећих
+правила.</p>
+<p>Размотримо неколико примера над следећом базом знања.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">musko</span><span class="p">(</span><span class="s s-Atom">homer</span><span class="p">).</span>
+<span class="nf">musko</span><span class="p">(</span><span class="s s-Atom">bart</span><span class="p">).</span>
+<span class="nf">zensko</span><span class="p">(</span><span class="s s-Atom">mardz</span><span class="p">).</span>
+<span class="nf">zensko</span><span class="p">(</span><span class="s s-Atom">liza</span><span class="p">).</span>
+<span class="nf">zensko</span><span class="p">(</span><span class="s s-Atom">meri</span><span class="p">).</span>
+<span class="nf">roditelj</span><span class="p">(</span><span class="s s-Atom">homer</span><span class="p">,</span> <span class="s s-Atom">bart</span><span class="p">).</span>
+<span class="nf">roditelj</span><span class="p">(</span><span class="s s-Atom">homer</span><span class="p">,</span> <span class="s s-Atom">liza</span><span class="p">).</span>
+<span class="nf">osoba</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">musko</span><span class="p">(</span><span class="nv">X</span><span class="p">).</span>
+<span class="nf">osoba</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">zensko</span><span class="p">(</span><span class="nv">X</span><span class="p">).</span>
+<span class="nf">rodjak</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">roditelj</span><span class="p">(</span><span class="nv">Z</span><span class="p">,</span> <span class="nv">X</span><span class="p">),</span> <span class="nf">roditelj</span><span class="p">(</span><span class="nv">Z</span><span class="p">,</span> <span class="nv">Y</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Наредно дрво описује израчунавање резултата  упита <code class="docutils literal notranslate"><span class="pre">osoba(bart).</span></code></p>
+<a class="reference internal image-reference" href="../_images/prolog_svedrvo1.png"><img alt="../_images/prolog_svedrvo1.png" class="align-center" src="../_images/prolog_svedrvo1.png" style="width: 400px;" /></a>
+<p>У корену дрвета се налази упит. Пошто постоје две дефиниције за
+предикат <code class="docutils literal notranslate"><span class="pre">osoba</span></code>, корен има два наследника. Са леве се на основу
+правила <code class="docutils literal notranslate"><span class="pre">osoba(X)</span> <span class="pre">:-</span> <span class="pre">musko(X).</span></code> добија нови упит <code class="docutils literal notranslate"><span class="pre">musko(bart)</span></code>
+(јер је <code class="docutils literal notranslate"><span class="pre">X</span></code> унификовано са <code class="docutils literal notranslate"><span class="pre">bart</span></code>), а са десне се на основу
+правила <code class="docutils literal notranslate"><span class="pre">osoba(X)</span> <span class="pre">:-</span> <span class="pre">zensko(X).</span></code> добија нови упит <code class="docutils literal notranslate"><span class="pre">zensko(bart)</span></code>
+(јер је <code class="docutils literal notranslate"><span class="pre">X</span></code> унификовано са <code class="docutils literal notranslate"><span class="pre">bart</span></code>). На основу чињеница у бази
+знања први упит успева, а други не успева. Дакле, видимо да је овај
+упит произвео једно решење и одговор је <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p>Наредно дрво описује израчунавање резултата упита <code class="docutils literal notranslate"><span class="pre">osoba(A).</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/prolog_svedrvo2.png"><img alt="../_images/prolog_svedrvo2.png" class="align-center" src="../_images/prolog_svedrvo2.png" style="width: 600px;" /></a>
+<p>На дрвету се види да постоји 5 различитих решења. У корену дрвета се
+налази упит <code class="docutils literal notranslate"><span class="pre">osoba(X)</span></code>. Пошто постоје две дефиниције за предикат
+<code class="docutils literal notranslate"><span class="pre">osoba</span></code>, корен има два наследника. Са леве се на основу правила
+<code class="docutils literal notranslate"><span class="pre">osoba(X)</span> <span class="pre">:-</span> <span class="pre">musko(X).</span></code> добија нови упит <code class="docutils literal notranslate"><span class="pre">musko(X)</span></code> (при чему се
+нотира да је <code class="docutils literal notranslate"><span class="pre">A</span></code> унификовано са <code class="docutils literal notranslate"><span class="pre">X</span></code>), а са десне се на основу
+правила <code class="docutils literal notranslate"><span class="pre">osoba(X)</span> <span class="pre">:-</span> <span class="pre">zensko(X).</span></code> добија нови упит <code class="docutils literal notranslate"><span class="pre">zensko(X)</span></code> (при
+чему се нотира да је <code class="docutils literal notranslate"><span class="pre">A</span></code> унификовано са <code class="docutils literal notranslate"><span class="pre">X</span></code>). Пошто у бази постоје
+две дефиниције за предикат <code class="docutils literal notranslate"><span class="pre">musko</span></code>, чвор <code class="docutils literal notranslate"><span class="pre">musko(X)</span></code> има два
+наследника. Оба су успешна, при чему се за први нотира да је <code class="docutils literal notranslate"><span class="pre">X</span></code>
+унификовано са <code class="docutils literal notranslate"><span class="pre">homer</span></code>, а за други da je <code class="docutils literal notranslate"><span class="pre">X</span></code> унификовано са
+<code class="docutils literal notranslate"><span class="pre">bart</span></code>. Када се дође до успешног чвора пријављује се решење. На
+пример, код првог успешног чвора нотирано да је <code class="docutils literal notranslate"><span class="pre">A</span></code> унификовано са
+<code class="docutils literal notranslate"><span class="pre">X</span></code>, а да је <code class="docutils literal notranslate"><span class="pre">X</span></code> унификовано са <code class="docutils literal notranslate"><span class="pre">homer</span></code>, па се може дати решење
+<code class="docutils literal notranslate"><span class="pre">A=homer</span></code>. Слично се дешава и у остатку дрвета.</p>
+<p>Наредно дрво описује израчунавање резултата упита <code class="docutils literal notranslate"><span class="pre">rodjak(A,</span> <span class="pre">B).</span></code></p>
+<a class="reference internal image-reference" href="../_images/prolog_svedrvo3.png"><img alt="../_images/prolog_svedrvo3.png" class="align-center" src="../_images/prolog_svedrvo3.png" style="width: 600px;" /></a>
+<p>У корену дрвета се налази упит. Пошто постоји само једно правило на
+основу ког је дефинисан предикат <code class="docutils literal notranslate"><span class="pre">rodjak</span></code>, корен има само једног
+наследника. Бележи се унификатор <code class="docutils literal notranslate"><span class="pre">A=X</span></code>, <code class="docutils literal notranslate"><span class="pre">B=Y</span></code>, а у новом чвору се
+налази десна страна правила <code class="docutils literal notranslate"><span class="pre">roditelj(Z,</span> <span class="pre">X),</span> <span class="pre">roditelj(Z,</span> <span class="pre">Y)</span></code>. Први
+пут имамо пример упита који је конјункција тј. који садржи два
+предиката који морају бити задовољени. Они се обрађују један по један.
+Прво се посматра предикат <code class="docutils literal notranslate"><span class="pre">roditelj(Z,</span> <span class="pre">X)</span></code>. Пошто постоје две
+дефиниције за предикат <code class="docutils literal notranslate"><span class="pre">roditelj</span></code>, овај чвор ће имати два
+наследника. Први одговара дефиницији <code class="docutils literal notranslate"><span class="pre">roditelj(homer,</span> <span class="pre">bart)</span></code>. Бележи
+се унификатор <code class="docutils literal notranslate"><span class="pre">Z=homer</span></code> и <code class="docutils literal notranslate"><span class="pre">X=bart</span></code>. Пошто је упит био конјункција,
+није довољно да буде задовољен само први предикат, већ се прелази на
+наредни. Зато се као дете чвора <code class="docutils literal notranslate"><span class="pre">roditelj(Z,</span> <span class="pre">X)</span></code> додаје чвор
+<code class="docutils literal notranslate"><span class="pre">roditelj(homer,</span> <span class="pre">Y)</span></code>. Он потиче од предиката <code class="docutils literal notranslate"><span class="pre">roditelj(Z,</span> <span class="pre">Y)</span></code>,
+међутим, пошто је направљена унификатор <code class="docutils literal notranslate"><span class="pre">Z=homer</span></code>, променљива <code class="docutils literal notranslate"><span class="pre">Z</span></code>
+је замењена константом <code class="docutils literal notranslate"><span class="pre">homer</span></code>. Пошто постоје две дефиниције за
+предикат родитељ, овај чвор има два наследника. У провм се налази
+успешно решење уз унификатор <code class="docutils literal notranslate"><span class="pre">Y=bart</span></code>. Дуж пута од корена до тог
+чвора забележен је унификатор <code class="docutils literal notranslate"><span class="pre">A=X,</span> <span class="pre">B=Y,</span> <span class="pre">X=bart,</span> <span class="pre">Z=homer,</span> <span class="pre">Y=bart</span></code>,
+па се пријављује решење <code class="docutils literal notranslate"><span class="pre">A=bart</span></code>, <code class="docutils literal notranslate"><span class="pre">B=bart</span></code>. Мало необично, али из
+дате базе знања и правила закључивања заиста следи да је Барт сам свој
+рођак. У другом случају се налази успешно решење уз инфикатор
+<code class="docutils literal notranslate"><span class="pre">Y=liza</span></code>, одакле следи да су Барт и Лиза рођаци. Десна страна дрвета
+је аналогна левој.</p>
+</section>
+<section id="id2">
+<h1>Сечење (рез)<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h1>
+<p>У циљу смањења простора претраге, спречавања нежељеног бектрекинга и
+на тај начин изостављања неких нетачних одговора или оптимизације
+времена извршавања Prolog уводи <strong>оператор сечења</strong> или <strong>рез</strong>
+(енг. <em>cut</em>). Оператор сечења је често нужно примењивати да би се
+добили довољно ефикасни програми. Нажалост, применом реза нарушава се
+јасна логичка структура Prolog програма и разумевање њиховог значења
+престаје да буде засновано на примени чистих логичких закона и правила
+извођења, већ је приликом анализе програма потребно узети у обзир
+механизам израчунавања (рез се најбоље разуме тако што се прати његов
+ефекат на стабло израчунавања), што је много компликованије. Дакле,
+рез се слободно може посматрати као још једна слаба тачка језика
+Prolog – поред све теорије на којој се заснива логичка парадигма,
+нелогички елемент као што је рез постаје кључан за ефикасно решавање
+проблема употребом логичке парадигме!</p>
+<p>Рез се означава са <code class="docutils literal notranslate"><span class="pre">!</span></code>, увек успева (када се наведе у правилу,
+сматра се да је резултат његовог израчунавања тачан), али у повратку
+спречава бектрекинг и враћање преко њега здесна налево. Размотримо
+неколико примера.</p>
+<p>Максимум се може дефинисати на следећи начин (релацијски оператори
+<code class="docutils literal notranslate"><span class="pre">=&lt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, наравно, представљају релације <em>мање једнако</em> и <em>мање</em>
+и детаљније су описане у поглављу о аритметици).</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">min</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">X</span> <span class="o">=&lt;</span> <span class="nv">Y</span><span class="p">.</span>
+<span class="nf">min</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">Y</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">Y</span> <span class="o">&lt;</span> <span class="nv">X</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Израчунавање резултата упита <code class="docutils literal notranslate"><span class="pre">max(3,</span> <span class="pre">5,</span> <span class="pre">M).</span></code> и упита <code class="docutils literal notranslate"><span class="pre">max(5,</span> <span class="pre">3,</span>
+<span class="pre">M).</span></code> су представљени следећим дрветима израчунавања.</p>
+<img alt="../_images/prolog_svedrvo_max.png" class="align-center" src="../_images/prolog_svedrvo_max.png" />
+<p>Ако се на основу првог правила одреди да је <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">=&lt;</span> <span class="pre">Y</span></code> (што се дешава
+приликом израчунавања резултата упита <code class="docutils literal notranslate"><span class="pre">min(3,</span> <span class="pre">5,</span> <span class="pre">M).</span></code>), тада нема
+потребе приликом бектрекинга проверавати друго правило јер унапред
+знамо да његов услов неће бити испуњен. Зато се програм може убрзати
+тако што се иза услова у првом правилу дода рез.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">min</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">X</span> <span class="o">=&lt;</span> <span class="nv">Y</span><span class="p">,</span> <span class="p">!.</span>
+<span class="nf">min</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">Y</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">Y</span> <span class="o">&lt;</span> <span class="nv">X</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Приликом упита <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">max(3,</span> <span class="pre">5,</span> <span class="pre">M)</span></code> извршиће се унификација којом ће се
+везати променљива <code class="docutils literal notranslate"><span class="pre">X</span></code> са вредношћу 3, <code class="docutils literal notranslate"><span class="pre">Y</span></code> са вредношћу 5 и <code class="docutils literal notranslate"><span class="pre">M</span></code>
+са вредношћу <code class="docutils literal notranslate"><span class="pre">X</span></code>, тј. 3, провериће се услов <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">=&lt;</span> <span class="pre">5</span></code> који ће бити
+тачан, провериће се рез који је тачан када се рачуна слева надесно и
+доћи ће се до краја правила и пријавиће се резултат <code class="docutils literal notranslate"><span class="pre">M=3</span></code>. Међутим,
+након тога ће се престати са испитивањем алтернатива и друго правило
+неће бити испробано. Ово можемо представити дрветом израчунавања на
+ком је означена грана која је исечена због реза.</p>
+<p>Приликом израчунавања другог упита, у левој грани се испитује услов
+<code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">=&lt;</span> <span class="pre">3</span></code> који није тачан, па се до реза ни не стиже и у том случају
+рез нема никаквог ефекта на извршавање претраге.</p>
+<img alt="../_images/prolog_svedrvo_rez1.png" class="align-center" src="../_images/prolog_svedrvo_rez1.png" />
+<p>Претходна употреба оператора сечења је <strong>зелена</strong>, јер се оператором
+сечења програм само убрзава и не мења му се значење.</p>
+<p>Можемо отићи и корак даље и из другог правила изоставити услов <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">&lt;</span>
+<span class="pre">X</span></code>. Наиме, пошто у првом правилу постоји сечење, јасно је да ће се до
+провере другог правила стићи само ако услов првог правила није испуњен,
+тј. ако не важи <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">=&lt;</span> <span class="pre">Y</span></code>, тј. сигурно тада знамо да важи <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">&gt;</span> <span class="pre">X</span></code>.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">max</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">X</span> <span class="o">=&lt;</span> <span class="nv">Y</span><span class="p">,</span> <span class="p">!.</span>
+<span class="nf">max</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">Y</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Вредност максимума бројева 3 и 5 можемо израчунати у било ком
+редоследу да су задати.</p>
+<ul class="simple">
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">max(3,</span> <span class="pre">5,</span> <span class="pre">M)</span></code> се извршава на већ описани начин, добија се
+резултат <code class="docutils literal notranslate"><span class="pre">M=5</span></code> и због сечења се не траже друга решења.</p></li>
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">max(5,</span> <span class="pre">3,</span> <span class="pre">M)</span></code> се извршава тако што се унификује <code class="docutils literal notranslate"><span class="pre">X</span></code> са
+5, <code class="docutils literal notranslate"><span class="pre">Y</span></code> са 3, проверава се <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">=&lt;</span> <span class="pre">3</span></code> и пошто тај услов није
+испуњен, одустаје се од овог правила. Затим се прелази на друго
+правило, унификују се <code class="docutils literal notranslate"><span class="pre">X</span></code> и 5, <code class="docutils literal notranslate"><span class="pre">Y</span></code> и <code class="docutils literal notranslate"><span class="pre">3</span></code> и <code class="docutils literal notranslate"><span class="pre">M</span></code> и <code class="docutils literal notranslate"><span class="pre">Y</span></code>,
+тј. 3, након чега се пријављује резултат <code class="docutils literal notranslate"><span class="pre">M=3</span></code>. Приликом тражења
+других решења враћамо се уназад, наилазимо на сечење и бектрекинг се
+прекида.</p></li>
+</ul>
+<p>Ово је приказано на наредним дрветима.</p>
+<img alt="../_images/prolog_svedrvo_rez2.png" class="align-center" src="../_images/prolog_svedrvo_rez2.png" />
+<p>Ипак, ова употреба реза је <strong>црвена</strong>, јер се резом мења значење
+програма. Заиста, наредни упит сасвим неочекивано враћа нетачан
+одговор <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">min</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Приликом његовог извршавања, покушава се унификација са левом страном
+првог правила, што не успева. Унификација са левом страном другог
+правила успева и пошто више нема услова на десној страни тог правила,
+пријављује се одговор <code class="docutils literal notranslate"><span class="pre">true</span></code>. Ово је приказано наредним дрветом.</p>
+<a class="reference internal image-reference" href="../_images/prolog_svedrvo_rez3.png"><img alt="../_images/prolog_svedrvo_rez3.png" class="align-center" src="../_images/prolog_svedrvo_rez3.png" style="width: 500px;" /></a>
+<p>Дакле, иако сечење може скратити програм и омогућити нам да неке
+услове не морамо да пишемо, треба бити веома обазрив јер такав програм
+може исправно радити за неке услове, а престати да ради исправно за
+неке друге упите. Приликом употребе реза пожељно је увек користити
+зелени, а не црвени облик.</p>
+<p>У наставку ћемо на неким местима употребљавати рез за оптимизацију и
+поједностављивање наших програма. У тим ситуацијама ће то бити
+наглашено и додатно објашњено.</p>
+<p>Размотримо још један, мало компликованији пример.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">zivotinja</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">kicmenjak</span><span class="p">(</span><span class="nv">X</span><span class="p">).</span>
+<span class="nf">zivotinja</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">beskicmenjak</span><span class="p">(</span><span class="nv">X</span><span class="p">).</span>
+<span class="nf">kicmenjak</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">sisar</span><span class="p">(</span><span class="nv">X</span><span class="p">).</span>
+<span class="nf">kicmenjak</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">ptica</span><span class="p">(</span><span class="nv">X</span><span class="p">).</span>
+<span class="nf">beskicmenjak</span><span class="p">(</span><span class="s s-Atom">skoljka</span><span class="p">).</span>
+<span class="nf">beskicmenjak</span><span class="p">(</span><span class="s s-Atom">pauk</span><span class="p">).</span>
+<span class="nf">sisar</span><span class="p">(</span><span class="s s-Atom">mis</span><span class="p">).</span>
+<span class="nf">sisar</span><span class="p">(</span><span class="s s-Atom">slon</span><span class="p">).</span>
+<span class="nf">ptica</span><span class="p">(</span><span class="s s-Atom">soko</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Наредно стабло израчунавања приказује израчунавање резултата упита
+<code class="docutils literal notranslate"><span class="pre">zivotinja(X).</span></code></p>
+<img alt="../_images/prolog_svedrvo_zivotinje.png" class="align-center" src="../_images/prolog_svedrvo_zivotinje.png" />
+<p>Види се да се исправно проналази свих пет решења.  Вежбе ради,
+размотримо шта би се догодило да се у једну од клаузула дода рез.
+На пример,</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">kicmenjak</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">sisar</span><span class="p">(</span><span class="nv">X</span><span class="p">),</span> <span class="p">!.</span>
+</pre></div>
+</div>
+<p>Стабло израчунавања које се добија у том случају је приказано на
+следећој слици.</p>
+<img alt="../_images/prolog_svedrvo_zivotinje_rez.png" class="align-center" src="../_images/prolog_svedrvo_zivotinje_rez.png" />
+<p>Примећујемо да су се због реза изгубила два решења (<code class="docutils literal notranslate"><span class="pre">X=slon</span></code> и
+<code class="docutils literal notranslate"><span class="pre">X=soko</span></code>), па је у питању црвени рез, који мења значење програма.
+Рез је проузроковао исецање две отворене гране, али не и треће, која
+се налази при врху дрвета. Наиме, рез сече све отворене гране у
+поддрвету чији је корен предикат који је проузроковао увођење реза. У
+нашем примеру рез је уведен приликом разрешавања предиката
+<code class="docutils literal notranslate"><span class="pre">kicmenjak(X)</span></code>, тако да су исечене гране испод тог чвора, док је
+грана преостала изнад, код предиката <code class="docutils literal notranslate"><span class="pre">zivotinja(X)</span></code> и даље присутна
+тј. након реза не испитују се алтернативна решења за <code class="docutils literal notranslate"><span class="pre">kicmenjak(X)</span></code>,
+али се испитују алтернативна решења за <code class="docutils literal notranslate"><span class="pre">zivotinja(X)</span></code>.</p>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="03_prolog.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

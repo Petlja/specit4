@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Функционална парадигма</title>
+    <title>Улаз и излаз</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -300,24 +300,140 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Функционална парадигма<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="01_funkcionalna.html">Функционална парадигма</a></li>
-<li class="toctree-l1"><a class="reference internal" href="01a_funkcionalna_quiz.html">Функционална парадигма - квиз</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_haskell.html">Основни појмови језика Haskell</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_haskell.html#id1">Изрази</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_haskell.html#id2">Дефинисање функција</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_haskell.html#id3">Рекурзивне функције</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02b_haskell_liste.html">Листе</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02b_haskell_liste.html#id2">Неке библиотечке функције за рад са листама</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02b_haskell_liste.html#id4">Компрехенсија (скуповна нотација)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02c_haskell_tipovi.html">Алгебарски типови података</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02e_haskell_main.html">Улаз и излаз</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02z_haskell_vezba.html">Задаци за вежбу</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02d_haskell_primeri.html">Пример сложенијег програма</a></li>
-</ul>
+<h1>Улаз и излаз<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Видели смо да је циљ функционалног програмирања решавање проблема
+употребом чистих функција. Међутим, јасно нам је да на тај начин није
+могуће правити комплетне апликације, јер учитавање података (било из
+датотеке било са стандардног улаза), испис података, цртање по екрану,
+коришћење графичког корисничког интерефејса, мрежна комуникација и
+многе друге акције без којих се не може замислити једна апликација
+представљају бочне ефекте. Решење које се у језику Haskell нуди је да
+се функције које производе бочне ефекте (нечисте функције) у
+потпуности раздвоје од чистих функција. Већи део сваког програма,
+наравно, треба да се састоји од чистих функција, које се користе
+унутар нечистих функција.</p>
+<p>Размотримо пример исписа података на екран. Све досадашње функције смо
+дефинисали у <code class="docutils literal notranslate"><span class="pre">.hs</span></code> датотекама, учитавали их у интерактивни
+интерпретатор (на пример <code class="docutils literal notranslate"><span class="pre">ghci</span></code>), а затим их у интерпретатору
+позивали. То нису били програми, јер нису садржали главну функцију
+<code class="docutils literal notranslate"><span class="pre">main</span></code> која би се позвала приликом покретања програма. Размотримо
+први пример комплетног програма.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">main</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">IO</span><span class="w"> </span><span class="nb">()</span>
+<span class="nf">main</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">putStrLn</span><span class="w"> </span><span class="s">&quot;Zdravo svete!&quot;</span>
+</pre></div>
 </div>
+<p>Овај програм се може компилирати (на пример, помоћу компилатора
+<code class="docutils literal notranslate"><span class="pre">ghc</span></code>) и на тај начин добити извршиви програм који, када се покрене,
+на стандардни излаз исписује <code class="docutils literal notranslate"><span class="pre">Zdravo</span> <span class="pre">svete!</span></code>.</p>
+<p>Шта је заправо тип <code class="docutils literal notranslate"><span class="pre">IO</span> <span class="pre">()</span></code> и како је могуће да у чистом функцоналном
+језику имамо функцију која није чиста?  <code class="docutils literal notranslate"><span class="pre">IO</span></code> је тип који има
+карактеристике које се у теорији називају <strong>монада</strong> и које нећемо
+детаљније коментарисати у овом тексту. Неформално можемо разумети да
+тип <code class="docutils literal notranslate"><span class="pre">IO</span></code> преставља акцију која може да врши улаз из неке датотеке
+или са стандардног улаза и може да врши неки испис или у неку датотеку
+или на стандардни излаз, при чему може, али не мора да врати податак
+неког датог типа. Функција <code class="docutils literal notranslate"><span class="pre">main</span></code> је типа <code class="docutils literal notranslate"><span class="pre">IO</span> <span class="pre">()</span></code>, што означава да
+је у питању улазно-излазна акција која не враћа податак (тип <code class="docutils literal notranslate"><span class="pre">()</span></code> се
+назива <em>unit type</em> и користи се да се нагласи да функција не враћа
+неку смислену вредност). Иако су функције попут <code class="docutils literal notranslate"><span class="pre">main</span></code> суштински
+нечисте, јер имају неке бочне ефекте, формално гледано оне могу да
+постоје у чистом функционалном језику, јер оне заправо не извршавају
+ове акције, већ само враћају акције, које онда извршава оперативни
+систем приликом покретања програма. На пример, тип функције
+<code class="docutils literal notranslate"><span class="pre">putStrLn</span></code> је следећи:</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">putStrLn</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">IO</span><span class="w"> </span><span class="nb">()</span>
+</pre></div>
+</div>
+<p>Дакле, можемо сматрати да она не исписује дату ниску на екран, већ да
+за дату ниску она враћа акцију која проузрокује испис те ниске на
+екран.</p>
+<p>Акције се могу комбиновати коришћењем специјалне <code class="docutils literal notranslate"><span class="pre">do</span></code> нотације.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">main</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">IO</span><span class="w"> </span><span class="nb">()</span>
+<span class="nf">main</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">  </span><span class="n">putStrLn</span><span class="w"> </span><span class="s">&quot;Zdravo svima!&quot;</span>
+<span class="w">  </span><span class="n">putStrLn</span><span class="w"> </span><span class="s">&quot;Želim Vam prijatan dan&quot;</span>
+</pre></div>
+</div>
+<p>Коришћењем ове нотације можемо остварити и читање података.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">main</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">IO</span><span class="w"> </span><span class="nb">()</span>
+<span class="nf">main</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">   </span><span class="n">putStrLn</span><span class="w"> </span><span class="s">&quot;Kako se zoveš: &quot;</span>
+<span class="w">   </span><span class="n">ime</span><span class="w"> </span><span class="ow">&lt;-</span><span class="w"> </span><span class="n">getLine</span>
+<span class="w">   </span><span class="n">putStrLn</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Zdravo! Ti se zoveš &quot;</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="n">ime</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">getLine</span></code> има тип:</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">getLine</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">IO</span><span class="w"> </span><span class="kt">String</span>
+</pre></div>
+</div>
+<p>То је, дакле, улазно-излазна акција, међутим, за разлику од <code class="docutils literal notranslate"><span class="pre">putStrLn</span> <span class="pre">&quot;Zdravo&quot;</span></code>
+која је улазно-излазна акција која не враћа никакав резултат тј. која је типа <code class="docutils literal notranslate"><span class="pre">IO</span> <span class="pre">()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">getLine</span></code> је улазно-излазна акција која враћа резултат типа <code class="docutils literal notranslate"><span class="pre">String</span></code>.
+Линијом <code class="docutils literal notranslate"><span class="pre">ime</span> <span class="pre">&lt;-</span> <span class="pre">getLine</span></code> се ниска која се добија извршавањем акције
+<code class="docutils literal notranslate"><span class="pre">getLine</span></code> именује са <code class="docutils literal notranslate"><span class="pre">ime</span></code> и у наставку <code class="docutils literal notranslate"><span class="pre">do</span></code> блока <code class="docutils literal notranslate"><span class="pre">ime</span></code> означава
+вредност која се добија извршавањем улазно-излазне акције <code class="docutils literal notranslate"><span class="pre">getLine</span></code>.
+Обратите пажњу на то да тип функције <code class="docutils literal notranslate"><span class="pre">getLine</span></code> није <code class="docutils literal notranslate"><span class="pre">String</span></code> и
+да се функција <code class="docutils literal notranslate"><span class="pre">getLine</span></code> не може позивати из чистих функција (јер оне
+не могу имати бочне ефекте, а <code class="docutils literal notranslate"><span class="pre">getLine</span></code> је акција која има бочни ефекат).
+Са друге стране, унутар функције <code class="docutils literal notranslate"><span class="pre">main</span></code> можемо без икаквих проблема
+употребити било коју чисту функцију и/или операцију (нпр. у претходном
+примеру употребљена је операција конкатенације <code class="docutils literal notranslate"><span class="pre">++</span></code>). Тип функција
+какве су <code class="docutils literal notranslate"><span class="pre">putStrLn</span></code> и <code class="docutils literal notranslate"><span class="pre">getLine</span></code> говори да су то акције са бочним
+ефектима и на основу строгих правила типизираности имамо гаранцију
+да оне никада неће бити употребљене унутар неке чисте функције, чиме
+се постиже јасна раздвојеност између чистих функција и функција са
+бочним ефектима.</p>
+<p>Још једна функција са бочним ефектима која се често може користити за
+програме који раде са улазом и излазом је</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">interact</span><span class="ow">::</span><span class="w"> </span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">IO</span><span class="w"> </span><span class="nb">()</span>
+</pre></div>
+</div>
+<p>Овој функцији се предаје чиста функција која прима ниску која ће
+садржати цео садржај учитан са стандардног улаза, а враћа ниску која
+садржи цео садржај који треба да буде исписан на стандардни излаз.
+Дакле, када год имамо програм који учитава фиксан скуп података са
+стандардног улаза, обрађује их и исписује резултат на стандардни
+излаз, можемо да скоро сву логику програма имплементирамо унутар неке
+чисте функције, и на самом крају да употребимо <code class="docutils literal notranslate"><span class="pre">interact</span></code> да бисмо
+добили извршиви програм. На пример, наредни програм броји линије
+учитане са стандардног улаза.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">countLines</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">String</span>
+<span class="nf">countLines</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">show</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="p">(</span><span class="n">lines</span><span class="w"> </span><span class="n">input</span><span class="p">))</span>
+
+<span class="nf">main</span><span class="ow">::</span><span class="w"> </span><span class="kt">IO</span><span class="w"> </span><span class="nb">()</span>
+<span class="nf">main</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">interact</span><span class="w"> </span><span class="n">countLines</span>
+</pre></div>
+</div>
+<p>Овде се користи функција <code class="docutils literal notranslate"><span class="pre">lines::</span> <span class="pre">String</span> <span class="pre">-&gt;</span> <span class="pre">[String]</span></code> која прелама
+стринг који у себи може да садржи ознаке за прелазак у нови ред у
+листу појединачних линија. Фунција <code class="docutils literal notranslate"><span class="pre">length::</span> <span class="pre">[a]</span> <span class="pre">-&gt;</span> <span class="pre">Int</span></code> израчунава
+дужину добијеног низа линија, а функција <code class="docutils literal notranslate"><span class="pre">show::</span> <span class="pre">Int</span> <span class="pre">-&gt;</span> <span class="pre">String</span></code> на
+крају ту дужину конвертује у стринг који ће бити приказан на екрану.</p>
+<p>Наравно, <code class="docutils literal notranslate"><span class="pre">countLines</span></code> можемо изразити и као композицију функција.</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">countLines</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">String</span>
+<span class="nf">countLines</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">show</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="n">lines</span>
+</pre></div>
+</div>
+<p>Тема постизања бочних ефеката у чистим функционалним језицима је веома
+важна, јер без њих није могуће замислити израду комплетних програма.
+Ми се њом нећемо детаљно бавити, а заинтересоване ученике упућујемо да
+се о овоме мало више информишу на интернету (на пример, књига <strong>Learn
+you a Haskell for Great Good</strong>, која је слободно доступна на
+интернету, је заиста одличан материјал за детаљније изучавање језика
+Haskell).</p>
+<section id="id2">
+<h2>Задаци за самостални рад<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Истражи на интернету шта су монаде, шта су функтори и шта су
+апликативни функтори? Како се ови концепти користе у језику Haskell?
+Проучи монаде <code class="docutils literal notranslate"><span class="pre">IO</span></code>, <code class="docutils literal notranslate"><span class="pre">Reader</span></code>, <code class="docutils literal notranslate"><span class="pre">Writer</span></code>, <code class="docutils literal notranslate"><span class="pre">State</span></code>, <code class="docutils literal notranslate"><span class="pre">ST</span></code>, …
+Зашто су <code class="docutils literal notranslate"><span class="pre">List</span></code> и <code class="docutils literal notranslate"><span class="pre">Maybe</span></code> монаде?</p></li>
+</ol>
+<ol class="arabic simple">
+<li><p>Истражи мало детаљније шта је <code class="docutils literal notranslate"><span class="pre">do</span></code> нотација и шта се све може
+навести унутар блока <code class="docutils literal notranslate"><span class="pre">do</span></code>.</p></li>
+</ol>
+</section>
 </section>
 
 
@@ -325,7 +441,7 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="../01%20paradigme/05_o_paradigmama_quiz.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  <a  href="02c_haskell_tipovi.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
   <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>

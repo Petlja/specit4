@@ -1,28 +1,58 @@
-courseId: courseID
+courseId: specit4_paradigme_logicko
 description:
   externalLinks:
-  - href: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
-    text: Sphinx Docs
-  - href: https://github.com/Petlja/PetljaDoc/blob/master/README.md
-    text: Petljadoc
-  - href: https://github.com/RunestoneInteractive/overview
-    text: Runestone Interactive
+  - href: https://www.haskell.org/ghc/
+    text: Glasgow haskell compiler
+  - href: https://www.haskell.org/hugs/
+    text: Hugs Haskell interpreter
+  - href: https://replit.com/languages/haskell
+    text: Haskell online (repl.it)
+  - href: https://www.swi-prolog.org/
+    text: SWI Prolog
+  - href: https://swish.swi-prolog.org/
+    text: SWI Prolog online
   longDescription: '<div class="document">
 
-    <p>This is an example of a long description...</p>
+    <p>&lt;p&gt; Овај курс је намењен за предмет Програмске парадигме у четвртом разреду
+    гимназија за ученике са посебним способностима за рачунарство и информатику. &lt;/p&gt;
+
+    &lt;p&gt; Курс прати одговарајући програм наставе и учења. Поред рада у школи,
+    курс може да се пролази и самостално. &lt;/p&gt;
+
+    &lt;p&gt;
+
+    &lt;a rel=&quot;license&quot; href=&quot;<a class="reference external" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">https://creativecommons.org/licenses/by/4.0/deed.sr_LATN</a>&quot;&gt;
+
+    &lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot;
+    src=&quot;https://i.creativecommons.org/l/by/4.0/88x31.png&quot; /&gt;&lt;/a&gt;
+
+    &lt;br /&gt;Овај курс Фондација Петља објавила je под лиценцом &lt;a rel=&quot;license&quot;
+    href=&quot;https://creativecommons.org/licenses/by/4.0/deed.sr_LATN&quot;&gt;Creative
+    Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)&lt;/a&gt;.
+
+    &lt;/p&gt;</p>
 
     </div>
 
     '
   requirements:
-  - Petljadoc
-  - Runestone
-  - Sphinx
-  shortDescription: Shrot description
+  - Инсталиран интерпретатор/компилатор за програмски језик Haskell (или приступ неком
+    онлајн интерпретатору)
+  - Инсталиран интерпретатор/компиатор за програмски језик Proog (или приступ неком
+    онлајн интерпретатору)
+  - Инсталирано развојно окружење за програмски језик C#
+  shortDescription: Увод у програмске парадигме, логичко и функционално програмирање
+    за четврти разред специјализованих ИТ одељења
   toc:
   - Intro to Petljadoc INDEX.yaml
   willLearn:
-  - Preview of Petljadoc course
+  - Научићеш шта су програмске парадигме и које су 4 основне програмске парадигме?
+  - Резимираћеш основне карактеристике императивне и објектнооријентисане парадигме.
+  - Научићеш основне карактеристике функционалне парадигме.
+  - Научићеш основне елементе функционалног програмског језика Haskell.
+  - Научићеш основне појмове математичке логике и аутоматског резоновања.
+  - Научићеш основне карактеристике логичке парадигме.
+  - Научићеш основне елементе логичког програмског језика PROLOG.
 lang: en
 lessons:
 - activities:
@@ -40,6 +70,27 @@ lessons:
     src: 02_imperativna.rst
     title: Императивна парадигма
     type: reading
+  - description: ''
+    file: 03_oop.html
+    guid: ccbc6043-02fd-41fb-ad06-388b3dd6e4c9
+    normalized_title: Објектнооријентисана парадигма
+    src: 03_oop.rst
+    title: Објектнооријентисана парадигма
+    type: reading
+  - description: ''
+    file: 04_skript.html
+    guid: da8a1690-cb6f-45a8-97f7-a884e45ad639
+    normalized_title: Скрипт парадигма
+    src: 04_skript.rst
+    title: Скрипт парадигма
+    type: reading
+  - description: ''
+    file: 05_o_paradigmama_quiz.html
+    guid: e0b70068-d864-4e1f-ad16-8f2464dddedc
+    normalized_title: Квиз
+    src: 05_o_paradigmama_quiz.rst
+    title: Квиз
+    type: quiz
   archived-activities: []
   description: ''
   folder: 01 paradigme
@@ -54,6 +105,13 @@ lessons:
     src: 01_funkcionalna.rst
     title: О функционалној парадигми
     type: reading
+  - description: ''
+    file: 01a_funkcionalna_quiz.html
+    guid: 1b30ba2a-41d5-41ba-8fe2-7d48eba6e198
+    normalized_title: Квиз
+    src: 01a_funkcionalna_quiz.rst
+    title: Квиз
+    type: quiz
   - description: ''
     file: 02_haskell.html
     guid: cede1110-aa21-4f7a-8d94-defc41c40001
@@ -76,11 +134,25 @@ lessons:
     title: Haskell - алгебарски типови података
     type: reading
   - description: ''
+    file: 02e_haskell_main.html
+    guid: a5ab4d60-9830-435e-afd8-d5f2c021be98
+    normalized_title: Haskell - улаз, излаз, главни програм
+    src: 02e_haskell_main.rst
+    title: Haskell - улаз, излаз, главни програм
+    type: reading
+  - description: ''
     file: 02z_haskell_vezba.html
     guid: 8050e6f9-add2-4981-86b5-39abb08599b1
     normalized_title: Haskell - задаци за вежбу
     src: 02z_haskell_vezba.rst
     title: Haskell - задаци за вежбу
+    type: reading
+  - description: ''
+    file: 02d_haskell_primeri.html
+    guid: 5bc27bbc-e730-418d-bbfb-94a145ca9db2
+    normalized_title: Haskell - пример већег програма
+    src: 02d_haskell_primeri.rst
+    title: Haskell - пример већег програма
     type: reading
   archived-activities: []
   description: ''
@@ -104,6 +176,20 @@ lessons:
     title: Исказна логика
     type: reading
   - description: ''
+    file: 01_sat.html
+    guid: 557ec21d-0c26-4079-8cb8-ee05859d2337
+    normalized_title: SAT решавачи
+    src: 01_sat.rst
+    title: SAT решавачи
+    type: reading
+  - description: ''
+    file: 01a_iskazna_logika_quiz.html
+    guid: 1ba02540-04fd-4027-9f4d-7764220561be
+    normalized_title: Исказна логика - квиз
+    src: 01a_iskazna_logika_quiz.rst
+    title: Исказна логика - квиз
+    type: quiz
+  - description: ''
     file: 02_predikatska_logika.html
     guid: b7c7481e-2ac9-489b-872c-b645d9a4a2a8
     normalized_title: Предикатска логика
@@ -111,11 +197,60 @@ lessons:
     title: Предикатска логика
     type: reading
   - description: ''
+    file: 02_atp.html
+    guid: 8e1d732c-b1f1-4846-b49d-134013eb5048
+    normalized_title: Аутоматски доказивачи теорема
+    src: 02_atp.rst
+    title: Аутоматски доказивачи теорема
+    type: reading
+  - description: ''
+    file: 02a_predikatska_logika_quiz.html
+    guid: 8f1ef0b8-7871-4264-87cc-2210dbfa71ee
+    normalized_title: Предикатска логика - квиз
+    src: 02a_predikatska_logika_quiz.rst
+    title: Предикатска логика - квиз
+    type: quiz
+  - description: ''
     file: 03_prolog.html
     guid: f94ab664-726c-4b43-b1f0-24f43ddf030f
-    normalized_title: PROLOG
+    normalized_title: Prolog - база знања и правила извођења
     src: 03_prolog.rst
-    title: PROLOG
+    title: Prolog - база знања и правила извођења
+    type: reading
+  - description: ''
+    file: 03_prolog_secenje.html
+    guid: 24649253-fd4f-4405-ad3d-bfca8b693e54
+    normalized_title: Prolog - дрво извођења, сечење
+    src: 03_prolog_secenje.rst
+    title: Prolog - дрво извођења, сечење
+    type: reading
+  - description: ''
+    file: 03_prolog_aritmetika.html
+    guid: 072958f1-7f1d-4c3c-9195-47bbfc34e447
+    normalized_title: Prolog - аритметичка израчунавања
+    src: 03_prolog_aritmetika.rst
+    title: Prolog - аритметичка израчунавања
+    type: reading
+  - description: ''
+    file: 03_prolog_liste.html
+    guid: 8f296f9a-c290-4198-85c5-b8d6d70f2e16
+    normalized_title: Prolog - листе
+    src: 03_prolog_liste.rst
+    title: Prolog - листе
+    type: reading
+  - description: ''
+    file: 03_prolog_zagonetke.html
+    guid: f00ca18d-f963-457c-bc17-1c62248a418f
+    normalized_title: Prolog - решавање логичких загонетки
+    src: 03_prolog_zagonetke.rst
+    title: Prolog - решавање логичких загонетки
+    type: reading
+  - description: ''
+    file: 03z_prolog_zadaci.html
+    guid: f4d1c973-5914-4fa6-ac73-02ce04b2098f
+    normalized_title: Prolog - задаци за самостални рад
+    src: 03z_prolog_zadaci.rst
+    title: Prolog - задаци за самостални рад
     type: reading
   archived-activities: []
   description: ''
@@ -123,4 +258,5 @@ lessons:
   guid: e5e07b93-a678-4972-89a8-a6372484c467
   normalized_title: Логичка парадигма
   title: Логичка парадигма
-title: Petljadoc Course
+title: Увод у програмске парадигме, логичко и функционално програмирање за четврти
+  разред специјализованих ИТ одељења.

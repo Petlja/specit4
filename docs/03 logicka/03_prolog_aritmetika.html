@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Аритметичка израчунавања у језику Prolog</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/ghc/" target="_blank">Glasgow haskell compiler</a></div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/hugs/" target="_blank">Hugs Haskell interpreter</a></div>
+          <div class="useful-link">
+            <a href="https://replit.com/languages/haskell" target="_blank">Haskell online (repl.it)</a></div>
+          <div class="useful-link">
+            <a href="https://www.swi-prolog.org/" target="_blank">SWI Prolog</a></div>
+          <div class="useful-link">
+            <a href="https://swish.swi-prolog.org/" target="_blank">SWI Prolog online</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01%20paradigme-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-01%20paradigme-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                <a href=../01%20paradigme/03_oop.html><div class="studioLecture" id=activity-01%20paradigme-03_oop><i class="fas fa-file-alt activity-icon"></i>Објектнооријентисана парадигма</div></a>
+                <a href=../01%20paradigme/04_skript.html><div class="studioLecture" id=activity-01%20paradigme-04_skript><i class="fas fa-file-alt activity-icon"></i>Скрипт парадигма</div></a>
+                <a href=../01%20paradigme/05_o_paradigmama_quiz.html><div class="studioLecture" id=activity-01%20paradigme-05_o_paradigmama_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-02%20funkcionalna-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/01a_funkcionalna_quiz.html><div class="studioLecture" id=activity-02%20funkcionalna-01a_funkcionalna_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02%20funkcionalna-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02%20funkcionalna-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02%20funkcionalna-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02e_haskell_main.html><div class="studioLecture" id=activity-02%20funkcionalna-02e_haskell_main><i class="fas fa-file-alt activity-icon"></i>Haskell - улаз, излаз, главни програм</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02%20funkcionalna-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                <a href=../02%20funkcionalna/02d_haskell_primeri.html><div class="studioLecture" id=activity-02%20funkcionalna-02d_haskell_primeri><i class="fas fa-file-alt activity-icon"></i>Haskell - пример већег програма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-03%20logicka-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-03%20logicka-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/01_sat.html><div class="studioLecture" id=activity-03%20logicka-01_sat><i class="fas fa-file-alt activity-icon"></i>SAT решавачи</div></a>
+                <a href=../03%20logicka/01a_iskazna_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-01a_iskazna_logika_quiz><i class="far fa-question-circle activity-icon"></i>Исказна логика - квиз</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-03%20logicka-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/02_atp.html><div class="studioLecture" id=activity-03%20logicka-02_atp><i class="fas fa-file-alt activity-icon"></i>Аутоматски доказивачи теорема</div></a>
+                <a href=../03%20logicka/02a_predikatska_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-02a_predikatska_logika_quiz><i class="far fa-question-circle activity-icon"></i>Предикатска логика - квиз</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03%20logicka-03_prolog><i class="fas fa-file-alt activity-icon"></i>Prolog - база знања и правила извођења</div></a>
+                <a href=../03%20logicka/03_prolog_secenje.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_secenje><i class="fas fa-file-alt activity-icon"></i>Prolog - дрво извођења, сечење</div></a>
+                <a href=../03%20logicka/03_prolog_aritmetika.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_aritmetika><i class="fas fa-file-alt activity-icon"></i>Prolog - аритметичка израчунавања</div></a>
+                <a href=../03%20logicka/03_prolog_liste.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_liste><i class="fas fa-file-alt activity-icon"></i>Prolog - листе</div></a>
+                <a href=../03%20logicka/03_prolog_zagonetke.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_zagonetke><i class="fas fa-file-alt activity-icon"></i>Prolog - решавање логичких загонетки</div></a>
+                <a href=../03%20logicka/03z_prolog_zadaci.html><div class="studioLecture" id=activity-03%20logicka-03z_prolog_zadaci><i class="fas fa-file-alt activity-icon"></i>Prolog - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="prolog">
+<h1>Аритметичка израчунавања у језику Prolog<a class="headerlink" href="#prolog" title="Permalink to this heading">¶</a></h1>
+<p>xИако је Prolog заснован на математичкој логици и његову основу, као
+што смо видели, чини симболичко израчунавање, програмирање се не може
+замислити без нумеричког израчунавања, тј. рада са бројевима. Prolog
+подржава рад и са целим и са реалним бројевима, али jе често за то
+потребно користити посебну подршку.</p>
+<p>Кренимо од употребе релацијских оператора. Дефинишимо предикате којима
+се одређује агрегатно стање воде.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">cvrsto</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">X</span> <span class="o">&lt;</span> <span class="mf">0.</span>
+<span class="nf">tecno</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">X</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">X</span> <span class="o">&lt;</span> <span class="mf">100.</span>
+<span class="nf">gasovito</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">X</span> <span class="o">&gt;=</span> <span class="mf">100.</span>
+</pre></div>
+</div>
+<p>Ови предикати су коректно дефинисани и дају исправан резултат за сваку
+проверу.</p>
+<p>Интересантан је и следећи пример. У бази знања памтимо почетак и крај
+владавине неколико краљева из династије Немањића. Затим дефинишемо да
+је неко био краљ током дате године, ако је та година унутар интервала
+његове владавине.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">kralj_od_do</span><span class="p">(</span><span class="s s-Atom">stefan</span><span class="p">,</span> <span class="mi">1217</span><span class="p">,</span> <span class="mi">1228</span><span class="p">).</span>
+<span class="nf">kralj_od_do</span><span class="p">(</span><span class="s s-Atom">radoslav</span><span class="p">,</span> <span class="mi">1228</span><span class="p">,</span> <span class="mi">1233</span><span class="p">).</span>
+<span class="nf">kralj_od_do</span><span class="p">(</span><span class="s s-Atom">vladislav</span><span class="p">,</span> <span class="mi">1234</span><span class="p">,</span> <span class="mi">1243</span><span class="p">).</span>
+<span class="nf">kralj_od_do</span><span class="p">(</span><span class="s s-Atom">uros</span><span class="p">,</span> <span class="mi">1243</span><span class="p">,</span> <span class="mi">1276</span><span class="p">).</span>
+<span class="nf">kralj_od_do</span><span class="p">(</span><span class="s s-Atom">dragutin</span><span class="p">,</span> <span class="mi">1276</span><span class="p">,</span> <span class="mi">1282</span><span class="p">).</span>
+<span class="nf">kralj</span><span class="p">(</span><span class="nv">Ime</span><span class="p">,</span> <span class="nv">Godina</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">kralj_od_do</span><span class="p">(</span><span class="nv">Ime</span><span class="p">,</span> <span class="nv">GodinaOd</span><span class="p">,</span> <span class="nv">GodinaDo</span><span class="p">),</span>
+                      <span class="nv">GodinaOd</span> <span class="o">=&lt;</span> <span class="nv">Godina</span><span class="p">,</span> <span class="nv">Godina</span> <span class="o">=&lt;</span> <span class="nv">GodinaDo</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Сада можемо да питамо и ко је био краљ током 1250. године.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">kralj</span><span class="p">(</span><span class="nv">Ime</span><span class="p">,</span> <span class="mi">1250</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Систем исправно изводи закључак да је једини краљ током те године био
+Урош.</p>
+<p>Релацијски оператори се, дакле, на први поглед понашају прилично
+очекивано. Међутим, Prolog неће успети да нам одговори током којих је
+све година Стефан био краљ.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">kralj</span><span class="p">(</span><span class="s s-Atom">stefan</span><span class="p">,</span> <span class="nv">Godina</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>На овај упит добијамо одговор</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Arguments</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">sufficiently</span> <span class="n">instantiated</span>
+<span class="n">In</span><span class="p">:</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="mi">1217</span> <span class="o">=&lt;</span> <span class="n">_1702</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">kralj</span><span class="p">(</span><span class="n">stefan</span><span class="p">,</span><span class="n">_1756</span><span class="p">)</span> <span class="n">at</span>  <span class="n">line</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<p>који нам каже да није могуће да се релацијски оператор примени на
+променљиву којој још није одређена вредност (у нашем случају то је
+променљива <code class="docutils literal notranslate"><span class="pre">Godina</span></code>).</p>
+<p>Размотримо сада следећи пример предиката који користи операцију
+сабирања.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">zbir</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">Z</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">Z</span> <span class="o">==</span> <span class="nv">X</span> <span class="o">+</span> <span class="nv">Y</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Ова дефиниција је синтаксички исправна, што значи да Prolog зна нешто
+о сабирању и једнакости. Међутим, ако поставимо следећи упит</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">zbir</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>неочекивано добијамо неисправан одговор <code class="docutils literal notranslate"><span class="pre">false</span></code>. И на упит</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">zbir</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">X</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>добијамо одговор <code class="docutils literal notranslate"><span class="pre">false</span></code>. Међутим, ако поставимо упит</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">zbir</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>добијамо одговор <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p>Нешто очигледно није како треба. Покушајмо да променимо дефиницију
+предиката <code class="docutils literal notranslate"><span class="pre">zbir</span></code> и да уместо оператора <code class="docutils literal notranslate"><span class="pre">==</span></code> употребимо оператор
+<code class="docutils literal notranslate"><span class="pre">=</span></code>.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">zbir</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">Z</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">Z</span> <span class="o">=</span> <span class="nv">X</span> <span class="o">+</span> <span class="nv">Y</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>И ова дефиниција је синтаксички исправна, што значи да Prolog користи
+и оператор <code class="docutils literal notranslate"><span class="pre">==</span></code> и <code class="docutils literal notranslate"><span class="pre">=</span></code> (и видећемо да они означавају различите
+ствари). Међутим, ако поставимо следећи упит</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">zbir</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>поново добијамо неисправан одговор <code class="docutils literal notranslate"><span class="pre">false</span></code>. Са друге стране, на упит</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">zbir</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">X</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>сада добијамо одговор <code class="docutils literal notranslate"><span class="pre">3+5</span></code>, што је делимично тачно (јер, наравно,
+очекујемо одговор <code class="docutils literal notranslate"><span class="pre">8</span></code>). Поново на упит</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="s s-Atom">?-</span> <span class="nf">zbir</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>добијамо тачан одговор <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p>Шта се заправо овде догађа? Оператор <code class="docutils literal notranslate"><span class="pre">==</span></code> је <strong>оператор провере
+једнакости</strong> два терма и он враћа вредност тачно ако и само ако су
+термови идентични.</p>
+<ul class="simple">
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">8)</span></code> се своди на <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">==</span> <span class="pre">3+5</span></code>. Проверава се да ли
+су терм са леве и десне стране идентични, они то нису и добија се
+одговор <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">X)</span></code> се своди на <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">==</span> <span class="pre">3+5</span></code>. Проверава се да ли
+су терм са леве и десне стране идентични, они то нису и добија се
+одговор <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">3+5)</span></code> се своди на <code class="docutils literal notranslate"><span class="pre">3+5</span> <span class="pre">==</span> <span class="pre">3+5</span></code>. Проверава се да
+ли су терм са леве и десне стране идентични, они јесу идентични и
+добија се одговор <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+<p>Оператор <code class="docutils literal notranslate"><span class="pre">=</span></code> је <strong>оператор унификације</strong> и он враћа вредност тачно
+ако и само ако се термови могу унификовати, тј. ако се променљивама
+доделити вредности тако да два терма постану једнака након те доделе.</p>
+<ul class="simple">
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">8)</span></code> се своди на <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">=</span> <span class="pre">3+5</span></code>. Пошто се термови
+не могу унификовати (у њима се не јављају променљиве) добија се
+одговор <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">X)</span></code> се своди на <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">=</span> <span class="pre">3+5</span></code>. Термови са леве и
+десне стране се могу унификовати тако што се променљивој <code class="docutils literal notranslate"><span class="pre">X</span></code>
+додели вредност <code class="docutils literal notranslate"><span class="pre">3+5</span></code>, па упит успева уз резултат <code class="docutils literal notranslate"><span class="pre">X=3+5</span></code>.</p></li>
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">3+5)</span></code> се своди на <code class="docutils literal notranslate"><span class="pre">3+5</span> <span class="pre">==</span> <span class="pre">3+5</span></code>. Термови са леве
+и десне стране су идентични (па се самим тим могу и унификовати) и
+као резултат се добија <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+<p>Објаснили смо операторе <code class="docutils literal notranslate"><span class="pre">==</span></code> и <code class="docutils literal notranslate"><span class="pre">=</span></code>, али нам ни један од њих не
+одговара у потпуности. Да би се извршило сабирање (или било која друга
+аритметичка операција), потребно је да се употреби оператор <code class="docutils literal notranslate"><span class="pre">is</span></code>.
+Њиме се проверава да ли се термови са леве и десне стране могу
+унификовати, али тек након што се терм са десне стране израчуна.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">zbir</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">Z</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">Z</span> <span class="o">is</span> <span class="nv">X</span> <span class="o">+</span> <span class="nv">Y</span><span class="p">.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">8)</span></code> се своди на <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">is</span> <span class="pre">3+5</span></code>. Када се израчуна
+вредност терма са десне стране, добија се вредност 8, па пошто су
+лева и десна страна тада једнаке, добија се исправан резултат
+<code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">X)</span></code> се своди на <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">is</span> <span class="pre">3+5</span></code>. Када се израчуна
+терм са десне стране добијају се термови <code class="docutils literal notranslate"><span class="pre">X</span></code> и <code class="docutils literal notranslate"><span class="pre">8</span></code>, па пошто се
+они могу унификовати тако што се променљивој <code class="docutils literal notranslate"><span class="pre">X</span></code> додели вредност
+<code class="docutils literal notranslate"><span class="pre">8</span></code>, упит успева уз резултат <code class="docutils literal notranslate"><span class="pre">X=8</span></code>.</p></li>
+<li><p>Упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">3+5)</span></code> се своди на <code class="docutils literal notranslate"><span class="pre">3+5</span> <span class="pre">is</span> <span class="pre">3+5</span></code>. Када се
+израчуна вредност терма са десне стране, добијају се термови <code class="docutils literal notranslate"><span class="pre">3+5</span></code>
+и <code class="docutils literal notranslate"><span class="pre">8</span></code>, који се не могу унификовати и добија се погрешан резултат
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>Дакле, ако употребимо оператор <code class="docutils literal notranslate"><span class="pre">is</span></code>, добијамо исправну могућност
+израчунавања вредности израза (у том светлу најзначајнији нам је упит
+<code class="docutils literal notranslate"><span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">X)</span></code>), при чему и провера израчунате вредности ради
+исправно (упит <code class="docutils literal notranslate"><span class="pre">zbir(3,</span> <span class="pre">5,</span> <span class="pre">8)</span></code> коректно ради).</p>
+<p>Међутим, важно је нагласити да се из ове релације не могу издвојити
+друге функције. На пример, упит <code class="docutils literal notranslate"><span class="pre">?-</span> <span class="pre">zbir(X,</span> <span class="pre">5,</span> <span class="pre">8)</span></code> даје одговор
+<code class="docutils literal notranslate"><span class="pre">no</span></code>. Решавање једначина, дакле, није могуће.</p>
+<p>Оператори поређења на једнакост <code class="docutils literal notranslate"><span class="pre">=:=</span></code> и различитост <code class="docutils literal notranslate"><span class="pre">=\=</span></code> такође
+врше израчунавање термова пре поређења.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Када год употребљавате аритметичке операторе, морате употребити и
+оператор <code class="docutils literal notranslate"><span class="pre">is</span></code>, <code class="docutils literal notranslate"><span class="pre">=:=</span></code> или <code class="docutils literal notranslate"><span class="pre">=\=</span></code> којим ћете натерати систем да
+их примени, тј. да изврши потребна израчунавања!</p>
+
+    </div></div>
+<p>Релацијски оператори су описани у следећој табели.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Оператор</p></th>
+<th class="head"><p>Опис</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
+<td><p>Унификује два терма</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\=</span></code></p></td>
+<td><p>Негација унификације</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+<td><p>Једнакост два терма</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">=:=</span></code></p></td>
+<td><p>Једнакост израчунатих вредности два терма</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">=\=</span></code></p></td>
+<td><p>Негација једнакости</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">=&lt;</span></code></p></td>
+<td><p>Мање од или једнако</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td><p>Мање од</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td><p>Веће од или једнако</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td><p>Веће од</p></td>
+</tr>
+</tbody>
+</table>
+<p>Аритметички оператори су описани у следећој табели.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Оператор</p></th>
+<th class="head"><p>Опис</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td><p>Сабира два броја.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><p>Одузима други број од првог.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>Множи два броја.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
+<td><p>Дели први број са другим.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">//</span></code></p></td>
+<td><p>Целобројно дељење (добија целобројни резултат).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mod</span></code></p></td>
+<td><p>Остатак при дељењу (добија остатак од дељења).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">**</span></code></p></td>
+<td><p>Степеновање (први број се степенује другим).</p></td>
+</tr>
+</tbody>
+</table>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који израчунава степен броја (изложилац је
+ненегативан цео број).</p>
+
+    </div></div>
+<p>Основна идеја је да пратимо рекурзивну дефиницију која је у језику
+Haskell била изражена на следећи начин:</p>
+<div class="highlight-haskell notranslate"><div class="highlight"><pre><span></span><span class="nf">stepen</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="nf">stepen</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stepen</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Уместо функције у језику Prolog дефинишемо предикат, тј. релацију.
+Поново имамо два случаја (излаз из рекурзије и рекурзивни корак).</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">).</span>
+<span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">S</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">N</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">N1</span> <span class="o">is</span> <span class="nv">N</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">N1</span><span class="p">,</span> <span class="nv">S1</span><span class="p">),</span> <span class="nv">S</span> <span class="o">is</span> <span class="nv">X</span> <span class="o">*</span> <span class="nv">S1</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Пошто се у првом правилу вредност променљиве <code class="docutils literal notranslate"><span class="pre">X</span></code> не користи,
+добијамо упозорење <code class="docutils literal notranslate"><span class="pre">Singleton</span> <span class="pre">variable</span> <span class="pre">X</span></code>. Да би се оно избегло,
+уместо назива <code class="docutils literal notranslate"><span class="pre">X</span></code> можемо употребити анонимну променљиву која се
+обележава подвлаком.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">stepen</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Прво правило можемо читати као:</p>
+<ul class="simple">
+<li><p>нулти степен било ког броја је 1*</p></li>
+</ul>
+<p>Друго правило се може протумачити као:</p>
+<ul class="simple">
+<li><p>ако је <code class="docutils literal notranslate"><span class="pre">N</span></code> позитиван, ако је <code class="docutils literal notranslate"><span class="pre">N1</span></code> једнак вредности броја <code class="docutils literal notranslate"><span class="pre">N</span></code>
+након што се она умањи за 1, ако је <code class="docutils literal notranslate"><span class="pre">S1</span></code> вредност степена <code class="docutils literal notranslate"><span class="pre">X</span></code> на
+<code class="docutils literal notranslate"><span class="pre">N1</span></code> и ако је <code class="docutils literal notranslate"><span class="pre">S</span></code> једнака вредности која се добије када се
+израчуна производ броја <code class="docutils literal notranslate"><span class="pre">X</span></code> и те вредности <code class="docutils literal notranslate"><span class="pre">S1</span></code>, тада је <code class="docutils literal notranslate"><span class="pre">S</span></code>
+вредност степена <code class="docutils literal notranslate"><span class="pre">X</span></code> на <code class="docutils literal notranslate"><span class="pre">N</span></code>.</p></li>
+</ul>
+<p>Нагласимо да је потребно употребити оператор <code class="docutils literal notranslate"><span class="pre">is</span></code> да би се број
+<code class="docutils literal notranslate"><span class="pre">N</span></code> умањио за 1 као и да би се резултат рекурзивног позива <code class="docutils literal notranslate"><span class="pre">S1</span></code>
+помножио са <code class="docutils literal notranslate"><span class="pre">X</span></code>. Ако не бисмо у другом правилу навели услов <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">&gt;</span>
+<span class="pre">0</span></code>, тада би се прво пријавила исправно израчуната вредност степена,
+али би се приликом тражења даљих решења запало у бесконачну рекурзију
+јер не би било услова који би спречио да се друго правило примењује на
+<code class="docutils literal notranslate"><span class="pre">N=0</span></code> а затим и на негативне вредности променљиве <code class="docutils literal notranslate"><span class="pre">N</span></code>.</p>
+<p>Можемо дефинисати и ефикаснију имплементацију степеновања.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">).</span>
+<span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">S</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">N</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">N</span> <span class="o">mod</span> <span class="mi">2</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="nv">N1</span> <span class="o">is</span> <span class="nv">N</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">X2</span> <span class="o">is</span> <span class="nv">X</span> <span class="o">*</span> <span class="nv">X</span><span class="p">,</span> <span class="nf">stepen</span><span class="p">(</span><span class="nv">X2</span><span class="p">,</span> <span class="nv">N1</span><span class="p">,</span> <span class="nv">S</span><span class="p">).</span>
+<span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">S</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">N</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">N</span> <span class="o">mod</span> <span class="mi">2</span> <span class="s s-Atom">=\=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="nv">N1</span> <span class="o">is</span> <span class="nv">N</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">N1</span><span class="p">,</span> <span class="nv">S1</span><span class="p">),</span> <span class="nv">S</span> <span class="o">is</span> <span class="nv">S1</span> <span class="o">*</span> <span class="nv">X</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Сечење (додуше црвено) нам може помоћи да поједноставимо неке од
+претходних дефиниција и да избегнемо експлицитно навођење додатних
+услова. На пример, дефиниција степеновања се упрошћава.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">stepen</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:-</span> <span class="p">!.</span>
+<span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">S</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">N</span> <span class="o">mod</span> <span class="mi">2</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="nv">N1</span> <span class="o">is</span> <span class="nv">N</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">X2</span> <span class="o">is</span> <span class="nv">X</span> <span class="o">*</span> <span class="nv">X</span><span class="p">,</span> <span class="nf">stepen</span><span class="p">(</span><span class="nv">X2</span><span class="p">,</span> <span class="nv">N1</span><span class="p">,</span> <span class="nv">S</span><span class="p">),</span> <span class="p">!.</span>
+<span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">S</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">N1</span> <span class="o">is</span> <span class="nv">N</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nf">stepen</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">N1</span><span class="p">,</span> <span class="nv">S1</span><span class="p">),</span> <span class="nv">S</span> <span class="o">is</span> <span class="nv">S1</span> <span class="o">*</span> <span class="nv">X</span><span class="p">.</span>
+</pre></div>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дефинисати предикат који Еуклидовим алгоритмом израчунава НЗД два
+дата природна броја.</p>
+
+    </div></div>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">nzd</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">A</span><span class="p">).</span>
+<span class="nf">nzd</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span> <span class="nv">B</span><span class="p">,</span> <span class="nv">N</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">B</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">M</span> <span class="o">is</span> <span class="nv">A</span> <span class="o">mod</span> <span class="nv">B</span><span class="p">,</span> <span class="nf">nzd</span><span class="p">(</span><span class="nv">B</span><span class="p">,</span> <span class="nv">M</span><span class="p">,</span> <span class="nv">N</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Дефинишимо и функцију којом се проверава да ли је дати број прост.
+Број је прост ако је већи од 1 и ако нема ниједан прост фактор између
+два и свог корена. У дефиницији ћемо зато користити негацију тј. израз
+<code class="docutils literal notranslate"><span class="pre">not(faktor(N,</span> <span class="pre">2))</span></code> који ће успети ако не успе предикат <code class="docutils literal notranslate"><span class="pre">faktor(N,</span>
+<span class="pre">2)</span></code>. Овај предикат рекурзивно претражује све факторе од 2 до корена
+из <code class="docutils literal notranslate"><span class="pre">N</span></code>. Ако је <code class="docutils literal notranslate"><span class="pre">N</span></code> дељив текућим кандидатом <code class="docutils literal notranslate"><span class="pre">X</span></code>, предикат
+<code class="docutils literal notranslate"><span class="pre">faktor(N,</span> <span class="pre">X)</span></code> успева. Други начин да тај предикат успе је да је
+<code class="docutils literal notranslate"><span class="pre">X</span></code> мањи од корена из <code class="docutils literal notranslate"><span class="pre">N</span></code>, а да предикат успе за вредност
+<code class="docutils literal notranslate"><span class="pre">X+1</span></code>. Дакле, предикат <code class="docutils literal notranslate"><span class="pre">faktor(N,</span> <span class="pre">X)</span></code> успева ако и само ако број
+<code class="docutils literal notranslate"><span class="pre">N</span></code> има неки прост фактор између вредности <code class="docutils literal notranslate"><span class="pre">X</span></code> и корен из <code class="docutils literal notranslate"><span class="pre">N</span></code>.
+Приметимо да смо код провере дељивости употребили оператор <code class="docutils literal notranslate"><span class="pre">=:=</span></code>,
+којим се постиже да се пре поређења обе вредности израчунају. Обратимо
+пажњу и на то да број 2 мора да се третира као специјални случај (јер
+се провера дељивости врши увек за фактор 2).</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">prost</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span>
+<span class="nf">prost</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">N</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="o">not</span><span class="p">(</span><span class="nf">faktor</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="mi">2</span><span class="p">)).</span>
+
+<span class="nf">faktor</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">N</span> <span class="o">mod</span> <span class="nv">X</span> <span class="o">=:=</span> <span class="mf">0.</span>
+<span class="nf">faktor</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">X</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">X</span><span class="o">*</span><span class="nv">X</span> <span class="o">&lt;</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">X1</span> <span class="o">is</span> <span class="nv">X</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nf">faktor</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">X1</span><span class="p">).</span>
+</pre></div>
+</div>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="03_prolog_secenje.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

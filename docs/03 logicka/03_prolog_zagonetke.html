@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Логичке загонетке</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'paradigme';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'paradigme';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/ghc/" target="_blank">Glasgow haskell compiler</a></div>
+          <div class="useful-link">
+            <a href="https://www.haskell.org/hugs/" target="_blank">Hugs Haskell interpreter</a></div>
+          <div class="useful-link">
+            <a href="https://replit.com/languages/haskell" target="_blank">Haskell online (repl.it)</a></div>
+          <div class="useful-link">
+            <a href="https://www.swi-prolog.org/" target="_blank">SWI Prolog</a></div>
+          <div class="useful-link">
+            <a href="https://swish.swi-prolog.org/" target="_blank">SWI Prolog online</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Увод у програмске парадигме, логичко и функционално програмирање за четврти разред специјализованих ИТ одељења</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01%20paradigme>
+                    <h5>О програмским парадигмама</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01%20paradigme/01_o_paradigmama.html><div class="studioLecture" id=activity-01%20paradigme-01_o_paradigmama><i class="fas fa-file-alt activity-icon"></i>О програмским језицима и парадигмама</div></a>
+                <a href=../01%20paradigme/02_imperativna.html><div class="studioLecture" id=activity-01%20paradigme-02_imperativna><i class="fas fa-file-alt activity-icon"></i>Императивна парадигма</div></a>
+                <a href=../01%20paradigme/03_oop.html><div class="studioLecture" id=activity-01%20paradigme-03_oop><i class="fas fa-file-alt activity-icon"></i>Објектнооријентисана парадигма</div></a>
+                <a href=../01%20paradigme/04_skript.html><div class="studioLecture" id=activity-01%20paradigme-04_skript><i class="fas fa-file-alt activity-icon"></i>Скрипт парадигма</div></a>
+                <a href=../01%20paradigme/05_o_paradigmama_quiz.html><div class="studioLecture" id=activity-01%20paradigme-05_o_paradigmama_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02%20funkcionalna>
+                    <h5>Функционална парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02%20funkcionalna/01_funkcionalna.html><div class="studioLecture" id=activity-02%20funkcionalna-01_funkcionalna><i class="fas fa-file-alt activity-icon"></i>О функционалној парадигми</div></a>
+                <a href=../02%20funkcionalna/01a_funkcionalna_quiz.html><div class="studioLecture" id=activity-02%20funkcionalna-01a_funkcionalna_quiz><i class="far fa-question-circle activity-icon"></i>Квиз</div></a>
+                <a href=../02%20funkcionalna/02_haskell.html><div class="studioLecture" id=activity-02%20funkcionalna-02_haskell><i class="fas fa-file-alt activity-icon"></i>Haskell - изрази и функције</div></a>
+                <a href=../02%20funkcionalna/02b_haskell_liste.html><div class="studioLecture" id=activity-02%20funkcionalna-02b_haskell_liste><i class="fas fa-file-alt activity-icon"></i>Haskell - листе</div></a>
+                <a href=../02%20funkcionalna/02c_haskell_tipovi.html><div class="studioLecture" id=activity-02%20funkcionalna-02c_haskell_tipovi><i class="fas fa-file-alt activity-icon"></i>Haskell - алгебарски типови података</div></a>
+                <a href=../02%20funkcionalna/02e_haskell_main.html><div class="studioLecture" id=activity-02%20funkcionalna-02e_haskell_main><i class="fas fa-file-alt activity-icon"></i>Haskell - улаз, излаз, главни програм</div></a>
+                <a href=../02%20funkcionalna/02z_haskell_vezba.html><div class="studioLecture" id=activity-02%20funkcionalna-02z_haskell_vezba><i class="fas fa-file-alt activity-icon"></i>Haskell - задаци за вежбу</div></a>
+                <a href=../02%20funkcionalna/02d_haskell_primeri.html><div class="studioLecture" id=activity-02%20funkcionalna-02d_haskell_primeri><i class="fas fa-file-alt activity-icon"></i>Haskell - пример већег програма</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03%20logicka>
+                    <h5>Логичка парадигма</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03%20logicka/01_logicka.html><div class="studioLecture" id=activity-03%20logicka-01_logicka><i class="fas fa-file-alt activity-icon"></i>О логичкој парадигми</div></a>
+                <a href=../03%20logicka/01_iskazna_logika.html><div class="studioLecture" id=activity-03%20logicka-01_iskazna_logika><i class="fas fa-file-alt activity-icon"></i>Исказна логика</div></a>
+                <a href=../03%20logicka/01_sat.html><div class="studioLecture" id=activity-03%20logicka-01_sat><i class="fas fa-file-alt activity-icon"></i>SAT решавачи</div></a>
+                <a href=../03%20logicka/01a_iskazna_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-01a_iskazna_logika_quiz><i class="far fa-question-circle activity-icon"></i>Исказна логика - квиз</div></a>
+                <a href=../03%20logicka/02_predikatska_logika.html><div class="studioLecture" id=activity-03%20logicka-02_predikatska_logika><i class="fas fa-file-alt activity-icon"></i>Предикатска логика</div></a>
+                <a href=../03%20logicka/02_atp.html><div class="studioLecture" id=activity-03%20logicka-02_atp><i class="fas fa-file-alt activity-icon"></i>Аутоматски доказивачи теорема</div></a>
+                <a href=../03%20logicka/02a_predikatska_logika_quiz.html><div class="studioLecture" id=activity-03%20logicka-02a_predikatska_logika_quiz><i class="far fa-question-circle activity-icon"></i>Предикатска логика - квиз</div></a>
+                <a href=../03%20logicka/03_prolog.html><div class="studioLecture" id=activity-03%20logicka-03_prolog><i class="fas fa-file-alt activity-icon"></i>Prolog - база знања и правила извођења</div></a>
+                <a href=../03%20logicka/03_prolog_secenje.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_secenje><i class="fas fa-file-alt activity-icon"></i>Prolog - дрво извођења, сечење</div></a>
+                <a href=../03%20logicka/03_prolog_aritmetika.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_aritmetika><i class="fas fa-file-alt activity-icon"></i>Prolog - аритметичка израчунавања</div></a>
+                <a href=../03%20logicka/03_prolog_liste.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_liste><i class="fas fa-file-alt activity-icon"></i>Prolog - листе</div></a>
+                <a href=../03%20logicka/03_prolog_zagonetke.html><div class="studioLecture" id=activity-03%20logicka-03_prolog_zagonetke><i class="fas fa-file-alt activity-icon"></i>Prolog - решавање логичких загонетки</div></a>
+                <a href=../03%20logicka/03z_prolog_zadaci.html><div class="studioLecture" id=activity-03%20logicka-03z_prolog_zadaci><i class="fas fa-file-alt activity-icon"></i>Prolog - задаци за самостални рад</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Логичке загонетке<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Веома лепа илустрација моћи језика Prolog у односу на друге програмске
+језике је кроз решавање логичких загонетки. Обично су програми само
+прецизно кодирање услова загонетки, а систем онда самостално проналази
+решење, што је доста ефикасније него код других програмских језика у
+којима програмер мора да програмира поступак одређивања решења. У
+зависности од загонетке која се решава и начина решавања, програми
+могу бити мање или више ефикасни. У наредним решењима нећемо обраћати
+много пажње на ефикасност решења, већ пре свега на једноставност
+њиховог програмирања. Размотримо следећих неколико примера.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Неколико пријатеља је гласало које би градове желели да посете.</p>
+<ol class="arabic simple">
+<li><p>Гласали су за Каиро, Лондон, Пекинг, Москву, Бомбај, Најроби и
+Џакарту.</p></li>
+<li><p>Један град је добио 4 гласа, два града по 2 гласа, два града по 1
+глас и два града нису добили ниједан глас.</p></li>
+<li><p>Каиро и Пекинг су добили различит број гласова.</p></li>
+<li><p>Москва је добила или најмање или највише гласова од свих градова.</p></li>
+<li><p>Каиро је добио више гласова од Џакарте.</p></li>
+<li><p>Гледајући листу из тачке 1, тачно два пута се догодило да је град
+са два гласа дошао непосредно иза града са једним гласом.</p></li>
+<li><p>Џакарта је добила или један глас мање од Лондона или један
+глас мање од Пекинга.</p></li>
+</ol>
+
+    </div></div>
+<p>Направићемо листу променљивих које одговарају градовима. Вредност
+сваке од тих променљивих биће број гласова које је тај град добио. На
+основу другог правила знамо да ће листа вредности тих променљивих
+садржати вредности <code class="docutils literal notranslate"><span class="pre">[4,</span> <span class="pre">2,</span> <span class="pre">2,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>, али не знамо у ком
+редоследу, тј. знаћемо да је листа вредности променљивих једна од
+пермутација ове листе. Можемо употребити библиотечки предикат
+<code class="docutils literal notranslate"><span class="pre">permutation</span></code> који се може употребљавати за набрајање свих
+пермутација (покушајте да за вежбу самостално дефинишете такав
+предикат). Приступ решењу је, дакле, прилично директан: набрајају се
+све пермутације ове листе и за сваку од њих се проверава да ли
+задовољава додатне услове. Иако су оваква решења у општем случају
+веома неефикасна, јер број пермутација брзо расте, у овом конкретном
+задатку ефикасност је задовољавајућа јер пермутација седмочлане листе
+има тек око 5000. Сваки даљи услов, осим услова 6, веома се директно
+кодира. Што се тиче услова 6, дефинишемо помоћни предикат који броји
+појављивања пара бројева у листи.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">brojPojavljivanjaPara</span><span class="p">([],</span> <span class="k">_</span><span class="p">,</span> <span class="mi">0</span><span class="p">).</span>
+<span class="nf">brojPojavljivanjaPara</span><span class="p">([</span><span class="nv">X1</span><span class="p">,</span><span class="nv">X2</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="p">[</span><span class="nv">X1</span><span class="p">,</span><span class="nv">X2</span><span class="p">],</span> <span class="nv">N</span><span class="p">)</span> <span class="p">:-</span>
+   <span class="nf">brojPojavljivanjaPara</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="p">[</span><span class="nv">X1</span><span class="p">,</span><span class="nv">X2</span><span class="p">],</span> <span class="nv">N1</span><span class="p">),</span> <span class="nv">N</span> <span class="o">is</span> <span class="nv">N1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="p">!.</span>
+<span class="nf">brojPojavljivanjaPara</span><span class="p">([</span><span class="k">_</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="p">[</span><span class="nv">X1</span><span class="p">,</span><span class="nv">X2</span><span class="p">],</span> <span class="nv">N</span><span class="p">)</span> <span class="p">:-</span>
+   <span class="nf">brojPojavljivanjaPara</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="p">[</span><span class="nv">X1</span><span class="p">,</span><span class="nv">X2</span><span class="p">],</span> <span class="nv">N</span><span class="p">).</span>
+
+<span class="nf">glasovi</span><span class="p">(</span><span class="nv">Gradovi</span><span class="p">)</span> <span class="p">:-</span>
+  <span class="nv">Gradovi</span> <span class="o">=</span> <span class="p">[</span><span class="nv">Kairo</span><span class="p">,</span><span class="nv">London</span><span class="p">,</span><span class="nv">Peking</span><span class="p">,</span><span class="nv">Moskva</span><span class="p">,</span><span class="nv">Bombaj</span><span class="p">,</span><span class="nv">Najrobi</span><span class="p">,</span><span class="nv">Dzakarta</span><span class="p">],</span>
+  <span class="nf">permutation</span><span class="p">(</span><span class="nv">Gradovi</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span>
+  <span class="nv">Kairo</span> <span class="s s-Atom">=\=</span> <span class="nv">Peking</span><span class="p">,</span>
+  <span class="p">(</span><span class="nv">Moskva</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="nv">Moskva</span> <span class="o">=</span> <span class="mi">4</span><span class="p">),</span>
+  <span class="nv">Kairo</span> <span class="o">&gt;</span> <span class="nv">Dzakarta</span><span class="p">,</span>
+  <span class="nf">brojPojavljivanjaPara</span><span class="p">(</span><span class="nv">Gradovi</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span>
+  <span class="p">(</span><span class="nv">Dzakarta</span> <span class="o">is</span> <span class="p">(</span><span class="nv">London</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="nv">Dzakarta</span> <span class="o">is</span> <span class="p">(</span><span class="nv">Peking</span><span class="o">-</span><span class="mi">1</span><span class="p">)).</span>
+</pre></div>
+</div>
+<p>Тачно решење <code class="docutils literal notranslate"><span class="pre">Gradovi</span> <span class="pre">=</span> <span class="pre">[4,</span> <span class="pre">0,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">2,</span> <span class="pre">1,</span> <span class="pre">1]</span></code> се пријављује
+неколико пута, јер функција за проналажење пермутација неколико
+пута проналази исту пермутацију (зато што листа садржи дупликате).</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Пет људи различитих националности живи у пет кућа различитих боја,
+имају пет различитих врста кућних љубимаца, пију пет различитих
+напитака и пуше пет различитих врста цигарета.</p>
+<ol class="arabic simple">
+<li><p>Норвежанин живи у првој кући.</p></li>
+<li><p>Млеко се пије у средњој кући.</p></li>
+<li><p>Енглез живи у црвеној кући.</p></li>
+<li><p>Шпанац има пса.</p></li>
+<li><p>У зеленој кући се пије кафа.</p></li>
+<li><p>Украјинац пије чај.</p></li>
+<li><p>Власник пужа пуши цигарете „олд голд“.</p></li>
+<li><p>У жутој кући се пуше цигарете „кулс“.</p></li>
+<li><p>Зелена кућа је прва десно од куће боје слоноваче.</p></li>
+<li><p>У кући поред оне у којој живи лисица се пуше цигарете „честер“.</p></li>
+<li><p>У кући поред оне у којој се пуше цигарете „кулс“ је љубимац коњ.</p></li>
+<li><p>Плава кућа је поред оне у којој живи Норвежанин.</p></li>
+<li><p>Власник једне куће пуши цигарете „лаки“ и пије ђус.</p></li>
+<li><p>Јапанац пуши цигарете „парламент“.</p></li>
+</ol>
+
+    </div></div>
+<p>Напиши програм који одређује ко је власник зебре и ко пије воду?</p>
+<p>Кључно питање је како представити решење. Веома погодна
+репрезентација је у облику листе термова где је сваки терм облика
+<code class="docutils literal notranslate"><span class="pre">kuca(nacionalnost,</span> <span class="pre">boja,</span> <span class="pre">ljubimac,</span> <span class="pre">pice,</span> <span class="pre">cigarete)</span></code>. Тада можемо
+креирати петочлану листу <code class="docutils literal notranslate"><span class="pre">Kuce</span></code> и кодирати услове о њеним
+члановима. Прва два услова се могу кодирати приликом дефинисања
+низа кућа: први елемент је облика <code class="docutils literal notranslate"><span class="pre">kuca(norvezanin,</span> <span class="pre">_,</span> <span class="pre">_,</span> <span class="pre">_,</span> <span class="pre">_)</span></code>,
+где анонимне променљиве могу бити унификоване са стварним
+вредностима на тим позицијама, а трећи елемент је облика
+<code class="docutils literal notranslate"><span class="pre">kuca(_,</span> <span class="pre">_,</span> <span class="pre">_,</span> <span class="pre">mleko,</span> <span class="pre">_)</span></code>. О другом, четвртом и петом елементу листе
+не знамо ништа, па их можемо представити анонимним променљивама. У услову
+9. потребно је да кодирамо „кућа је десно од куће“, а у неколико
+услова треба да кодирамо да су куће једна поред друге. За то
+дефинишемо два помоћна предиката <code class="docutils literal notranslate"><span class="pre">desnoOd</span></code> и <code class="docutils literal notranslate"><span class="pre">pored</span></code> (који се лако
+кодира помоћу <code class="docutils literal notranslate"><span class="pre">desnoOd</span></code> зато што је кућа поред куће ако и само ако
+је прва десно од друге или друга десно од прве). Све остале услове
+кодирамо коришћењем уграђеног предиката <code class="docutils literal notranslate"><span class="pre">member</span></code>, који проверава да
+ли дати елемент припада листи, али и може да наброји редом чланове
+листе. Имајући све ово у виду, сви услови се прилично директно
+кодирају (приметимо да услови различитости следе из тога што за сваку
+категорију имамо пет различитих константи, након што као последња два
+услова додамо информације о томе да власник зебре има зебру, а да онај
+ко пије воду пије воду). Покретањем предиката <code class="docutils literal notranslate"><span class="pre">zebraZagonetka</span></code>
+добијамо јединствено решење да Јапанац има зебру, а да Норвежанин пије
+воду.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">desnoOd</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="p">[</span><span class="nv">Y</span><span class="p">,</span> <span class="nv">X</span><span class="p">|</span> <span class="k">_</span><span class="p">]).</span>
+<span class="nf">desnoOd</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="p">[</span><span class="k">_</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span> <span class="nf">desnoOd</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">T</span><span class="p">).</span>
+<span class="nf">pored</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">L</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">desnoOd</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">L</span><span class="p">)</span> <span class="p">;</span> <span class="nf">desnoOd</span><span class="p">(</span><span class="nv">Y</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">L</span><span class="p">).</span>
+
+<span class="nf">zebraZagonetka</span><span class="p">(</span><span class="nv">VlasnikZebre</span><span class="p">,</span> <span class="nv">PijeVodu</span><span class="p">)</span> <span class="p">:-</span>
+   <span class="nv">Kuce</span> <span class="o">=</span> <span class="p">[</span><span class="nf">kuca</span><span class="p">(</span><span class="s s-Atom">norvezanin</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="k">_</span><span class="p">,</span> <span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">mleko</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">],</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="s s-Atom">englez</span><span class="p">,</span> <span class="s s-Atom">crvena</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="s s-Atom">spanac</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">pas</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="s s-Atom">zelena</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">kafa</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="s s-Atom">ukrajinac</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">caj</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">puz</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">oldgold</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="s s-Atom">zuta</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">kuls</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">desnoOd</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="s s-Atom">zelena</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="s s-Atom">slonovaca</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">pored</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">cester</span><span class="p">),</span> <span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">lisica</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">pored</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">kuls</span><span class="p">),</span> <span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">konj</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">pored</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="s s-Atom">norvezanin</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="s s-Atom">plava</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">djus</span><span class="p">,</span> <span class="s s-Atom">laki</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="s s-Atom">japanac</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">parlament</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="nv">VlasnikZebre</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">zebra</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">),</span>
+   <span class="nf">member</span><span class="p">(</span><span class="nf">kuca</span><span class="p">(</span><span class="nv">PijeVodu</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="k">_</span><span class="p">,</span> <span class="s s-Atom">voda</span><span class="p">,</span> <span class="k">_</span><span class="p">),</span> <span class="nv">Kuce</span><span class="p">).</span>
+</pre></div>
+</div>
+<section id="id2">
+<h2>Судоку решавач<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>У претходним поглављима смо видели неколико решења загонетке Судоку у
+различитим програмским језицима и системима. У наставку следе два
+правила у језику Prolog која могу да реше Судоку загонетку димензије
+<span class="math notranslate nohighlight">\(4\times 4\)</span>. Табла је представљена као листа листи и Кодирано је
+да је свака врста, свака колона и сваки квадрат димензије <span class="math notranslate nohighlight">\(2
+\times 2\)</span> пермутација бројева од 1 до 4. На основу ових ограничења
+Prolog може да наброји све исправне Судоку табле. За набрајање
+пермутација коришћен је библиотечки предикат <code class="docutils literal notranslate"><span class="pre">permutation</span></code> (а раније
+смо приказали како се ова функционалност може ручно
+кодирати). Приметимо да је бектрекинг претрага уграђена у сам језик и
+да, за разлику од имплементација у императивним и функционалним
+језицима, она није видљива у програмском коду. Програм је сасвим
+декларативан и процедура претраге решења је у потпуности сакривена од
+програмера.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">permutacija</span><span class="p">(</span><span class="nv">Xs</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">permutation</span><span class="p">(</span><span class="nv">Xs</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]).</span>
+
+<span class="nf">sudoku</span><span class="p">(</span><span class="nv">Xs</span><span class="p">)</span> <span class="p">:-</span> <span class="nv">Xs</span> <span class="o">=</span> <span class="p">[[</span><span class="nv">A11</span><span class="p">,</span> <span class="nv">A12</span><span class="p">,</span> <span class="nv">A13</span><span class="p">,</span> <span class="nv">A14</span><span class="p">],</span>
+                    <span class="p">[</span><span class="nv">A21</span><span class="p">,</span> <span class="nv">A22</span><span class="p">,</span> <span class="nv">A23</span><span class="p">,</span> <span class="nv">A24</span><span class="p">],</span>
+                    <span class="p">[</span><span class="nv">A31</span><span class="p">,</span> <span class="nv">A32</span><span class="p">,</span> <span class="nv">A33</span><span class="p">,</span> <span class="nv">A34</span><span class="p">],</span>
+                    <span class="p">[</span><span class="nv">A41</span><span class="p">,</span> <span class="nv">A42</span><span class="p">,</span> <span class="nv">A43</span><span class="p">,</span> <span class="nv">A44</span><span class="p">]],</span>
+
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A11</span><span class="p">,</span> <span class="nv">A12</span><span class="p">,</span> <span class="nv">A13</span><span class="p">,</span> <span class="nv">A14</span><span class="p">]),</span>
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A21</span><span class="p">,</span> <span class="nv">A22</span><span class="p">,</span> <span class="nv">A23</span><span class="p">,</span> <span class="nv">A24</span><span class="p">]),</span>
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A31</span><span class="p">,</span> <span class="nv">A32</span><span class="p">,</span> <span class="nv">A33</span><span class="p">,</span> <span class="nv">A34</span><span class="p">]),</span>
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A41</span><span class="p">,</span> <span class="nv">A42</span><span class="p">,</span> <span class="nv">A43</span><span class="p">,</span> <span class="nv">A44</span><span class="p">]),</span>
+
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A11</span><span class="p">,</span> <span class="nv">A21</span><span class="p">,</span> <span class="nv">A31</span><span class="p">,</span> <span class="nv">A41</span><span class="p">]),</span>
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A12</span><span class="p">,</span> <span class="nv">A22</span><span class="p">,</span> <span class="nv">A32</span><span class="p">,</span> <span class="nv">A42</span><span class="p">]),</span>
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A13</span><span class="p">,</span> <span class="nv">A23</span><span class="p">,</span> <span class="nv">A33</span><span class="p">,</span> <span class="nv">A43</span><span class="p">]),</span>
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A14</span><span class="p">,</span> <span class="nv">A24</span><span class="p">,</span> <span class="nv">A34</span><span class="p">,</span> <span class="nv">A44</span><span class="p">]),</span>
+
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A11</span><span class="p">,</span> <span class="nv">A12</span><span class="p">,</span> <span class="nv">A21</span><span class="p">,</span> <span class="nv">A22</span><span class="p">]),</span>
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A13</span><span class="p">,</span> <span class="nv">A14</span><span class="p">,</span> <span class="nv">A23</span><span class="p">,</span> <span class="nv">A24</span><span class="p">]),</span>
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A31</span><span class="p">,</span> <span class="nv">A32</span><span class="p">,</span> <span class="nv">A41</span><span class="p">,</span> <span class="nv">A42</span><span class="p">]),</span>
+    <span class="nf">permutacija</span><span class="p">([</span><span class="nv">A33</span><span class="p">,</span> <span class="nv">A34</span><span class="p">,</span> <span class="nv">A43</span><span class="p">,</span> <span class="nv">A44</span><span class="p">]).</span>
+</pre></div>
+</div>
+<p>Уопштавање овог проблем на таблу веће димензије, нажалост, не даје
+програм који је довољно ефикасан.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Задатак се ефикасно решава ако се користи проширење језика Prolog
+које подржава тзв. <strong>програмирање ограничења над коначним
+доменима</strong> (енгл. constraint logic programming over finite
+domains). SWI Prolog подржава ово проширење, ако се укључи
+одговарајућа библиотека. Наредно решење је управо и приказано на
+сајту SWI Prologa, као пример употребе ове библиотеке.</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="p">:-</span> <span class="nf">use_module</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s s-Atom">clpz</span><span class="p">)).</span>
+<span class="p">:-</span> <span class="nf">use_module</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s s-Atom">lists</span><span class="p">)).</span>
+
+<span class="nf">sudoku</span><span class="p">(</span><span class="nv">Rows</span><span class="p">)</span> <span class="p">:-</span>
+        <span class="nf">length</span><span class="p">(</span><span class="nv">Rows</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="nf">maplist</span><span class="p">(</span><span class="nf">same_length</span><span class="p">(</span><span class="nv">Rows</span><span class="p">),</span> <span class="nv">Rows</span><span class="p">),</span>
+        <span class="nf">append</span><span class="p">(</span><span class="nv">Rows</span><span class="p">,</span> <span class="nv">Vs</span><span class="p">),</span> <span class="nv">Vs</span> <span class="s s-Atom">ins</span> <span class="mf">1..9</span><span class="p">,</span>
+        <span class="nf">maplist</span><span class="p">(</span><span class="s s-Atom">all_distinct</span><span class="p">,</span> <span class="nv">Rows</span><span class="p">),</span>
+        <span class="nf">transpose</span><span class="p">(</span><span class="nv">Rows</span><span class="p">,</span> <span class="nv">Columns</span><span class="p">),</span> <span class="nf">maplist</span><span class="p">(</span><span class="s s-Atom">all_distinct</span><span class="p">,</span> <span class="nv">Columns</span><span class="p">),</span>
+        <span class="nv">Rows</span> <span class="o">=</span> <span class="p">[</span><span class="nv">As</span><span class="p">,</span><span class="nv">Bs</span><span class="p">,</span><span class="nv">Cs</span><span class="p">,</span><span class="nv">Ds</span><span class="p">,</span><span class="nv">Es</span><span class="p">,</span><span class="nv">Fs</span><span class="p">,</span><span class="nv">Gs</span><span class="p">,</span><span class="nv">Hs</span><span class="p">,</span><span class="nv">Is</span><span class="p">],</span>
+        <span class="nf">blocks</span><span class="p">(</span><span class="nv">As</span><span class="p">,</span> <span class="nv">Bs</span><span class="p">,</span> <span class="nv">Cs</span><span class="p">),</span>
+        <span class="nf">blocks</span><span class="p">(</span><span class="nv">Ds</span><span class="p">,</span> <span class="nv">Es</span><span class="p">,</span> <span class="nv">Fs</span><span class="p">),</span>
+        <span class="nf">blocks</span><span class="p">(</span><span class="nv">Gs</span><span class="p">,</span> <span class="nv">Hs</span><span class="p">,</span> <span class="nv">Is</span><span class="p">).</span>
+
+<span class="nf">blocks</span><span class="p">([],</span> <span class="p">[],</span> <span class="p">[]).</span>
+<span class="nf">blocks</span><span class="p">([</span><span class="nv">N1</span><span class="p">,</span><span class="nv">N2</span><span class="p">,</span><span class="nv">N3</span><span class="p">|</span><span class="nv">Ns1</span><span class="p">],</span> <span class="p">[</span><span class="nv">N4</span><span class="p">,</span><span class="nv">N5</span><span class="p">,</span><span class="nv">N6</span><span class="p">|</span><span class="nv">Ns2</span><span class="p">],</span> <span class="p">[</span><span class="nv">N7</span><span class="p">,</span><span class="nv">N8</span><span class="p">,</span><span class="nv">N9</span><span class="p">|</span><span class="nv">Ns3</span><span class="p">])</span> <span class="p">:-</span>
+        <span class="nf">all_distinct</span><span class="p">([</span><span class="nv">N1</span><span class="p">,</span><span class="nv">N2</span><span class="p">,</span><span class="nv">N3</span><span class="p">,</span><span class="nv">N4</span><span class="p">,</span><span class="nv">N5</span><span class="p">,</span><span class="nv">N6</span><span class="p">,</span><span class="nv">N7</span><span class="p">,</span><span class="nv">N8</span><span class="p">,</span><span class="nv">N9</span><span class="p">]),</span>
+        <span class="nf">blocks</span><span class="p">(</span><span class="nv">Ns1</span><span class="p">,</span> <span class="nv">Ns2</span><span class="p">,</span> <span class="nv">Ns3</span><span class="p">).</span>
+
+<span class="nf">problem</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[[</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">],</span>
+            <span class="p">[</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+            <span class="p">[</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">],</span>
+            <span class="p">[</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">],</span>
+            <span class="p">[</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">],</span>
+            <span class="p">[</span><span class="k">_</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+            <span class="p">[</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">],</span>
+            <span class="p">[</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="k">_</span><span class="p">,</span><span class="mi">9</span><span class="p">]]).</span>
+</pre></div>
+</div>
+<p>Ово решење користи неколико библиотечких предиката.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">length(Rows,</span> <span class="pre">9)</span></code> каже да је решење листа дужине 9</p></li>
+<li><p>Предикат <code class="docutils literal notranslate"><span class="pre">maplist</span></code> успева ако се први дати аргумент, који је
+предикат, успешно примењује на све елементе другог датог
+аргумента, који је листа. У овом случају сваки елемент листе
+<code class="docutils literal notranslate"><span class="pre">Rows</span></code> мора да има исту дужину као и листа <code class="docutils literal notranslate"><span class="pre">Rows</span></code> (предикат
+<code class="docutils literal notranslate"><span class="pre">same_length</span></code> проверава да ли су две дате листе исте дужине).</p></li>
+<li><p>Предикатом <code class="docutils literal notranslate"><span class="pre">append(Rows,</span> <span class="pre">Vs)</span></code> се израчунава листа <code class="docutils literal notranslate"><span class="pre">Vs</span></code> која
+се добија надовезивањем свих листи из листе <code class="docutils literal notranslate"><span class="pre">Rows</span></code>. Након тога
+се оператором <code class="docutils literal notranslate"><span class="pre">ins</span></code> који је део библиотеке за програмирање
+ограничења над коначним доменима проглашава да свака променљива у
+тој листи има као домен скуп бројева од 1 до 9.</p></li>
+<li><p>Предикатом <code class="docutils literal notranslate"><span class="pre">maplist(all_distinct,</span> <span class="pre">Rows)</span></code> се захтева да се свака
+врста састоји од различитих бројева (предикат <code class="docutils literal notranslate"><span class="pre">all_distinct</span></code>
+који је део поменуте библиотеке то ефикасно проверава).</p></li>
+<li><p>Захтев да су елементи сваке колоне сви различити се поставља на
+сличан начин, тако што се пре тог захтева матрица транспонује
+(мењају се улоге врста и колона) коришћењем библиотечког
+предиката <code class="docutils literal notranslate"><span class="pre">transpose</span></code>.</p></li>
+<li><p>На крају се манеће услов различитости елемената за сваки квадрат
+димензије <span class="math notranslate nohighlight">\(3\times 3\)</span>. Већ смо разјаснили улогу сваког
+библиотечког предиката, па покушај самостално да разумеш како тај
+део кода ради.</p></li>
+</ul>
+
+    </div></div>
+</section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="03_prolog_liste.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
