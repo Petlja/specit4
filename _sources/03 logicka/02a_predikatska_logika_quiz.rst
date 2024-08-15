@@ -11,8 +11,6 @@
         :correct: b
  
 .. quizq::
-           
-        Сваки исказ представља неку:
 
     .. mchoice:: model
         :answer_a: зна домен
