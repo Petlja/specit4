@@ -48,6 +48,7 @@
                int cifra = n % 10;
                if (cifra % 2 != 0)
                   zbir += cifra * cifra;
+               n = n / 10;
            }
            return zbir;
        }
